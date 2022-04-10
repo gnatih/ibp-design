@@ -50,7 +50,6 @@ export const BaseStyles = css`
     min-height: 135px;
     align-items: center;
     font-famiy: "Adelle Sans", sans-serif;
-    border-top: 1px solid var(--ibp-ecru);
   }
 
   .main-nav .logo {

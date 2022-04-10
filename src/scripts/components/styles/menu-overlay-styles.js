@@ -44,6 +44,10 @@ export const MenuOverlayStyles = css`
     background: var(--ibp-ecru);
   }
 
+  .main-nav {
+    border-top: 1px solid var(--ibp-ecru);
+  }
+
   .nav-content {
     flex: auto;
     background: var(--ibp-ecru);

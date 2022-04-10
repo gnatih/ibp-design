@@ -14,12 +14,12 @@ export const menu = [
   {
     title: "Open Budget Survey",
     url: "#open-budget-survey",
-    hero: "https://ibp.wp.localhost/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
+    hero: "https://internationalbudget.org/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
     children: [
       {
         title: "Overview",
         url: "#open-budget-survey",
-        hero: "https://ibp.wp.localhost/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
+        hero: "https://internationalbudget.org/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
       },
 
       {
