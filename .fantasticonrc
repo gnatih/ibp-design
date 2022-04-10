@@ -1,0 +1,11 @@
+module.exports = {
+  name: "ibp-icons",
+  inputDir: "src/svgs",
+  outputDir: "dist/fonts",
+  assetTypes: ["css"],
+  fontsUrl: "/fonts",
+  normalize: true,
+  pathOptions: {
+    css: "dist/css/icons.css",
+  },
+};

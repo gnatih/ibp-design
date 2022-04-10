@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "ibp-icons";
+    src: url("/fonts/ibp-icons.eot?61158625f0b995aa1d0304c61126c797#iefix") format("embedded-opentype"),
+url("/fonts/ibp-icons.woff2?61158625f0b995aa1d0304c61126c797") format("woff2"),
+url("/fonts/ibp-icons.woff?61158625f0b995aa1d0304c61126c797") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: ibp-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-caret-down:before {
+    content: "\f101";
+}
+.icon-caret-right-circle:before {
+    content: "\f102";
+}
+.icon-close:before {
+    content: "\f103";
+}
+.icon-download:before {
+    content: "\f104";
+}
+.icon-facebook:before {
+    content: "\f105";
+}
+.icon-globe:before {
+    content: "\f106";
+}
+.icon-linkedin:before {
+    content: "\f107";
+}
+.icon-menu:before {
+    content: "\f108";
+}
+.icon-more:before {
+    content: "\f109";
+}
+.icon-search:before {
+    content: "\f10a";
+}
+.icon-twitter:before {
+    content: "\f10b";
+}
+.icon-youtube:before {
+    content: "\f10c";
+}

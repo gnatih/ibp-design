@@ -1,0 +1,42 @@
+:root {
+  --ibp-body-font-family: "Adelle Sans", sans-serif;
+  --ibp-body-text: #222222;
+  --ibp-body-text-dark-mode: #ffffff;
+
+  --ibp-text-highlight-light: #dad5ca;
+  --ibp-text-highlight-dark: #6d6a5f;
+  --ibp-page-bg: #ffffff;
+  --ibp-ecru: #eceae5;
+  --ibp-footer-bg-light: #0f717e;
+  --ibp-footer-bg-dark: #233238;
+  --ibp-accent: #ffa46b;
+  --ibp-accent-alt: #97e5ea;
+  --ibp-hr: #dad5ca;
+  --ibp-field-focus-outline: #222222;
+  --ibp-field-outline: rgba(255, 255, 255, 0.2);
+  --ibp-error: #cb0303;
+  --ibp-hr-height: 2px;
+  --ibp-letter-spacing-sm:-0.03em;
+  --ibp-letter-spacing: 0.12em;
+
+  --obs-rating-1: #47dca0;
+  --obs-rating-2: #a0fbba;
+  --obs-rating-3: #ffe179;
+  --obs-rating-4: #ffb978;
+  --obs-rating-5: #ff7b5d;
+
+  /**headings**/
+  --ibp-heading-font-family: "DM Serif Display", serif;
+  --ibp-heading-1-font-size: 58px;
+  --ibp-heading-2-font-size: 48px;
+  --ibp-heading-3-font-size: 36px;
+  --ibp-heading-4-font-size: 24px;
+  --ibp-heading-5-font-size: 18px;
+  --ibp-heading-6-font-size: 13px;
+
+  --ibp-page-title-font-size: 90px;
+  --ibp-page-title-large-font-size: 120px;
+
+  --ibp-input-font-size: 14px;
+  --ibp-button-font-size-large: 14px; 
+}
