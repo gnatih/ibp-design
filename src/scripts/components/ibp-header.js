@@ -13,6 +13,8 @@ onhashchange = () => {
   }
 };
 
+const ibpHome = "http://ibp.wp.localhost";
+
 export class IbpHeader extends LitElement {
   static styles = [BaseStyles, HeaderStyles];
 
@@ -51,34 +53,39 @@ export class IbpHeader extends LitElement {
   }
 
   render() {
-    return html` <link rel="stylesheet" href="css/icons.css" />
+    return html`
       <pre-header></pre-header>
-      <div class="banner ${this.current_menu.hero ? "has-image" : ""}" style="background-image:url(${this.current_menu.hero})">
+      <div class="main-nav-wrapper container">
         <div class="main-nav grid-12-col">
-          <div class="logo"><ibp-logo fill="${this.current_menu.hero ? "#fff" : "#000"}" /></div>
-          <div class="nav">
-            <ul>
-              ${renderPrimaryMenu(this.primary_menu)}
-              <li>
-                <a href="#" class="search-btn"><i class="ibp-icons icon-search"></i></a>
-              </li>
-              <li>
-                <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
-              </li>
-            </ul>
-          </div>
+          <a class="logo" href="/"><ibp-logo fill="#000"></ibp-logo></a>
+          <ul class="nav">
+            ${renderPrimaryMenu(this.primary_menu)}
+            <li class="d-md-none">
+              <a href="#" class="search-btn"><i class="ibp-icons icon-globe"></i></a>
+            </li>
+            <li>
+              <a href="#" class="search-btn"><i class="ibp-icons icon-search"></i></a>
+            </li>
+            <li>
+              <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
+            </li>
+          </ul>
         </div>
-
-        <div class="nav-content grid-12-col">
-          <slot name="secondary-nav">${renderSecondaryMenu(this.parent_menu)}</slot>
-
+      </div>
+      <div class="nav-content-wrapper">
+        <div class="container nav-content grid-12-col">
+          <slot name="secondary-nav">
+            <div class="secondary-nav">${renderSecondaryMenu(this.parent_menu)}</div>
+            <div class="spacer"></div>
+          </slot>
           <div class="nav-content--header">
-            <slot name="nav-title"><h1 class="page-title">${this.current_menu.title}</h1></slot>
-            <slot name="nav-description"></slot>
+            <slot name="page-title">${this.current_menu.title}</slot>
+            <div class="nav-description" name="nav-description"></div>
           </div>
         </div>
       </div>
-      <menu-overlay @hideMenuOverlay=${this._hideMenuOverlay} ?visible="${this.show_menu}" .menu="${this.primary_menu}"></menu-overlay>`;
+      <menu-overlay @hideMenuOverlay=${this._hideMenuOverlay} ?visible="${this.show_menu}" .menu="${this.primary_menu}"></menu-overlay>
+    `;
   }
 }
 

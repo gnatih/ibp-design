@@ -6,16 +6,29 @@ export const MenuOverlayStyles = css`
     top: 0;
     width: 100%;
     min-height: 100vh;
-    display: none;
+    opacity: 0;
+    height: 0;
+    transition: all 1s;
+    pointer-events: none;
   }
 
-  .overlay .scroll-container {
-    overflow: auto;
-    height: 100%;
-    position: absolute;
-    min-height: 100vh;
+  .overlay.visible {
+    opacity: 1;
+    top: 0;
+    pointer-events: auto;
+  }
+
+  .scroll-container {
     display: flex;
+    overflow: auto;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: purple;
   }
 
   input[type="text"] {
@@ -44,31 +57,37 @@ export const MenuOverlayStyles = css`
     background: var(--ibp-ecru);
   }
 
-  .main-nav {
-    border-top: 1px solid var(--ibp-ecru);
+  .nav-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: var(--ibp-ecru);
   }
 
   .nav-content {
-    flex: auto;
-    background: var(--ibp-ecru);
-    padding: 0 44px;
+    height: 100%;
   }
 
-  .nav-footer {
-    padding: 44px;
-    justify-self: end;
+  .nav-footer-wrapper {
     background: var(--ibp-footer-bg-light);
-    align-items: center;
+  }
+
+  .nav-content-wrapper {
+    flex: 1;
+  }
+
+  .main-nav-wrapper {
+    background: white;
   }
 
   .nav-footer .signup-note {
     color: white;
-    // grid-column: 1/7;
-    grid-column: span 6;
+    grid-column: span 5;
     line-height: 28px;
+    padding: 44px 0;
   }
 
-  .nav-footer .signup-form {
+  .nav-footer newsletter-form {
     grid-column: 7/13;
   }
 
@@ -95,6 +114,10 @@ export const MenuOverlayStyles = css`
     margin-top: 44px;
   }
 
+  .full-menu h6 i {
+    display: none;
+  }
+
   .full-menu a {
     text-decoration: none;
     color: var(--ibp-body-text);
@@ -103,5 +126,101 @@ export const MenuOverlayStyles = css`
   .featured-story {
     grid-column: span 4;
     margin-right: -44px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .sub-links {
+    display: block;
+    margin: 32px 0;
+    line-height: 32px;
+  }
+
+  .sub-links a {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 576px) {
+    .main-nav-wrapper {
+      background: var(--ibp-ecru);
+    }
+
+    .main-nav-wrapper .container {
+      padding: 0 12px;
+    }
+
+    pre-nav {
+      outline: 1px solid red;
+    }
+
+    .full-menu {
+      flex-direction: column;
+    }
+
+    .full-menu div {
+      width: auto;
+    }
+
+    .full-menu h6 {
+      background: var(--ibp-ecru);
+      margin: 0;
+      padding-top: 14px;
+      padding-bottom: 12px;
+      border-top: 1px solid var(--ibp-text-highlight-light);
+    }
+
+    .full-menu h6 i {
+      display: block;
+    }
+
+    .full-menu li a {
+      font-size: 14px;
+    }
+
+    .btn-donate,
+    .btn-action {
+      padding: 14px 14px 12px 14px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 800;
+      border-radius: 500px;
+      margin-right: 11px;
+      letter-spacing: var(--ibp-letter-spacing);
+    }
+
+    .toggle:checked + h6 i {
+      transform: rotate(180deg) translateY(4px);
+    }
+
+    .full-menu ul {
+      overflow: hidden;
+      transition: max-height 0.8s ease-in-out;
+      max-height: 0;
+    }
+
+    h6 label {
+      transition: all 0.7s ease-out;
+    }
+
+    .toggle:checked + h6 + ul {
+      display: block;
+      color: blue;
+      max-height: 100vh;
+    }
+
+    .action-buttons {
+      margin-top: 24px;
+      display: block;
+    }
+
+    .nav-footer newsletter-form {
+      grid-column: auto;
+      margin-top: 0;
+      margin-bottom: 44px;
+    }
   }
 `;

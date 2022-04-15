@@ -25,6 +25,7 @@ export const FeaturedStoryStyles = css`
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 10px;
   }
 
   h3 {
@@ -40,5 +41,37 @@ export const FeaturedStoryStyles = css`
     color: var(--ibp-body-text);
     text-decoration: none;
     font-weight: 700;
+  }
+
+  .read-more i {
+    margin-left: 8px;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 576px) {
+    h3 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    .story-image {
+      min-height: 100vw;
+    }
+
+    .story-content {
+      padding: 24px 15px;
+    }
+
+    :host {
+      display: block;
+      margin-left: 0;
+      margin-right: 0 !important;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+
+    .read-more {
+      font-size: 14px;
+    }
   }
 `;

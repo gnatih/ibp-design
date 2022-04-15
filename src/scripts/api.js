@@ -23,7 +23,7 @@ export function createPrimaryMenu(menu) {
       hero: item.hero,
     };
 
-    if (origin + "/" + item.url == href) {
+    if (item.url == href) {
       _current = parent;
       parent.active = true;
     }
@@ -37,7 +37,7 @@ export function createPrimaryMenu(menu) {
           active: item_child.url == href,
         };
 
-        if (origin + "/" + item_child.url == href) {
+        if (item_child.url == href) {
           _parent = parent;
           _current = item_child;
           parent.active = true;
@@ -61,7 +61,7 @@ export function renderPrimaryMenu(menu) {
   menu.forEach((el) => {
     const parent_class = el.active ? "active" : "";
 
-    str += `<li><a class="${parent_class}" href="${el.url}">${el.title}</a></li>`;
+    str += `<li class="d-xs-none"><a class="${parent_class}" href="${el.url}">${el.title}</a></li>`;
   });
 
   return unsafeHTML(str);
@@ -72,7 +72,6 @@ export function renderSecondaryMenu(menu) {
     let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
 
     menu.children.forEach((item) => {
-      let classes = { active: item.active };
       str += `<li><a href="${item.url}" class="${item.active ? "active" : ""}">${item.title}</a></li>`;
     });
 
@@ -87,9 +86,24 @@ export function renderFullMenu(menu) {
 
   let menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 1), menu.slice(menu.length - 1, menu.length)];
 
-  menu_items.forEach((items) => {
-    str += `<div>${createLinkList(items)}</div>`;
-  });
+  str += `<div>${createLinkList(menu_items[0])}</div>`;
+  str += `<div>${createLinkList(menu_items[1])}</div>`;
+  str += `<div>
+            ${createLinkList(menu_items[2])}
+            
+            <span class="action-buttons d-md-none"><a href="#" class="btn-action">Take Action</a><a href="#" class="btn-donate">Donate</a> </span>
+            <span class="sub-links">
+              <a href="#">Press</a>
+              <a href="#">Events</a>
+              <a href="#">Insights</a>
+            </span>
+
+            <social-links></social-links>
+          </div>`;
+
+  // menu_items.forEach((items) => {
+  //   str += `<div>${createLinkList(items)}</div>`;
+  // });
 
   return unsafeHTML(str);
 }
@@ -99,7 +113,8 @@ function createLinkList(items) {
 
   items.forEach((item) => {
     if (item.children) {
-      str += `<h6>${item.title}</h6><ul>`;
+      console.log(item);
+      str += `<input class="toggle" type="checkbox" id="${item.title}" name="fn"><h6><label for="${item.title}">${item.title} <i class="ibp-icons icon-caret-down" style="float:right"></i></label></h6><ul>`;
 
       item.children.forEach((child) => {
         str += `<li><a href="${child.url}">${child.title}</a></li>`;

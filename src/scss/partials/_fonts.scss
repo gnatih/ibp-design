@@ -1,19 +1,26 @@
 @font-face {
   font-family: "Adelle Sans";
   font-display: swap;
-  src: url("/fonts/Adelle-Sans.otf") format("opentype");
+  src: url("https://ibp-design.surge.sh/fonts/Adelle-Sans.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Adelle Sans";
   font-display: swap;
   font-weight: 700;
-  src: url("/fonts/Adelle-Sans-Bold.otf") format("opentype");
+  src: url("https://ibp-design.surge.sh/fonts/Adelle-Sans-Bold.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Adelle Sans";
   font-display: swap;
   font-weight: 800;
-  src: url("/fonts/Adelle-Sans-ExtraBold.otf") format("opentype");
+  src: url("https://ibp-design.surge.sh/fonts/Adelle-Sans-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "ibp-icons";
+  src: url("https://ibp-design.surge.sh/fonts/ibp-icons.eot?61158625f0b995aa1d0304c61126c797#iefix") format("embedded-opentype"),
+       url("https://ibp-design.surge.sh/fonts/ibp-icons.woff2?61158625f0b995aa1d0304c61126c797") format("woff2"),
+       url("https://ibp-design.surge.sh/fonts/ibp-icons.woff?61158625f0b995aa1d0304c61126c797") format("woff");
 }

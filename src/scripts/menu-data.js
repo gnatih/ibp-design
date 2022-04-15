@@ -3,10 +3,19 @@ export const menu = [
     title: "The Network",
     url: "#the-network",
     hero: "",
+    slug: "the-network",
     children: [
       {
         title: "Network Learnings",
         url: "#the-network",
+      },
+      {
+        title: "Network Directory",
+        url: "#network-directory",
+      },
+      {
+        title: "Join the Network",
+        url: "#join-the-network",
       },
     ],
   },
@@ -14,6 +23,7 @@ export const menu = [
   {
     title: "Open Budget Survey",
     url: "#open-budget-survey",
+    slug: "open-budget-survey",
     hero: "https://internationalbudget.org/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
     children: [
       {
@@ -24,7 +34,9 @@ export const menu = [
 
       {
         title: "Rankings",
-        url: "#open-budget-survey/rankings",
+        url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/rankings",
+        hero: "",
+        children: [],
       },
 
       {
@@ -35,6 +47,21 @@ export const menu = [
       {
         title: "Reports",
         url: "#open-budget-survey/reports",
+      },
+
+      {
+        title: "Calculator",
+        url: "#open-budget-survey/calculator",
+      },
+
+      {
+        title: "Download Data",
+        url: "#open-budget-survey/download-data",
+      },
+
+      {
+        title: "Road to 61 Roadmap",
+        url: "#open-budget-survey/roadmap",
       },
     ],
   },
@@ -49,15 +76,62 @@ export const menu = [
   {
     title: "Projects",
     url: "#projects",
+    children: [
+      {
+        title: "Grassroots Budget Advocacy",
+        url: "#projects/grassroots-budget-advocacy",
+      },
+      {
+        title: "Open Budget Initiative",
+        url: "#projects/open-budget-initiative",
+      },
+      {
+        title: "Tax Equity Initiative",
+        url: "#projects/tax-equity-initiative",
+      },
+      {
+        title: "Capacity Building",
+        url: "#projects/capacity-building",
+      },
+      {
+        title: "GIFT",
+        url: "#projects/gift",
+      },
+    ],
   },
 
   {
     title: "Resources",
     url: "#resources",
   },
-
+  {
+    title: "Stories",
+    url: "#stories",
+  },
   {
     title: "About",
     url: "#about",
+    children: [
+      {
+        title: "Our People",
+        url: "#about/our-people",
+      },
+      {
+        title: "Our Impact",
+        url: "#about/our-impact",
+      },
+      {
+        title: "Financials",
+        url: "#about/financials",
+      },
+      {
+        title: "Careers",
+        url: "#about/careers",
+      },
+      {
+        title: "Contact",
+        url: "#about/contact",
+      },
+    ],
   },
 ];

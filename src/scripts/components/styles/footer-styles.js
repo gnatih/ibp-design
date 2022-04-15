@@ -3,7 +3,12 @@ import { css } from "lit";
 export const FooterStyles = css`
   footer {
     background-color: var(--ibp-footer-bg-light);
+  }
+
+  .grid-12-col {
     padding: 0 44px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   hr {
@@ -31,48 +36,43 @@ export const FooterStyles = css`
     color: white;
   }
 
-  .signup-form {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-top: 44px;
-  }
-
-  .signup-form h6,
-  .signup-form .form {
-    text-align: left;
-    grid-column: 2/6;
-  }
-
-  .form {
-    display: flex;
-    margin-top: 8px;
-  }
-
-  .form input[type="text"] {
-    width: 100%;
-    border: none;
-  }
-
-  .form button {
-    min-width: 120px;
-    border: none;
-  }
-
   .copyright {
     text-align: center;
     color: rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
     font-size: 12px;
-    padding: 18px 0;
+    padding: 18px;
+  }
+
+  .footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-nav li {
+    padding: 8px 0;
+    border-bottom: 1px solid #3f8d98;
+  }
+
+  .footer-nav li:last-child {
+    border-bottom: none;
+  }
+
+  .footer-nav a {
+    color: white;
+    font-size: 16px;
   }
 
   @media screen and (max-width: 576px) {
-    .signup-form h6,
-    .signup-form .form,
     .main,
     .right,
     .left {
       grid-column: auto;
+    }
+
+    .grid-12-col {
+      padding: 0;
     }
 
     footer {
@@ -82,6 +82,7 @@ export const FooterStyles = css`
     .right {
       order: 3;
       padding: 0 32px;
+      padding-bottom: 32px;
     }
 
     .left {
@@ -89,9 +90,13 @@ export const FooterStyles = css`
       padding: 0 32px;
     }
 
-    .signup-form {
-      grid-template-columns: 1fr;
-      padding: 0 32px;
+    .copyright {
+      padding: 0 32px 32px 32px;
+      text-align: left;
+    }
+
+    hr {
+      margin-top: 44px;
     }
   }
 `;

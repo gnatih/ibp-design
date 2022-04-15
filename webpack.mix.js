@@ -11,6 +11,7 @@ mix.browserSync({
   index: "index.html",
   files: ["dist/css/*", "dist/index.html", "dist/js/*"],
   open: false,
+  cors: true,
 });
 
 mix.options({

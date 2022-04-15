@@ -1,15 +1,18 @@
 import { css } from "lit";
 
 export const PreHeaderStyles = css`
-  .pre-nav {
-    background: white;
+  :host {
     display: flex;
     justify-content: end;
     height: 35px;
-    align-items: center;
+    background: white;
   }
 
-  .pre-nav a {
+  .overlay :host {
+    background: green;
+  }
+
+  a {
     font-size: 13px;
     font-family: "Adelle Sans", sans-serif;
     font-weight: 800;
@@ -21,11 +24,9 @@ export const PreHeaderStyles = css`
     letter-spacing: 0.12em;
   }
 
-  .btn-donate {
-    background: #97e5ea;
-  }
-
-  .btn-action {
-    background: #dad5ca;
+  @media screen and (max-width: 576px) {
+    :host {
+      display: none;
+    }
   }
 `;

@@ -135,7 +135,6 @@ p {
   &--small {
     font-family: "DM Mono", monospace;
     font-size: 9px;
-    line-height: 10px;
   }
 }
 
@@ -145,14 +144,19 @@ p {
   letter-spacing: var(--ibp-letter-spacing-sm);
   line-height: 1;
 
+  @media screen and (max-width: 576px) {
+    font-size: 42px;
+    line-height: 45px;
+    margin-bottom: 15px;
+  }
+
   &--large {
     font-family: var(--ibp-heading-font-family);
     font-size: 120px;
-    line-height: 120px;
+    line-height: 1;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 576px) {
       font-size: 50px;
-      line-height: 30px;
     }
   }
 }
@@ -162,9 +166,19 @@ hr {
 }
 
 ibp-header {
+  min-height: var(--ibp-header-height);
+
   p {
     line-height: 29px;
+    margin-bottom: 32px;
+  }
+
+  [slot="nav-title"] {
+    margin-bottom: 36px;
+  }
+
+  @media screen and (max-width: 576px) {
+    min-height: auto;
   }
 }
-
 

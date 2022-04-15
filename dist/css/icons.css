@@ -1,8 +1,8 @@
 @font-face {
     font-family: "ibp-icons";
-    src: url("/fonts/ibp-icons.eot?61158625f0b995aa1d0304c61126c797#iefix") format("embedded-opentype"),
-url("/fonts/ibp-icons.woff2?61158625f0b995aa1d0304c61126c797") format("woff2"),
-url("/fonts/ibp-icons.woff?61158625f0b995aa1d0304c61126c797") format("woff");
+    src: url("/fonts/ibp-icons.eot?21aebc353aaf4134f6007317f8d65380#iefix") format("embedded-opentype"),
+url("/fonts/ibp-icons.woff2?21aebc353aaf4134f6007317f8d65380") format("woff2"),
+url("/fonts/ibp-icons.woff?21aebc353aaf4134f6007317f8d65380") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -28,27 +28,30 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-download:before {
     content: "\f104";
 }
-.icon-facebook:before {
+.icon-email:before {
     content: "\f105";
 }
-.icon-globe:before {
+.icon-facebook:before {
     content: "\f106";
 }
-.icon-linkedin:before {
+.icon-globe:before {
     content: "\f107";
 }
-.icon-menu:before {
+.icon-linkedin:before {
     content: "\f108";
 }
-.icon-more:before {
+.icon-menu:before {
     content: "\f109";
 }
-.icon-search:before {
+.icon-more:before {
     content: "\f10a";
 }
-.icon-twitter:before {
+.icon-search:before {
     content: "\f10b";
 }
-.icon-youtube:before {
+.icon-twitter:before {
     content: "\f10c";
+}
+.icon-youtube:before {
+    content: "\f10d";
 }

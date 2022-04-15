@@ -4,12 +4,12 @@ export const HeaderStyles = css`
   :host {
     display: block;
     background: #eceae5;
-    min-height: 648px;
+    min-height: var(--ibp-header-height);
     overflow: visible;
   }
 
   .banner {
-    min-height: 648px;
+    min-height: var(--ibp-header-height);
     width: 100%;
     z-index: 0;
   }
@@ -43,16 +43,14 @@ export const HeaderStyles = css`
     font-family: var(--ibp-heading-font-family);
     font-size: var(--ibp-page-title-font-size);
     font-weight: 400;
+    line-height: 1;
     letter-spacing: var(--ibp-letter-spacing-sm);
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 32px;
   }
 
-  .nav-content {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(12, 1fr);
-    justify-content: start;
-    padding: 0 44px;
+  ::slotted([slot="nav-description"]) {
+    font-size: 18px;
   }
 
   .nav-content--header {
@@ -86,22 +84,6 @@ export const HeaderStyles = css`
     background: #f00;
   }
 
-  ::slotted([name="secondary-nav"]) {
-    grid-column: span 3;
-  }
-
-  @media screen and (max-width: 576px) {
-    .nav-content {
-      gap: 12px;
-      grid-template-columns: 1fr;
-    }
-
-    .secondary-nav,
-    .nav-content--header {
-      grid-column: auto;
-    }
-  }
-
   .secondary-nav ul {
     list-style: none;
     margin: 0;
@@ -124,15 +106,33 @@ export const HeaderStyles = css`
     border: none;
   }
 
+  .banner {
+    display: block;
+    min-height: 100vh;
+  }
+
   @media screen and (max-width: 576px) {
-    .banner,
     :host {
-      display: block;
-      min-height: 100vh;
+      min-height: auto;
     }
 
     .nav-content {
-      padding: 0 32px;
+      gap: 12px;
+      grid-template-columns: 1fr;
+    }
+
+    .secondary-nav,
+    .nav-content--header {
+      grid-column: auto;
+    }
+
+    .main-nav-wrapper {
+      padding: 0 12px;
+    }
+
+    .page-title {
+      font-size: 42px;
+      line-height: 45px;
     }
   }
 `;
