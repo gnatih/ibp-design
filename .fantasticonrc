@@ -3,8 +3,10 @@ module.exports = {
   inputDir: "src/svgs",
   outputDir: "dist/fonts",
   assetTypes: ["css"],
-  fontsUrl: "/fonts",
+  fontTypes: ["eot", "woff", "woff2", "ttf"],
+  fontsUrl: "http://localhost:3000/fonts",
   normalize: true,
+  fontHeight: 300,
   pathOptions: {
     css: "dist/css/icons.css",
   },

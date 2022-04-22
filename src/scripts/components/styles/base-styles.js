@@ -196,43 +196,76 @@ export const BaseStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .icon-caret-down:before {
+  .icon-arrow-left:before {
     content: "\\f101";
   }
-  .icon-caret-right-circle:before {
+  .icon-arrow-up:before {
     content: "\\f102";
   }
-  .icon-close:before {
+  .icon-budget:before {
     content: "\\f103";
   }
-  .icon-download:before {
+  .icon-caret-down:before {
     content: "\\f104";
   }
-  .icon-email:before {
+  .icon-caret-left:before {
     content: "\\f105";
   }
-  .icon-facebook:before {
+  .icon-caret-right-circle:before {
     content: "\\f106";
   }
-  .icon-globe:before {
+  .icon-caret-right:before {
     content: "\\f107";
   }
-  .icon-linkedin:before {
+  .icon-close:before {
     content: "\\f108";
   }
-  .icon-menu:before {
+  .icon-download:before {
     content: "\\f109";
   }
-  .icon-more:before {
+  .icon-email-filled:before {
     content: "\\f10a";
   }
-  .icon-search:before {
+  .icon-email:before {
     content: "\\f10b";
   }
-  .icon-twitter:before {
+  .icon-facebook:before {
     content: "\\f10c";
   }
-  .icon-youtube:before {
+  .icon-filter:before {
     content: "\\f10d";
+  }
+  .icon-globe:before {
+    content: "\\f10e";
+  }
+  .icon-linkedin:before {
+    content: "\\f10f";
+  }
+  .icon-menu:before {
+    content: "\\f110";
+  }
+  .icon-more:before {
+    content: "\\f111";
+  }
+  .icon-participation:before {
+    content: "\\f112";
+  }
+  .icon-search:before {
+    content: "\\f113";
+  }
+  .icon-share:before {
+    content: "\\f114";
+  }
+  .icon-transparency:before {
+    content: "\\f115";
+  }
+  .icon-twitter:before {
+    content: "\\f116";
+  }
+  .icon-youtube:before {
+    content: "\\f117";
+  }
+  .icon-zoom:before {
+    content: "\\f118";
   }
 `;

@@ -27,6 +27,10 @@ export const HeaderStyles = css`
     color: white;
   }
 
+  .has-image .infobox {
+    color: var(--ibp-body-text);
+  }
+
   .banner.has-image .nav li a.active {
     background: rgba(255, 255, 255, 0.3);
   }
@@ -47,18 +51,23 @@ export const HeaderStyles = css`
     letter-spacing: var(--ibp-letter-spacing-sm);
     margin-top: 0;
     margin-bottom: 32px;
-  }
-
-  ::slotted([slot="nav-description"]) {
-    font-size: 18px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
   }
 
   .nav-content--header {
     grid-column: span 6;
+    padding-bottom: 44px;
   }
 
   .secondary-nav {
     grid-column: span 2;
+  }
+
+  .infobox {
+    grid-column: 9/13;
+    background: white;
   }
 
   .spacer {
@@ -106,9 +115,8 @@ export const HeaderStyles = css`
     border: none;
   }
 
-  .banner {
-    display: block;
-    min-height: 100vh;
+  ::slotted[name="infobox"] {
+    background: blue;
   }
 
   @media screen and (max-width: 576px) {

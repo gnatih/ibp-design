@@ -15,7 +15,8 @@
       }
 
       .ibp-icons {
-        margin: 0 1em;
+        display: inline-block;
+        margin: 1em;
       }
 
       .ibp-icons:before {
@@ -28,15 +29,18 @@
       }
     </style>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/icons.css" />
 
     <script src="js/ibp-components.js" type="module"></script>
   </head>
   <body class="loading">
     <div class="header loading">
-      <ibp-header>
+      <ibp-header hide-sidebar>
         <!-- <h1 class="page-title" slot="nav-title">Country results</h1> -->
-        <p slot="nav-description">The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p>
-        <p slot="nav-description">Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>
+        <div class="page-description" slot="nav-description">
+          <p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p>
+          <p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>
+        </div>
 
         <!-- <div slot="secondary-nav">
         <hr />
@@ -66,17 +70,29 @@
       <p class="numbers--small">012345678</p>
 
       <p>
-        <i class="ibp-icons icon-twitter"></i>
-        <i class="ibp-icons icon-facebook"></i>
-        <i class="ibp-icons icon-linkedin"></i>
-        <i class="ibp-icons icon-youtube"></i>
-        <i class="ibp-icons icon-search"></i>
-        <i class="ibp-icons icon-menu"></i>
+        <i class="ibp-icons icon-arrow-left"></i>
+        <i class="ibp-icons icon-arrow-up"></i>
+        <i class="ibp-icons icon-budget"></i>
         <i class="ibp-icons icon-caret-down"></i>
+        <i class="ibp-icons icon-caret-left"></i>
         <i class="ibp-icons icon-caret-right-circle"></i>
+        <i class="ibp-icons icon-caret-right"></i>
+        <i class="ibp-icons icon-close"></i>
         <i class="ibp-icons icon-download"></i>
+        <i class="ibp-icons icon-email-filled"></i>
+        <i class="ibp-icons icon-email"></i>
+        <i class="ibp-icons icon-facebook"></i>
+        <i class="ibp-icons icon-filter"></i>
         <i class="ibp-icons icon-globe"></i>
-        <i class="ibp-icons icon-more"></i>
+        <i class="ibp-icons icon-linkedin"></i>
+        <i class="ibp-icons icon-menu"></i>
+        <i class="ibp-icons icon-participation"></i>
+        <i class="ibp-icons icon-search"></i>
+        <i class="ibp-icons icon-share"></i>
+        <i class="ibp-icons icon-transparency"></i>
+        <i class="ibp-icons icon-twitter"></i>
+        <i class="ibp-icons icon-youtube"></i>
+        <i class="ibp-icons icon-zoom"></i>
       </p>
 
       <p>
@@ -98,6 +114,17 @@
         facere eaque obcaecati iste explicabo nemo, sint molestiae cumque deserunt. Itaque asperiores doloremque eligendi, illum distinctio eaque iste officiis libero eius praesentium! Beatae, perspiciatis minima. Voluptates, exercitationem
         minus? Aspernatur necessitatibus neque nostrum alias voluptate distinctio qui placeat, ipsum doloribus numquam optio porro ducimus dolore reiciendis nemo repellendus iusto.
       </p>
+
+      <div style="background: var(--ibp-ecru); padding: 44px">
+        <a href="#" class="btn btn--dark">View 2021 Global Reports <i class="icon-caret-right-circle"></i></a>
+
+        <a href="#" class="btn btn-pill btn-pill--dark">Download <i class="icon-download"></i></a>
+      </div>
+
+      <div style="padding: 44px">
+        <a href="#" class="btn">View 2021 Global Reports <i class="icon-caret-right-circle"></i></a>
+        <a href="#" class="btn btn-pill">Download <i class="icon-download"></i></a>
+      </div>
     </div>
 
     <ibp-footer></ibp-footer>
