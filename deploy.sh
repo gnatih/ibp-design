@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -e
-npm run build
+npx mix --production
 
 cd dist
 
