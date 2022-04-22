@@ -1,9 +1,9 @@
 @font-face {
     font-family: "ibp-icons";
-    src: url("http://localhost:3000/fonts/ibp-icons.eot?7eb7a5c6cf926814bff37cdcf9234f98#iefix") format("embedded-opentype"),
-url("http://localhost:3000/fonts/ibp-icons.woff?7eb7a5c6cf926814bff37cdcf9234f98") format("woff"),
-url("http://localhost:3000/fonts/ibp-icons.woff2?7eb7a5c6cf926814bff37cdcf9234f98") format("woff2"),
-url("http://localhost:3000/fonts/ibp-icons.ttf?7eb7a5c6cf926814bff37cdcf9234f98") format("truetype");
+    src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot?7eb7a5c6cf926814bff37cdcf9234f98#iefix") format("embedded-opentype"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff?7eb7a5c6cf926814bff37cdcf9234f98") format("woff"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2?7eb7a5c6cf926814bff37cdcf9234f98") format("woff2"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?7eb7a5c6cf926814bff37cdcf9234f98") format("truetype");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
