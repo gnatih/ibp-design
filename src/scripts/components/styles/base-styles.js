@@ -55,8 +55,12 @@ export const BaseStyles = css`
     margin-right: 25px;
   }
 
+  .main-nav-wrapper {
+    background: white;
+  }
+
   .main-nav {
-    min-height: 135px;
+    min-height: var(--ibp-main-nav-height);
     align-items: center;
     font-famiy: "Adelle Sans", sans-serif;
   }
@@ -177,7 +181,7 @@ export const BaseStyles = css`
     }
   }
 
-  @media screen and (max-width: 1290px) {
+  @media screen and (max-width: 1190px) {
     .d-xs-none {
       display: none;
     }

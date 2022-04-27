@@ -70,7 +70,7 @@ export class IbpHeader extends LitElement {
       <div class="${classMap({ banner: true, "has-image": this.background || this.current_menu.hero })}" style="background: url(${this.background || this.current_menu.hero}) center/cover no-repeat">
         <div class="main-nav-wrapper container">
           <div class="main-nav grid-12-col">
-            <a class="logo" href="/"><ibp-logo fill="#000"></ibp-logo></a>
+            <a class="logo" href="/"><ibp-logo></ibp-logo></a>
             <ul class="nav">
               ${renderPrimaryMenu(this.primary_menu)}
               <li class="d-md-none">
