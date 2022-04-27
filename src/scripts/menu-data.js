@@ -1,21 +1,44 @@
 export const menu = [
   {
-    title: "The Network",
-    url: "#the-network",
+    title: "About",
+    url: "https://internationalbudget.org/about-us",
     hero: "",
-    slug: "the-network",
+    slug: "about",
     children: [
       {
-        title: "Network Learnings",
-        url: "#the-network",
+        title: "About Us",
+        url: "https://internationalbudget.org/about-us",
       },
       {
-        title: "Network Directory",
-        url: "#network-directory",
+        title: "Our Network",
+        url: "https://internationalbudget.org/findgroup",
       },
       {
-        title: "Join the Network",
-        url: "#join-the-network",
+        title: "Our People",
+        url: "https://internationalbudget.org/about-us/our-people/",
+      },
+      {
+        title: "Our Learning",
+        url: "https://internationalbudget.org/about-us/learning/",
+      },
+      {
+        title: "Our Impact",
+        url: "https://internationalbudget.org/about-us/annual-report/",
+      },
+    ],
+  },
+
+  {
+    title: "Our Work",
+    url: "https://internationalbudget.org/our-work",
+    children: [
+      {
+        title: "Our Work",
+        url: "https://internationalbudget.org/our-work",
+      },
+      {
+        title: "Where we work",
+        url: "https://internationalbudget.org/countries",
       },
     ],
   },
@@ -36,8 +59,7 @@ export const menu = [
         title: "Rankings",
         url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/rankings",
         hero: "",
-        description:
-          "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
+        description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
         children: [],
       },
 
@@ -70,71 +92,45 @@ export const menu = [
   },
 
   {
-    title: "Countries",
-    url: "#countries",
-    hero: "",
-    children: [],
-  },
-
-  {
-    title: "Projects",
-    url: "#projects",
+    title: "Join Us",
+    url: "https://internationalbudget.org/support-us/",
     children: [
       {
-        title: "Grassroots Budget Advocacy",
-        url: "#projects/grassroots-budget-advocacy",
+        title: "Join Us",
+        url: "https://internationalbudget.org/support-us/",
       },
       {
-        title: "Open Budget Initiative",
-        url: "#projects/open-budget-initiative",
+        title: "Attend an Event",
+        url: "https://internationalbudget.org/events/",
       },
       {
-        title: "Tax Equity Initiative",
-        url: "#projects/tax-equity-initiative",
+        title: "Join our Call to Action",
+        url: "https://internationalbudget.org/campaign-to-open-budgets/",
       },
       {
-        title: "Capacity Building",
-        url: "#projects/capacity-building",
+        title: "Get Updates",
+        url: "https://internationalbudget.org/library/publications/sign-up-for-ibp-e-publications/",
       },
       {
-        title: "GIFT",
-        url: "#projects/gift",
+        title: "Apply for a Job",
+        url: "https://internationalbudget.org/job-opportunities/",
       },
     ],
   },
-
   {
-    title: "Resources",
-    url: "#resources",
+    title: "Publications",
+    url: "https://internationalbudget.org/library/publications/",
+  },
+  {
+    title: "Blog",
+    url: "https://internationalbudget.org/blog",
   },
   {
     title: "Stories",
-    url: "#stories",
+    url: "https://story.internationalbudget.org",
   },
   {
-    title: "About",
-    url: "#about",
-    children: [
-      {
-        title: "Our People",
-        url: "#about/our-people",
-      },
-      {
-        title: "Our Impact",
-        url: "#about/our-impact",
-      },
-      {
-        title: "Financials",
-        url: "#about/financials",
-      },
-      {
-        title: "Careers",
-        url: "#about/careers",
-      },
-      {
-        title: "Contact",
-        url: "#about/contact",
-      },
-    ],
+    title: "News",
+    url: "https://internationalbudget.org/pressarchive/",
   },
 ];

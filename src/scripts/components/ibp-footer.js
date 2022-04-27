@@ -29,7 +29,7 @@ export class IbpFooter extends LitElement {
           </ul>
         </div>
         <div class="main">
-          <ibp-logo fill="#fff" width="280"></ibp-logo>
+          <ibp-logo flat width="280"></ibp-logo>
 
           <newsletter-form show-heading style="padding: 0 44px; margin: 44px 0;"></newsletter-form>
 
