@@ -49,6 +49,7 @@ export const menu = [
       {
         title: "Reports",
         url: "#open-budget-survey/reports",
+        url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/reports",
       },
 
       {

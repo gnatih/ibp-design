@@ -59,8 +59,9 @@ export class IbpHeader extends LitElement {
   _getSidebar() {
     if (!this.hide_sidebar) {
       return html`<div class="secondary-nav">
-        <slot name="secondary-nav">${renderSecondaryMenu(this.parent_menu)}</slot>
-      </div>`;
+          <slot name="secondary-nav">${renderSecondaryMenu(this.parent_menu)}</slot>
+        </div>
+        <div class="spacer"></div>`;
     }
   }
 
