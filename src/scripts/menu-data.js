@@ -45,20 +45,20 @@ export const menu = [
 
   {
     title: "Open Budget Survey",
-    url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey",
+    url: "https://www2-ibp.wp.localhost/soem-title",
     slug: "open-budget-survey",
     hero: "https://internationalbudget.org/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
     children: [
       {
-        title: "Overview",
-        url: "#open-budget-survey",
+        title: "Open Budget Survey",
+        url: "https://www2-ibp.wp.localhost/soem-title",
         hero: "https://internationalbudget.org/wp-content/uploads/senegal_onas_urbasen-scaled.webp",
+        description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
       },
 
       {
         title: "Rankings",
         url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/rankings",
-        hero: "",
         description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
         children: [],
       },

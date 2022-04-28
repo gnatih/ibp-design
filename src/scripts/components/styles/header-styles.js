@@ -23,9 +23,9 @@ export const HeaderStyles = css`
     background-blend-mode: multiply;
   }
 
-  .banner.has-image .nav li a {
-    color: white;
-  }
+  // .banner.has-image .nav li a {
+  //   color: white;
+  // }
 
   .has-image .infobox {
     color: var(--ibp-body-text);

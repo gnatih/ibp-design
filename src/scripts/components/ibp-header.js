@@ -8,14 +8,6 @@ import "./partials/pre-header";
 import "./partials/ibp-logo";
 import { classMap } from "lit/directives/class-map.js";
 
-onhashchange = () => {
-  if (window.location.hash !== "") {
-    window.location.reload();
-  }
-};
-
-const ibpHome = "http://ibp.wp.localhost";
-
 export class IbpHeader extends LitElement {
   static styles = [BaseStyles, HeaderStyles];
 
@@ -42,13 +34,15 @@ export class IbpHeader extends LitElement {
 
     fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res);
+
       this.primary_menu = primary;
       this.current_menu = current;
       this.parent_menu = parent;
     });
   }
 
-  showMenuOverlay() {
+  showMenuOverlay(e) {
+    e.preventDefault();
     this.show_menu = true;
   }
 
@@ -68,9 +62,9 @@ export class IbpHeader extends LitElement {
   render() {
     return html`
       <pre-header></pre-header>
-      <div class="${classMap({ banner: true, "has-image": this.background || this.current_menu.hero })}" style="background: url(${this.background || this.current_menu.hero}) center/cover no-repeat">
-        <div class="main-nav-wrapper container">
-          <div class="main-nav grid-12-col">
+      <div class="${classMap({ banner: true, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
+        <div class="main-nav-wrapper">
+          <div class="main-nav grid-12-col container">
             <a class="logo" href="/"><ibp-logo></ibp-logo></a>
             <ul class="nav">
               ${renderPrimaryMenu(this.primary_menu)}

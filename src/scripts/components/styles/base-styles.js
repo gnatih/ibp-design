@@ -69,6 +69,10 @@ export const BaseStyles = css`
     grid-column: 1/3;
   }
 
+  .nav-content-wrapper {
+    padding-top: 44px;
+  }
+
   .nav,
   .mobile-nav {
     justify-self: end;
@@ -199,7 +203,6 @@ export const BaseStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   .icon-arrow-left:before {
     content: "\\f101";
   }
@@ -248,28 +251,25 @@ export const BaseStyles = css`
   .icon-menu:before {
     content: "\\f110";
   }
-  .icon-more:before {
+  .icon-participation:before {
     content: "\\f111";
   }
-  .icon-participation:before {
+  .icon-search:before {
     content: "\\f112";
   }
-  .icon-search:before {
+  .icon-share:before {
     content: "\\f113";
   }
-  .icon-share:before {
+  .icon-transparency:before {
     content: "\\f114";
   }
-  .icon-transparency:before {
+  .icon-twitter:before {
     content: "\\f115";
   }
-  .icon-twitter:before {
+  .icon-youtube:before {
     content: "\\f116";
   }
-  .icon-youtube:before {
-    content: "\\f117";
-  }
   .icon-zoom:before {
-    content: "\\f118";
+    content: "\\f117";
   }
 `;

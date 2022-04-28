@@ -16,6 +16,7 @@ export const MenuOverlayStyles = css`
     opacity: 1;
     top: 0;
     pointer-events: auto;
+    z-index: 999;
   }
 
   .scroll-container {
@@ -73,6 +74,7 @@ export const MenuOverlayStyles = css`
   }
 
   .nav-content-wrapper {
+    padding-top: 0;
     flex: 1;
   }
 
@@ -89,6 +91,7 @@ export const MenuOverlayStyles = css`
 
   .nav-footer newsletter-form {
     grid-column: 7/13;
+    align-self: center;
   }
 
   .full-menu {

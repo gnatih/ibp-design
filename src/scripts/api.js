@@ -16,25 +16,27 @@ export function createPrimaryMenu(menu) {
   let _parent = {};
 
   menu.forEach((item) => {
-    let href = window.location.href;
+    let href = window.location.href.replace(/\/$/, "");
+    let url = item.url.replace(/\/$/, "");
     let parent = {
       title: item.title,
       url: item.url,
       hero: item.hero,
     };
 
-    if (item.url == href) {
+    if (url == href) {
       _current = parent;
       parent.active = true;
     }
 
     if (item.children) {
       item.children.forEach((item_child) => {
+        let item_url = item_child.url.replace(/\/$/, "");
         let child = {
           title: item_child.title,
-          url: item_child.url,
+          url: item_url,
           hero: item_child.hero,
-          active: item_child.url == href,
+          active: item_url == href,
         };
 
         if (item_child.url == href) {
@@ -52,6 +54,8 @@ export function createPrimaryMenu(menu) {
     _menu.push(parent);
   });
 
+  console.log(_current);
+
   return { primary: _menu, current: _current, parent: _parent };
 }
 
@@ -68,6 +72,8 @@ export function renderPrimaryMenu(menu) {
 }
 
 export function renderSecondaryMenu(menu) {
+  console.log(menu);
+
   if (menu.children && menu.children.length > 1) {
     let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
 
@@ -84,7 +90,7 @@ export function renderSecondaryMenu(menu) {
 export function renderFullMenu(menu) {
   let str = "";
 
-  let menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 1), menu.slice(menu.length - 1, menu.length)];
+  let menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 4), menu.slice(menu.length - 4, menu.length)];
 
   str += `<div>${createLinkList(menu_items[0])}</div>`;
   str += `<div>${createLinkList(menu_items[1])}</div>`;
@@ -113,7 +119,6 @@ function createLinkList(items) {
 
   items.forEach((item) => {
     if (item.children) {
-      console.log(item);
       str += `<input class="toggle" type="checkbox" id="${item.title}" name="fn"><h6><label for="${item.title}">${item.title} <i class="ibp-icons icon-caret-down" style="float:right"></i></label></h6><ul>`;
 
       item.children.forEach((child) => {

@@ -19,7 +19,9 @@ export class MenuOverlay extends LitElement {
     return [BaseStyles, MenuOverlayStyles];
   }
 
-  hideMenuOverlay() {
+  hideMenuOverlay(e) {
+    e.preventDefault();
+
     this.visible = false;
     this.dispatchEvent(new CustomEvent("hideMenuOverlay", { detail: { visible: false } }));
   }
