@@ -42,4 +42,9 @@
 
   --ibp-header-height: 643px;
   --ibp-main-nav-height: 113px;
+
+  /** elementor overrides */
+
+  --e-global-color-text: var(--ibp-body-text);
+  --e-global-typography-text-font-family: var(--ibp-body-font-family);
 }
