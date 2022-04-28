@@ -73,6 +73,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: #222222;
+  -webkit-font-smoothing: antialiased;
 }
 @media screen and (max-width: 375px) {
   body {
