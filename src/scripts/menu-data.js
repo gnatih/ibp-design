@@ -1,3 +1,5 @@
+const drupal_url = process.env == "production" ? "https://dev-obs-redesign.pantheonsite.io/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+
 export const menu = [
   {
     title: "About",
@@ -58,20 +60,19 @@ export const menu = [
 
       {
         title: "Rankings",
-        url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/rankings",
+        url: `${drupal_url}/rankings`,
         description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
         children: [],
       },
 
       {
         title: "Country Results",
-        url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/country-results",
+        url: `${drupal_url}/country-results`,
       },
 
       {
         title: "Reports",
-        url: "#open-budget-survey/reports",
-        url: "https://international-budget-partnership.ddev.site:4443/open-budget-survey/reports",
+        url: `${drupal_url}/reports`,
       },
 
       {
