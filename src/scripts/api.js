@@ -1,6 +1,7 @@
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { menu } from "./menu-data";
 
+console.log(menu);
 export async function fetchData(path) {
   // let base_url = "https://ibp.wp.localhost";
 
@@ -72,8 +73,6 @@ export function renderPrimaryMenu(menu) {
 }
 
 export function renderSecondaryMenu(menu) {
-  console.log(menu);
-
   if (menu.children && menu.children.length > 1) {
     let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
 

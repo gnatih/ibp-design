@@ -259,6 +259,21 @@ ibp-header {
   }
 }
 
+.list-item--checkbox {
+  list-style: none; 
+  background-image: url($images-path + "/checkbox.svg");
+  padding: 0 0 0 32px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  margin-bottom: 1em;
+}
+
+ul.with-checkbox {
+  li { 
+    @extend .list-item--checkbox;
+  }
+}
+
 
 // .btn {
 //   font-size: 18px;
