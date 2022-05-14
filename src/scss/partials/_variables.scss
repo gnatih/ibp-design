@@ -24,6 +24,11 @@
   --obs-rating-3: #ffe179;
   --obs-rating-4: #ffb978;
   --obs-rating-5: #ff7b5d;
+  --obs-rating-very-good: var(--obs-rating-1);
+  --obs-rating-good: var(--obs-rating-2);
+  --obs-rating-medium: var(--obs-rating-3);
+  --obs-rating-bad: var(--obs-rating-4);
+  --obs-rating-worse: var(--obs-rating-5);
 
   /**headings**/
   --ibp-heading-font-family: "DM Serif Display", serif;
@@ -44,4 +49,4 @@
   --ibp-main-nav-height: 113px;
 }
 
-$images-path: "https://gnatih.github.io/images/";
+$images-path: "https://gnatih.github.io/ibp-design/images/";

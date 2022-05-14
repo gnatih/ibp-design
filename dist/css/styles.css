@@ -22,6 +22,11 @@
   --obs-rating-3: #ffe179;
   --obs-rating-4: #ffb978;
   --obs-rating-5: #ff7b5d;
+  --obs-rating-very-good: var(--obs-rating-1);
+  --obs-rating-good: var(--obs-rating-2);
+  --obs-rating-medium: var(--obs-rating-3);
+  --obs-rating-bad: var(--obs-rating-4);
+  --obs-rating-worse: var(--obs-rating-5);
   /**headings**/
   --ibp-heading-font-family: "DM Serif Display", serif;
   --ibp-heading-1-font-size: 58px;
@@ -162,6 +167,13 @@ h6 {
   }
 }
 
+blockquote {
+  font-family: var(--ibp-heading-font-family);
+}
+blockquote cite {
+  font-family: var(--ibp-body-text);
+}
+
 .section-title {
   text-transform: uppercase;
   letter-spacing: var(--ibp-letter-spacing);
@@ -289,18 +301,50 @@ ibp-header [slot=nav-title] {
 @media screen and (max-width: 576px) {
   .container {
     max-width: 100%;
-    padding: 0 32px;
+    padding: 0 12px;
     margin: 0 auto;
   }
 }
 
 .list-item--checkbox, ul.with-checkbox li {
   list-style: none;
-  background-image: url("https://gnatih.github.io/images//checkbox.svg");
+  background-image: url("https://gnatih.github.io/ibp-design/images//checkbox.svg");
   padding: 0 0 0 32px;
   background-repeat: no-repeat;
   background-size: 24px;
   margin-bottom: 1em;
+}
+
+.bg-ecru {
+  background-color: var(--ibp-ecru);
+}
+.bg-high, .bg-teal {
+  background-color: var(--obs-rating-1);
+}
+.bg-medium {
+  background-color: var(--obs-rating-3);
+}
+.bg-low {
+  background-color: var(--obs-rating-5);
+}
+.bg-white {
+  background-color: #ffffff;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
 
 .icon-circle {

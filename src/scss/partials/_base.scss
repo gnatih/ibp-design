@@ -92,6 +92,14 @@ h6 {
 }
 
 
+blockquote {
+  font-family: var(--ibp-heading-font-family);
+
+  cite {
+    font-family: var(--ibp-body-text);
+  }
+}
+
 // p {
 //   font-size: 16px;
 //   line-height: 22px;
@@ -229,6 +237,7 @@ ibp-header {
     text-transform: uppercase;
     background: var(--ibp-ecru);
     padding: 6px 12px 5px 12px;
+    white-space: nowrap;
 
     &:hover {
       background: white; 
@@ -254,7 +263,7 @@ ibp-header {
 
   @media screen and (max-width: 576px) {
     max-width: 100%;
-    padding: 0 32px;
+    padding: 0 12px;
     margin: 0 auto;
   }
 }
@@ -274,6 +283,44 @@ ul.with-checkbox {
   }
 }
 
+
+.bg {
+  &-ecru {
+    background-color: var(--ibp-ecru);
+  }
+
+  &-high, &-teal {
+    background-color: var(--obs-rating-1);
+  }
+
+  &-medium {
+    background-color: var(--obs-rating-3);
+  }
+
+  &-low {
+    background-color: var(--obs-rating-5);
+  }
+
+  &-white {
+    background-color: #ffffff;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
 
 // .btn {
 //   font-size: 18px;

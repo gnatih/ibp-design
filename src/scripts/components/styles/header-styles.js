@@ -23,10 +23,6 @@ export const HeaderStyles = css`
     background-blend-mode: multiply;
   }
 
-  // .banner.has-image .nav li a {
-  //   color: white;
-  // }
-
   .has-image .infobox {
     color: var(--ibp-body-text);
   }
@@ -120,7 +116,8 @@ export const HeaderStyles = css`
   }
 
   @media screen and (max-width: 576px) {
-    :host {
+    :host,
+    .banner {
       min-height: auto;
     }
 
