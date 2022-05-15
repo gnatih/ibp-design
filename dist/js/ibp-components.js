@@ -1100,7 +1100,7 @@ var menu = [{
   }]
 }, {
   title: "Open Budget Survey",
-  url: "".concat(wp_url, "/open-budget-survey"),
+  url: "".concat(wp_url, "/obs-v2"),
   slug: "open-budget-survey",
   hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
   children: [{
