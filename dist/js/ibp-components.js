@@ -1121,13 +1121,13 @@ var menu = [{
     url: "".concat(drupal_url, "/reports")
   }, {
     title: "Calculator",
-    url: "#open-budget-survey/calculator"
+    url: "".concat(wp_url, "/obs-v2/calculator")
   }, {
     title: "Download Data",
-    url: "#open-budget-survey/download-data"
+    url: "".concat(wp_url, "/obs-v2/download-data")
   }, {
     title: "Road to 61 Roadmap",
-    url: "#open-budget-survey/roadmap"
+    url: "".concat(wp_url, "/open-budget-survey/roadmap")
   }]
 }, {
   title: "Join Us",

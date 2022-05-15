@@ -80,17 +80,17 @@ export const menu = [
 
       {
         title: "Calculator",
-        url: "#open-budget-survey/calculator",
+        url: `${wp_url}/obs-v2/calculator`,
       },
 
       {
         title: "Download Data",
-        url: "#open-budget-survey/download-data",
+        url: `${wp_url}/obs-v2/download-data`,
       },
 
       {
         title: "Road to 61 Roadmap",
-        url: "#open-budget-survey/roadmap",
+        url: `${wp_url}/open-budget-survey/roadmap`,
       },
     ],
   },
