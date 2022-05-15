@@ -1065,7 +1065,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var href = window.location.href;
 console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://internationalbudget.org/obs-v2";
+var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://internationalbudget.org";
 var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://internationalbudget.org/obs-v2" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
 var menu = [{
   title: "About",
@@ -1105,7 +1105,7 @@ var menu = [{
   hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
   children: [{
     title: "Open Budget Survey",
-    url: "".concat(wp_url, "/open-budget-survey"),
+    url: "".concat(wp_url, "/obs-v2"),
     hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
     description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>"
   }, {
