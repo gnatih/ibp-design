@@ -280,6 +280,7 @@ ibp-header [slot=nav-title] {
   text-transform: uppercase;
   background: var(--ibp-ecru);
   padding: 6px 12px 5px 12px;
+  white-space: nowrap;
 }
 .btn-pill:hover {
   background: white;

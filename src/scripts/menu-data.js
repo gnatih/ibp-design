@@ -1,7 +1,7 @@
 const href = window.location.href;
 console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-const wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://www2.internationalbudget.org";
-const drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://dev-obs-redesign.pantheonsite.io/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+const wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://internationalbudget.org/obs-v2";
+const drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://internationalbudget.org/obs-v2" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
 
 export const menu = [
   {

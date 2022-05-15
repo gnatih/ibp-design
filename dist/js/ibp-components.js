@@ -40,7 +40,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-console.log(_menu_data__WEBPACK_IMPORTED_MODULE_2__.menu);
 function fetchData(_x) {
   return _fetchData.apply(this, arguments);
 }
@@ -104,7 +103,6 @@ function createPrimaryMenu(menu) {
 
     _menu.push(parent);
   });
-  console.log(_current);
   return {
     primary: _menu,
     current: _current,
@@ -134,10 +132,7 @@ function renderFullMenu(menu) {
   var menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 4), menu.slice(menu.length - 4, menu.length)];
   str += "<div>".concat(createLinkList(menu_items[0]), "</div>");
   str += "<div>".concat(createLinkList(menu_items[1]), "</div>");
-  str += "<div>\n            ".concat(createLinkList(menu_items[2]), "\n            \n            <span class=\"action-buttons d-md-none\"><a href=\"#\" class=\"btn-action\">Take Action</a><a href=\"#\" class=\"btn-donate\">Donate</a> </span>\n            <span class=\"sub-links\">\n              <a href=\"#\">Press</a>\n              <a href=\"#\">Events</a>\n              <a href=\"#\">Insights</a>\n            </span>\n\n            <social-links></social-links>\n          </div>"); // menu_items.forEach((items) => {
-  //   str += `<div>${createLinkList(items)}</div>`;
-  // });
-
+  str += "<div>\n            ".concat(createLinkList(menu_items[2]), "\n            \n            <span class=\"action-buttons d-md-none\"><a href=\"#\" class=\"btn-action\">Take Action</a><a href=\"#\" class=\"btn-donate\">Donate</a> </span>\n            <span class=\"sub-links\">\n              <a href=\"#\">Press</a>\n              <a href=\"#\">Events</a>\n              <a href=\"#\">Insights</a>\n            </span>\n\n            <social-links></social-links>\n          </div>");
   return (0,lit_directives_unsafe_html_js__WEBPACK_IMPORTED_MODULE_1__.unsafeHTML)(str);
 }
 
@@ -1070,8 +1065,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var href = window.location.href;
 console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://www2.internationalbudget.org";
-var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://dev-obs-redesign.pantheonsite.io/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://internationalbudget.org/obs-v2";
+var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://internationalbudget.org/obs-v2" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
 var menu = [{
   title: "About",
   url: "https://internationalbudget.org/about-us",

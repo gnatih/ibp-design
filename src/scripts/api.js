@@ -1,7 +1,6 @@
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { menu } from "./menu-data";
 
-console.log(menu);
 export async function fetchData(path) {
   // let base_url = "https://ibp.wp.localhost";
 
@@ -55,8 +54,6 @@ export function createPrimaryMenu(menu) {
     _menu.push(parent);
   });
 
-  console.log(_current);
-
   return { primary: _menu, current: _current, parent: _parent };
 }
 
@@ -105,10 +102,6 @@ export function renderFullMenu(menu) {
 
             <social-links></social-links>
           </div>`;
-
-  // menu_items.forEach((items) => {
-  //   str += `<div>${createLinkList(items)}</div>`;
-  // });
 
   return unsafeHTML(str);
 }
