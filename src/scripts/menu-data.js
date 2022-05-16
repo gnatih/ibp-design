@@ -1,7 +1,7 @@
 const href = window.location.href;
 console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-const wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://internationalbudget.org";
-const drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://internationalbudget.org/obs-v2" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+const wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://www2.internationalbudget.org";
+const drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://dev-obs-redesign.pantheonsite.io/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
 
 export const menu = [
   {
@@ -50,13 +50,13 @@ export const menu = [
 
   {
     title: "Open Budget Survey",
-    url: `${wp_url}/obs-v2`,
+    url: `${wp_url}/open-budget-survey`,
     slug: "open-budget-survey",
     hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
     children: [
       {
         title: "Open Budget Survey",
-        url: `${wp_url}/obs-v2`,
+        url: `${wp_url}/open-budget-survey`,
         hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
         description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
       },
@@ -80,17 +80,17 @@ export const menu = [
 
       {
         title: "Calculator",
-        url: `${wp_url}/obs-v2/calculator`,
+        url: "#open-budget-survey/calculator",
       },
 
       {
         title: "Download Data",
-        url: `${wp_url}/obs-v2/download-data`,
+        url: "#open-budget-survey/download-data",
       },
 
       {
         title: "Road to 61 Roadmap",
-        url: `${wp_url}/open-budget-survey/roadmap`,
+        url: "#open-budget-survey/roadmap",
       },
     ],
   },
