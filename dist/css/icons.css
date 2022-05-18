@@ -1,12 +1,12 @@
 @font-face {
     font-family: "ibp-icons";
-    src: url("http://localhost:3000/fonts/ibp-icons.eot?12f94d9954ff26bd56470591f8e9106b#iefix") format("embedded-opentype"),
-url("http://localhost:3000/fonts/ibp-icons.woff?12f94d9954ff26bd56470591f8e9106b") format("woff"),
-url("http://localhost:3000/fonts/ibp-icons.woff2?12f94d9954ff26bd56470591f8e9106b") format("woff2"),
-url("http://localhost:3000/fonts/ibp-icons.ttf?12f94d9954ff26bd56470591f8e9106b") format("truetype");
+    src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot?a6882af56db7358e0936b8b95216140e#iefix") format("embedded-opentype"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff?a6882af56db7358e0936b8b95216140e") format("woff"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2?a6882af56db7358e0936b8b95216140e") format("woff2"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?a6882af56db7358e0936b8b95216140e") format("truetype");
 }
 
-i[class^="icon-"]:before, i[class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: ibp-icons !important;
     font-style: normal;
     font-weight: normal !important;
@@ -38,54 +38,51 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-caret-right:before {
     content: "\f107";
 }
-.icon-checkbox:before {
+.icon-close:before {
     content: "\f108";
 }
-.icon-close:before {
+.icon-download:before {
     content: "\f109";
 }
-.icon-download:before {
+.icon-email-filled:before {
     content: "\f10a";
 }
-.icon-email-filled:before {
+.icon-email:before {
     content: "\f10b";
 }
-.icon-email:before {
+.icon-facebook:before {
     content: "\f10c";
 }
-.icon-facebook:before {
+.icon-filter:before {
     content: "\f10d";
 }
-.icon-filter:before {
+.icon-globe:before {
     content: "\f10e";
 }
-.icon-globe:before {
+.icon-linkedin:before {
     content: "\f10f";
 }
-.icon-linkedin:before {
+.icon-menu:before {
     content: "\f110";
 }
-.icon-menu:before {
+.icon-participation:before {
     content: "\f111";
 }
-.icon-participation:before {
+.icon-search:before {
     content: "\f112";
 }
-.icon-search:before {
+.icon-share:before {
     content: "\f113";
 }
-.icon-share:before {
+.icon-transparency:before {
     content: "\f114";
 }
-.icon-transparency:before {
+.icon-twitter:before {
     content: "\f115";
 }
-.icon-twitter:before {
+.icon-youtube:before {
     content: "\f116";
 }
-.icon-youtube:before {
-    content: "\f117";
-}
 .icon-zoom:before {
-    content: "\f118";
+    content: "\f117";
 }

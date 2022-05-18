@@ -173,7 +173,7 @@ blockquote {
 }
 
 p {
-  &.sm {
+  &.sm, &.text-sm {
     font-size: 13px;
     margin: 0;
   }
@@ -182,9 +182,18 @@ p {
 .page-description {
   font-size:18px;
   line-height: 29px;
+  
+  p {
+    line-height: 1.5;
+  }
+
 
   .btn {
     margin-left: -12px;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }
 

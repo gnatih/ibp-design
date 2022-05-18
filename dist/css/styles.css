@@ -224,7 +224,7 @@ blockquote cite {
   }
 }
 
-p.sm {
+p.sm, p.text-sm {
   font-size: 13px;
   margin: 0;
 }
@@ -233,8 +233,14 @@ p.sm {
   font-size: 18px;
   line-height: 29px;
 }
+.page-description p {
+  line-height: 1.5;
+}
 .page-description .btn {
   margin-left: -12px;
+}
+.page-description a {
+  text-decoration: underline;
 }
 
 hr {
