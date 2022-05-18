@@ -203,7 +203,6 @@ export const BaseStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   .icon-arrow-left:before {
     content: "\\f101";
   }
@@ -225,55 +224,52 @@ export const BaseStyles = css`
   .icon-caret-right:before {
     content: "\\f107";
   }
-  .icon-checkbox:before {
+  .icon-close:before {
     content: "\\f108";
   }
-  .icon-close:before {
+  .icon-download:before {
     content: "\\f109";
   }
-  .icon-download:before {
+  .icon-email-filled:before {
     content: "\\f10a";
   }
-  .icon-email-filled:before {
+  .icon-email:before {
     content: "\\f10b";
   }
-  .icon-email:before {
+  .icon-facebook:before {
     content: "\\f10c";
   }
-  .icon-facebook:before {
+  .icon-filter:before {
     content: "\\f10d";
   }
-  .icon-filter:before {
+  .icon-globe:before {
     content: "\\f10e";
   }
-  .icon-globe:before {
+  .icon-linkedin:before {
     content: "\\f10f";
   }
-  .icon-linkedin:before {
+  .icon-menu:before {
     content: "\\f110";
   }
-  .icon-menu:before {
+  .icon-participation:before {
     content: "\\f111";
   }
-  .icon-participation:before {
+  .icon-search:before {
     content: "\\f112";
   }
-  .icon-search:before {
+  .icon-share:before {
     content: "\\f113";
   }
-  .icon-share:before {
+  .icon-transparency:before {
     content: "\\f114";
   }
-  .icon-transparency:before {
+  .icon-twitter:before {
     content: "\\f115";
   }
-  .icon-twitter:before {
+  .icon-youtube:before {
     content: "\\f116";
   }
-  .icon-youtube:before {
-    content: "\\f117";
-  }
   .icon-zoom:before {
-    content: "\\f118";
+    content: "\\f117";
   }
 `;
