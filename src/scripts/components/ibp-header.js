@@ -31,7 +31,7 @@ export class IbpHeader extends LitElement {
     this.show_menu = false;
     // this.background = "http://";
 
-    document.querySelector("ibp-header").classList.remove("loading");
+    // document.querySelector("ibp-header").classList.remove("loading");
 
     fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res);
