@@ -1065,8 +1065,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var href = window.location.href;
 console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://www2.internationalbudget.org";
-var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://dev-obs-redesign.pantheonsite.io/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://redesign.internationalbudget.org";
+var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://redesign.internationalbudget.org/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
 var menu = [{
   title: "About",
   url: "https://internationalbudget.org/about-us",
@@ -1107,7 +1107,7 @@ var menu = [{
     title: "Open Budget Survey",
     url: "".concat(wp_url, "/open-budget-survey"),
     hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
-    description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>"
+    description: '<a href="#" class="btn btn-dark">Link to open budget survey</a>'
   }, {
     title: "Rankings",
     url: "".concat(drupal_url, "/rankings"),
@@ -1128,6 +1128,9 @@ var menu = [{
   }, {
     title: "Road to 61 Roadmap",
     url: "#open-budget-survey/roadmap"
+  }, {
+    title: "Events",
+    url: "https://internationalbudget.org/events/"
   }]
 }, {
   title: "Join Us",
