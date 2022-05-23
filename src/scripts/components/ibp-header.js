@@ -63,7 +63,7 @@ export class IbpHeader extends LitElement {
   render() {
     return html`
       <pre-header></pre-header>
-      <div class="${classMap({ banner: false, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
+      <div class="${classMap({ banner: !this.mini, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
         <div class="main-nav-wrapper">
           <div class="main-nav grid-12-col container">
             <a class="logo" href="/"><ibp-logo></ibp-logo></a>
