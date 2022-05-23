@@ -247,9 +247,6 @@ hr {
   border: solid var(--ibp-hr-height) var(--ibp-footer-bg-dark);
 }
 
-ibp-header {
-  min-height: var(--ibp-header-height);
-}
 ibp-header p {
   margin-bottom: 24px;
 }

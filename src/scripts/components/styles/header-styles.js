@@ -8,6 +8,10 @@ export const HeaderStyles = css`
     overflow: visible;
   }
 
+  :host([mini]) {
+    min-height: auto;
+  }
+
   .banner {
     min-height: var(--ibp-header-height);
     width: 100%;

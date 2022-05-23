@@ -202,7 +202,11 @@ hr {
 }
 
 ibp-header {
-  min-height: var(--ibp-header-height);
+  // min-height: var(--ibp-header-height);
+
+  // &.mini {
+  //   min-height: auto;
+  // }
 
   p {
     margin-bottom: 24px;

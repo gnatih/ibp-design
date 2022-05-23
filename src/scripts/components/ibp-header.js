@@ -19,6 +19,7 @@ export class IbpHeader extends LitElement {
       show_menu: { type: Boolean, attribute: "visible" },
       background: { type: String, attribute: "background" },
       hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
+      mini: { type: Boolean, attribute: "mini" },
     };
   }
 
@@ -62,7 +63,7 @@ export class IbpHeader extends LitElement {
   render() {
     return html`
       <pre-header></pre-header>
-      <div class="${classMap({ banner: true, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
+      <div class="${classMap({ banner: false, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
         <div class="main-nav-wrapper">
           <div class="main-nav grid-12-col container">
             <a class="logo" href="/"><ibp-logo></ibp-logo></a>
@@ -80,17 +81,22 @@ export class IbpHeader extends LitElement {
             </ul>
           </div>
         </div>
-        <div class="nav-content-wrapper">
-          <div class="container nav-content grid-12-col">
-            ${this._getSidebar()}
-            <div class="nav-content--header">
-              <slot name="pre-nav"></slot>
-              <slot name="nav-title"><h1 class="page-title">${this.current_menu.title}</h1></slot>
-              <slot name="nav-description"><div class="page-description">${unsafeHTML(this.current_menu.description)}</div></slot>
-            </div>
-            <slot name="infobox"></slot>
-          </div>
-        </div>
+
+        ${!this.mini
+          ? html`
+              <div class="nav-content-wrapper">
+                <div class="container nav-content grid-12-col">
+                  ${this._getSidebar()}
+                  <div class="nav-content--header">
+                    <slot name="pre-nav"></slot>
+                    <slot name="nav-title"><h1 class="page-title">${this.current_menu.title}</h1></slot>
+                    <slot name="nav-description"><div class="page-description">${unsafeHTML(this.current_menu.description)}</div></slot>
+                  </div>
+                  <slot name="infobox"></slot>
+                </div>
+              </div>
+            `
+          : null}
       </div>
       <menu-overlay @hideMenuOverlay=${this._hideMenuOverlay} ?visible="${this.show_menu}" .menu="${this.primary_menu}"></menu-overlay>
     `;

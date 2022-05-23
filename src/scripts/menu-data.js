@@ -90,7 +90,7 @@ export const menu = [
 
       {
         title: "Road to 61 Roadmap",
-        url: "#open-budget-survey/roadmap",
+        url: `${wp_url}/open-budget-survey/roadmap-to-61`,
       },
       {
         title: "Events",
