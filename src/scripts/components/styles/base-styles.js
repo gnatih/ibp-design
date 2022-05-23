@@ -100,6 +100,12 @@ export const BaseStyles = css`
     font-family: "Adelle Sans", sans-serif;
   }
 
+  @media screen and (max-width: 1299px) {
+    .nav li a {
+      margin-right: 0;
+    }
+  }
+
   .nav li:last-child a {
     margin-right: 0;
     padding-right: 0;
@@ -109,8 +115,10 @@ export const BaseStyles = css`
     display: grid;
     gap: 40px;
     grid-template-columns: repeat(12, 1fr);
+  }
 
-    @media screen and (min-width: 375px) {
+  @media screen and (min-width: 375px) {
+    .grid-12-col {
       gap: 12px;
     }
   }
