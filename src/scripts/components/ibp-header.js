@@ -11,17 +11,27 @@ import { classMap } from "lit/directives/class-map.js";
 export class IbpHeader extends LitElement {
   static styles = [BaseStyles, HeaderStyles];
 
-  static get properties() {
-    return {
-      primary_menu: { type: Array },
-      hero: { type: String },
-      current_menu: { type: Object },
-      show_menu: { type: Boolean, attribute: "visible" },
-      background: { type: String, attribute: "background" },
-      hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
-      mini: { type: Boolean, attribute: "mini" },
-    };
-  }
+  // static get properties() {
+  //   return {
+  //     primary_menu: { type: Array },
+  //     hero: { type: String },
+  //     current_menu: { type: Object },
+  //     show_menu: { type: Boolean, attribute: "visible" },
+  //     background: {},
+  //     hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
+  //     mini: { type: Boolean, attribute: "mini" },
+  //   };
+  // }
+
+  static properties = {
+    primary_menu: { type: Array },
+    hero: { type: String },
+    current_menu: { type: Object },
+    show_menu: { type: Boolean, attribute: "visible" },
+    background: {},
+    hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
+    mini: { type: Boolean, attribute: "mini" },
+  };
 
   constructor() {
     super();
@@ -35,6 +45,11 @@ export class IbpHeader extends LitElement {
 
     fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res);
+      console.log(current);
+
+      if (current.hero && typeof this.background !== "undefined") {
+        this.background = current.hero;
+      }
 
       this.primary_menu = primary;
       this.current_menu = current;
@@ -63,27 +78,27 @@ export class IbpHeader extends LitElement {
   render() {
     return html`
       <pre-header></pre-header>
-      <div class="${classMap({ banner: !this.mini, "has-image": this.background || this.current_menu.hero })}" style="background-image: url(${this.background || this.current_menu.hero})">
-        <div class="main-nav-wrapper">
-          <div class="main-nav grid-12-col container">
-            <a class="logo" href="/"><ibp-logo></ibp-logo></a>
-            <ul class="nav">
-              ${renderPrimaryMenu(this.primary_menu)}
-              <li class="d-md-none">
-                <a href="#" class="search-btn"><i class="ibp-icons icon-globe"></i></a>
-              </li>
-              <li>
-                <a href="#" class="search-btn"><i class="ibp-icons icon-search"></i></a>
-              </li>
-              <li>
-                <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
-              </li>
-            </ul>
-          </div>
+      <div class="main-nav-wrapper">
+        <div class="main-nav grid-12-col container">
+          <a class="logo" href="/"><ibp-logo></ibp-logo></a>
+          <ul class="nav">
+            ${renderPrimaryMenu(this.primary_menu)}
+            <li class="d-md-none">
+              <a href="#" class="search-btn"><i class="ibp-icons icon-globe"></i></a>
+            </li>
+            <li>
+              <a href="#" class="search-btn"><i class="ibp-icons icon-search"></i></a>
+            </li>
+            <li>
+              <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
+            </li>
+          </ul>
         </div>
+      </div>
 
-        ${!this.mini
-          ? html`
+      ${!this.mini
+        ? html`
+            <div class="${classMap({ banner: !this.mini, "has-image": this.background })}" style="background-image: url(${this.background})">
               <div class="nav-content-wrapper">
                 <div class="container nav-content grid-12-col">
                   ${this._getSidebar()}
@@ -95,9 +110,10 @@ export class IbpHeader extends LitElement {
                   <slot name="infobox"></slot>
                 </div>
               </div>
-            `
-          : null}
-      </div>
+            </div>
+          `
+        : null}
+
       <menu-overlay @hideMenuOverlay=${this._hideMenuOverlay} ?visible="${this.show_menu}" .menu="${this.primary_menu}"></menu-overlay>
     `;
   }

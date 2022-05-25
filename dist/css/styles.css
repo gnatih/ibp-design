@@ -9,7 +9,7 @@
   --ibp-footer-bg-light: #0f717e;
   --ibp-footer-bg-dark: #233238;
   --ibp-accent: #ffa46b;
-  --ibp-accent-alt: #97e5ea;
+  --ibp-accent-alt: #53C3C9;
   --ibp-hr: #dad5ca;
   --ibp-field-focus-outline: #222222;
   --ibp-field-outline: rgba(255, 255, 255, 0.2);
@@ -39,7 +39,7 @@
   --ibp-page-title-large-font-size: 120px;
   --ibp-input-font-size: 14px;
   --ibp-button-font-size-large: 14px;
-  --ibp-header-height: 643px;
+  --ibp-header-height: 520px;
   --ibp-main-nav-height: 113px;
 }
 

@@ -52,12 +52,10 @@ export const menu = [
     title: "Open Budget Survey",
     url: `${wp_url}/open-budget-survey`,
     slug: "open-budget-survey",
-    hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
     children: [
       {
         title: "Open Budget Survey",
         url: `${wp_url}/open-budget-survey`,
-        hero: "https://www2.internationalbudget.org/wp-content/uploads/2022/05/kyle-petzer-l4Ztuy0-eU8-unsplash-scaled.jpg",
         description: '<a href="#" class="btn btn-dark">Link to open budget survey</a>',
       },
 

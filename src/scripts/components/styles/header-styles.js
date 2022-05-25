@@ -20,7 +20,7 @@ export const HeaderStyles = css`
 
   .banner.has-image {
     background-size: cover;
-    background-position: center;
+    background-position: contain;
     background-repeat: no-repeat;
     color: white;
     background-color: #979797;
