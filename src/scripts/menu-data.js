@@ -1,7 +1,14 @@
 const href = window.location.href;
-console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-const wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://redesign.internationalbudget.org";
-const drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://redesign.internationalbudget.org/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+
+let wp_url = "https://redesign.internationalbudget.org";
+let drupal_url = "https://redesign.internationalbudget.org/open-budget-survey";
+let explorer_url = "https://obs-data-explorer.herokuapp.com";
+
+if (href.match(/(ddev|localhost)/)) {
+  wp_url = "https://www2-ibp.wp.localhost";
+  drupal_url = "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+  explorer_url = "http://localhost:3000";
+}
 
 export const menu = [
   {
@@ -78,12 +85,12 @@ export const menu = [
 
       {
         title: "Calculator",
-        url: "#open-budget-survey/calculator",
+        url: `${explorer_url}/#calculator`,
       },
 
       {
         title: "Download Data",
-        url: "#open-budget-survey/download-data",
+        url: `${explorer_url}/#download`,
       },
 
       {

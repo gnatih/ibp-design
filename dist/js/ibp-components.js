@@ -62,7 +62,7 @@ function _fetchData() {
   return _fetchData.apply(this, arguments);
 }
 
-function createPrimaryMenu(menu) {
+function createPrimaryMenu(menu, active_slug) {
   var _menu = [];
   var _current = {};
   var _parent = {};
@@ -80,6 +80,11 @@ function createPrimaryMenu(menu) {
       parent.active = true;
     }
 
+    if (active_slug && item.slug == active_slug) {
+      _current = parent;
+      parent.active = true;
+    }
+
     if (item.children) {
       item.children.forEach(function (item_child) {
         var item_url = item_child.url.replace(/\/$/, "");
@@ -87,10 +92,10 @@ function createPrimaryMenu(menu) {
           title: item_child.title,
           url: item_url,
           hero: item_child.hero,
-          active: item_url == href
+          active: href.indexOf(item_url) > -1
         };
 
-        if (item_child.url == href) {
+        if (href.indexOf(item_child.url) > -1) {
           _parent = parent;
           _current = item_child;
           parent.active = true;
@@ -321,7 +326,7 @@ var IbpHeader = /*#__PURE__*/function (_LitElement) {
     // document.querySelector("ibp-header").classList.remove("loading");
 
     (0,_api__WEBPACK_IMPORTED_MODULE_4__.fetchData)("wp-api-menus/v2/menu-locations/primary").then(function (res) {
-      var _createPrimaryMenu = (0,_api__WEBPACK_IMPORTED_MODULE_4__.createPrimaryMenu)(res),
+      var _createPrimaryMenu = (0,_api__WEBPACK_IMPORTED_MODULE_4__.createPrimaryMenu)(res, _this.active_slug),
           primary = _createPrimaryMenu.primary,
           current = _createPrimaryMenu.current,
           parent = _createPrimaryMenu.parent;
@@ -394,6 +399,9 @@ _defineProperty(IbpHeader, "properties", {
   mini: {
     type: Boolean,
     attribute: "mini"
+  },
+  active_slug: {
+    attribute: "active-slug"
   }
 });
 
@@ -1079,9 +1087,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "menu": () => (/* binding */ menu)
 /* harmony export */ });
 var href = window.location.href;
-console.log(href.indexOf("localhost") > -1 || href.indexOf("ddev") > -1);
-var wp_url = href.indexOf("ddev") > -1 || href.indexOf("localhost") > -1 ? "https://www2-ibp.wp.localhost" : "https://redesign.internationalbudget.org";
-var drupal_url = href.indexOf("ddev") == -1 && href.indexOf("localhost") == -1 ? "https://redesign.internationalbudget.org/open-budget-survey" : "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+var wp_url = "https://redesign.internationalbudget.org";
+var drupal_url = "https://redesign.internationalbudget.org/open-budget-survey";
+var explorer_url = "https://obs-data-explorer.herokuapp.com";
+
+if (href.match(/(ddev|localhost)/)) {
+  wp_url = "https://www2-ibp.wp.localhost";
+  drupal_url = "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
+  explorer_url = "http://localhost:3000";
+}
+
 var menu = [{
   title: "About",
   url: "https://internationalbudget.org/about-us",
@@ -1134,10 +1149,10 @@ var menu = [{
     url: "".concat(drupal_url, "/reports")
   }, {
     title: "Calculator",
-    url: "#open-budget-survey/calculator"
+    url: "".concat(explorer_url, "/#calculator")
   }, {
     title: "Download Data",
-    url: "#open-budget-survey/download-data"
+    url: "".concat(explorer_url, "/#download")
   }, {
     title: "Road to 61 Roadmap",
     url: "".concat(wp_url, "/open-budget-survey/roadmap-to-61")

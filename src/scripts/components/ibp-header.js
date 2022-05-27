@@ -31,6 +31,7 @@ export class IbpHeader extends LitElement {
     background: {},
     hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
     mini: { type: Boolean, attribute: "mini" },
+    active_slug: { attribute: "active-slug" },
   };
 
   constructor() {
@@ -44,7 +45,7 @@ export class IbpHeader extends LitElement {
     // document.querySelector("ibp-header").classList.remove("loading");
 
     fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
-      let { primary, current, parent } = createPrimaryMenu(res);
+      let { primary, current, parent } = createPrimaryMenu(res, this.active_slug);
       console.log(current);
 
       if (current.hero && typeof this.background !== "undefined") {

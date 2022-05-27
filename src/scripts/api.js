@@ -10,7 +10,7 @@ export async function fetchData(path) {
   return menu;
 }
 
-export function createPrimaryMenu(menu) {
+export function createPrimaryMenu(menu, active_slug) {
   let _menu = [];
   let _current = {};
   let _parent = {};
@@ -29,6 +29,11 @@ export function createPrimaryMenu(menu) {
       parent.active = true;
     }
 
+    if (active_slug && item.slug == active_slug) {
+      _current = parent;
+      parent.active = true;
+    }
+
     if (item.children) {
       item.children.forEach((item_child) => {
         let item_url = item_child.url.replace(/\/$/, "");
@@ -36,10 +41,10 @@ export function createPrimaryMenu(menu) {
           title: item_child.title,
           url: item_url,
           hero: item_child.hero,
-          active: item_url == href,
+          active: href.indexOf(item_url) > -1,
         };
 
-        if (item_child.url == href) {
+        if (href.indexOf(item_child.url) > -1) {
           _parent = parent;
           _current = item_child;
           parent.active = true;
