@@ -94,7 +94,7 @@ export const menu = [
       },
 
       {
-        title: "Road to 61 Roadmap",
+        title: "Roadmap to 61",
         url: `${wp_url}/open-budget-survey/roadmap-to-61`,
       },
       {

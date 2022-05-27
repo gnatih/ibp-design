@@ -1189,7 +1189,7 @@ var menu = [{
     title: "Download Data",
     url: "".concat(explorer_url, "/#download")
   }, {
-    title: "Road to 61 Roadmap",
+    title: "Roadmap to 61",
     url: "".concat(wp_url, "/open-budget-survey/roadmap-to-61")
   }, {
     title: "Events",
