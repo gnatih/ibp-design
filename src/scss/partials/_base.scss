@@ -91,6 +91,16 @@ h6 {
   }
 }
 
+a {
+  color: var(--ibp-body-text);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--ibp-body-text);
+  background-color: rgba(83, 195, 201, .3);
+  text-decoration: none;
+}
 
 blockquote {
   font-family: var(--ibp-heading-font-family);

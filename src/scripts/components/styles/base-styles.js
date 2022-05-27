@@ -117,7 +117,7 @@ export const BaseStyles = css`
     grid-template-columns: repeat(12, 1fr);
   }
 
-  @media screen and (min-width: 375px) {
+  @media screen and (max-width: 375px) {
     .grid-12-col {
       gap: 12px;
     }

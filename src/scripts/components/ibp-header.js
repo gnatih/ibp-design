@@ -34,19 +34,27 @@ export class IbpHeader extends LitElement {
     active_slug: { attribute: "active-slug" },
   };
 
+  firstUpdated() {
+    let hash_links = this.shadowRoot.querySelectorAll(".hash-link");
+    console.log(hash_links);
+    for (const link of hash_links) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location = link.getAttribute("href");
+        return false;
+      });
+    }
+  }
+
   constructor() {
     super();
     this.primary_menu = [];
     this.parent_menu = {};
     this.current_menu = {};
     this.show_menu = false;
-    // this.background = "http://";
-
-    // document.querySelector("ibp-header").classList.remove("loading");
 
     fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res, this.active_slug);
-      console.log(current);
 
       if (current.hero && typeof this.background !== "undefined") {
         this.background = current.hero;

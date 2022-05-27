@@ -79,7 +79,12 @@ export function renderSecondaryMenu(menu) {
     let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
 
     menu.children.forEach((item) => {
-      str += `<li><a href="${item.url}" class="${item.active ? "active" : ""}">${item.title}</a></li>`;
+      let link_class = "";
+
+      if (item.active) link_class += "active";
+      if (item.url.match(/(#calculator|#download)/)) link_class += " hash-link";
+
+      str += `<li><a href="${item.url}" class="${link_class}">${item.title}</a></li>`;
     });
 
     str += `</ul></div><div class="spacer"></div>`;
