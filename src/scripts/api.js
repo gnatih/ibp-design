@@ -29,11 +29,6 @@ export function createPrimaryMenu(menu, active_slug) {
       parent.active = true;
     }
 
-    if (active_slug && item.slug == active_slug) {
-      _current = parent;
-      parent.active = true;
-    }
-
     if (item.children) {
       item.children.forEach((item_child) => {
         let item_url = item_child.url.replace(/\/$/, "");

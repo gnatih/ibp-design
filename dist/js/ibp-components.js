@@ -80,11 +80,6 @@ function createPrimaryMenu(menu, active_slug) {
       parent.active = true;
     }
 
-    if (active_slug && item.slug == active_slug) {
-      _current = parent;
-      parent.active = true;
-    }
-
     if (item.children) {
       item.children.forEach(function (item_child) {
         var item_url = item_child.url.replace(/\/$/, "");
@@ -353,7 +348,6 @@ var IbpHeader = /*#__PURE__*/function (_LitElement) {
     // }
     function firstUpdated() {
       var hash_links = this.shadowRoot.querySelectorAll(".hash-link");
-      console.log(hash_links);
 
       var _iterator = _createForOfIteratorHelper(hash_links),
           _step;
@@ -363,7 +357,15 @@ var IbpHeader = /*#__PURE__*/function (_LitElement) {
           var link = _step.value;
           link.addEventListener("click", function (e) {
             e.preventDefault();
-            window.location = link.getAttribute("href");
+            var href = link.getAttribute("href");
+            window.location = href;
+            var urlParser = document.createElement("a");
+            urlParser.href = href;
+
+            if (urlParser.origin + urlParser.pathname === location.origin + location.pathname) {
+              window.location.reload(true);
+            }
+
             return false;
           });
         };

@@ -36,11 +36,18 @@ export class IbpHeader extends LitElement {
 
   firstUpdated() {
     let hash_links = this.shadowRoot.querySelectorAll(".hash-link");
-    console.log(hash_links);
+
     for (const link of hash_links) {
       link.addEventListener("click", function (e) {
         e.preventDefault();
-        window.location = link.getAttribute("href");
+        const href = link.getAttribute("href");
+        window.location = href;
+
+        var urlParser = document.createElement("a");
+        urlParser.href = href;
+        if (urlParser.origin + urlParser.pathname === location.origin + location.pathname) {
+          window.location.reload(true);
+        }
         return false;
       });
     }
