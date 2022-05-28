@@ -22,26 +22,27 @@ export class IbpFooter extends LitElement {
           <h6>Quick Links</h6>
 
           <ul class="footer-nav">
-            <li><a href="#">The Network</a></li>
-            <li><a href="#">Countries</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="https://internationalbudget.org/campaign-to-open-budgets/">Join Our Call To Action</a></li>
+            <li><a href="https://internationalbudget.org/our-work/">What We Do</a></li>
+            <li><a href="https://internationalbudget.org/library/publications/">Publications</a></li>
+            <li><a href="https://internationalbudget.org/about-us/">About</a></li>
           </ul>
         </div>
         <div class="main">
           <ibp-logo flat width="280"></ibp-logo>
 
-          <newsletter-form show-heading style="padding: 0 44px; margin: 44px 0;"></newsletter-form>
+          <newsletter-form style="padding: 0 44px; margin: 44px 0;"></newsletter-form>
 
           <social-links color="var(--ibp-accent-alt)"></social-links>
         </div>
         <div class="right">
           <hr />
-          <h6>Title</h6>
+          <h6>&nbsp;</h6>
           <ul class="footer-nav">
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Whistleblower Policy</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
+            <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
+            <li><a href="https://www.internationalbudget.org/library/copyright/">Copyright</a></li>
+            <li><a href="https://www.internationalbudget.org/library/publications/newsletter/sign-up-for-ibp-e-publications/">Newsletter</a></li>
           </ul>
         </div>
       </div>

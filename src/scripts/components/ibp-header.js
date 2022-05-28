@@ -103,9 +103,6 @@ export class IbpHeader extends LitElement {
               <a href="#" class="search-btn"><i class="ibp-icons icon-globe"></i></a>
             </li>
             <li>
-              <a href="#" class="search-btn"><i class="ibp-icons icon-search"></i></a>
-            </li>
-            <li>
               <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
             </li>
           </ul>

@@ -96,15 +96,8 @@ export function renderFullMenu(menu) {
   str += `<div>${createLinkList(menu_items[0])}</div>`;
   str += `<div>${createLinkList(menu_items[1])}</div>`;
   str += `<div>
-            ${createLinkList(menu_items[2])}
-            
-            <span class="action-buttons d-md-none"><a href="#" class="btn-action">Take Action</a><a href="#" class="btn-donate">Donate</a> </span>
-            <span class="sub-links">
-              <a href="#">Press</a>
-              <a href="#">Events</a>
-              <a href="#">Insights</a>
-            </span>
-
+            ${createLinkList(menu_items[2])}            
+            <span class="action-buttons d-md-none"><a href="https://internationalbudget.org/campaign-to-open-budgets/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Donate</a> </span>
             <social-links></social-links>
           </div>`;
 

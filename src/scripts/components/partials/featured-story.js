@@ -8,11 +8,11 @@ export class FeaturedStory extends LitElement {
   }
 
   render() {
-    return html`<div class="story-image" style="background: url(https://internationalbudget.org/wp-content/uploads/226A5020-Astou_senegal_square.jpg) center/cover no-repeat"></div>
+    return html`<div class="story-image" style="background: url(https://www2.internationalbudget.org/wp-content/uploads/2022/05/menu_obsimage.jpg) center/cover no-repeat"></div>
       <div class="story-content">
-        <p class="featured-type">Story</p>
-        <h3>Building Inclusive & Accountable Budgets in Gambia</h3>
-        <a href="#" class="read-more">Read more <i class="ibp-icons icon-caret-right-circle"></i></a>
+        <p class="featured-type">Report</p>
+        <h3>Paths to Progress in the Open Budget Survey 2021</h3>
+        <a href="https://internationalbudget.org/open-budget-survey/open-budget-survey-2021" class="read-more">Read more <i class="ibp-icons icon-caret-right-circle"></i></a>
       </div>`;
   }
 }

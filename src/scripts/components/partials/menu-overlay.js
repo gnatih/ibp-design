@@ -38,7 +38,6 @@ export class MenuOverlay extends LitElement {
                 <div class="main-nav grid-12-col">
                   <a class="logo" href="/"><ibp-logo fill="#000"></ibp-logo></a>
                   <ul class="nav">
-                    <li class="search-box d-xs-none"><input type="text" placeholder="Enter text" /><i class="ibp-icons icon-search"></i></li>
                     <li>
                       <a href="#" class="close-btn" @click=${this.hideMenuOverlay}><i class="ibp-icons icon-close"></i></a>
                     </li>

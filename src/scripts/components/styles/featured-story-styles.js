@@ -32,6 +32,7 @@ export const FeaturedStoryStyles = css`
     font-family: var(--ibp-heading-font-family);
     font-size: var(--ibp-heading-3-font-size);
     letter-spacing: var(--ibp-letter-spacing-sm);
+    font-weight: normal;
     line-height: 1.1;
     margin: 0;
     margin-bottom: 22px;

@@ -18,9 +18,7 @@ export class NewsletterForm extends LitElement {
       <div class="signup-form">
         ${this.show_heading ? html`<h6>Sign up for updates</h6>` : ``}
         <form class="form">
-          <i class="icon-email"></i>
-          <input type="text" placeholder="Email address" />
-          <button type="submit">Sign up</button>
+          <a class="newsletter-signup-button" href="http://eepurl.com/dNqbOs" target="_blank" rel="nofollow"><i class="icon-email"></i> <span>Sign up for our newsletters</span></a>
         </form>
       </div>
     `;

@@ -33,15 +33,32 @@ export const NewsletterFormStyles = css`
   }
 
   .icon-email {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    color: var(--ibp-ecru);
+    margin-right: 8px;
+    //   position: absolute;
+    //   top: 12px;
+    //   left: 12px;
+    //   color: var(--ibp-ecru);
   }
 
   button {
     min-width: 120px;
     border: none;
+  }
+
+  a.newsletter-signup-button {
+    background: var(--ibp-accent-alt);
+    width: 100%;
+    color: var(--ibp-body-text);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 20px;
+  }
+
+  .newsletter-signup-button:hover {
+    background: white;
+    color: var(--ibp-body-text);
   }
 
   @media screen and (max-width: 576px) {
