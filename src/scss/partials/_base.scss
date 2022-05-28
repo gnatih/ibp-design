@@ -401,30 +401,31 @@ ul.with-checkbox {
 ol {
   list-style: none;
   counter-reset: ibp-ol;
+  padding: 0;
+  margin: 0;
   
   li {
-    counter-increment: ibp-ol;
-    line-height: 28px;
-
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
 
     &:before {
       font-family: "DM Mono", sans-serif;
       content: counter(ibp-ol);
-      margin-right: 0.8rem;
+      counter-increment: ibp-ol;
       background: var(--ibp-footer-bg-light);
+      height: 20px;
+      width: 20px;
       border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      font-size: 12px;
       text-align: center;
-      display: inline-block;
-      background-origin: border-box;
-      color: white;
-      line-height: 24px;
-      display: inline-block;
-      text-align: center;
-      position: relative;
+      position: absolute;      
+      left: 0;
       top: -2px;
+      font-size: 12px;
+      color: white;
+      position: absolute;      
+      top: 4px;
+      line-height: 20px;
     }
   }
 }
