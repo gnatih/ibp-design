@@ -94,16 +94,17 @@ h6 {
 [slot="pre-nav"] a {
   text-decoration: underline;
 }
-// a {
-//   color: var(--ibp-body-text);
-//   text-decoration: underline;
-// }
 
-// a:hover {
-//   color: var(--ibp-body-text);
-//   background-color: rgba(83, 195, 201, .3);
-//   text-decoration: none;
-// }
+a {
+  color: var(--ibp-body-text);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--ibp-body-text);
+  background-color: rgba(83, 195, 201, .3);
+  text-decoration: none;
+}
 
 
 blockquote {
@@ -394,5 +395,36 @@ ul.with-checkbox {
 
   &:before {
     padding-left: 4px;
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: ibp-ol;
+  
+  li {
+    counter-increment: ibp-ol;
+    line-height: 28px;
+
+
+    &:before {
+      font-family: "DM Mono", sans-serif;
+      content: counter(ibp-ol);
+      margin-right: 0.8rem;
+      background: var(--ibp-footer-bg-light);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+      text-align: center;
+      display: inline-block;
+      background-origin: border-box;
+      color: white;
+      line-height: 24px;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      top: -2px;
+    }
   }
 }
