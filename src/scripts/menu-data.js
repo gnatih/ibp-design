@@ -1,13 +1,19 @@
 const href = window.location.href;
 
-let wp_url = "https://redesign.internationalbudget.org";
-let drupal_url = "https://redesign.internationalbudget.org/open-budget-survey";
-let explorer_url = "https://obs-data-explorer.herokuapp.com";
+let wp_url = "https://internationalbudget.org";
+let drupal_url = "https://internationalbudget.org/open-budget-survey";
+let explorer_url = "https://survey.internationalbudget.org";
 
 if (href.match(/(ddev|localhost)/)) {
   wp_url = "https://www2-ibp.wp.localhost";
   drupal_url = "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
   explorer_url = "http://localhost:3000";
+}
+
+if (href.match(/(127.0.0.1)/)) {
+  wp_url = "http://127.0.0.1:8787";
+  drupal_url = "http://127.0.0.1:8787/open-budget-survey";
+  explorer_url = "http://127.0.0.1:8787";
 }
 
 export const menu = [

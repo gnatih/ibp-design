@@ -95,17 +95,19 @@ h6 {
   text-decoration: underline;
 }
 
-a {
+a:not(.btn):not(.ue-btn):not(.elementor-button-link):not(.elementor-accordion-title) {
   color: var(--ibp-body-text);
   text-decoration: underline;
-}
+  // background: linear-gradient(to bottom, rgba(var(--ibp-accent-alt-rgb), .2) 0%, rgba(var(--ibp-accent-alt-rgb), .2) 100%);
+  // background-size: 0 0;
+  // background-repeat: repeat-y;
+  transition: all .2s;
 
-a:hover {
-  color: var(--ibp-body-text);
-  background-color: rgba(83, 195, 201, .3);
-  text-decoration: none;
+  &:hover {
+    color: var(--ibp-body-text);
+    text-decoration: none;
+  }
 }
-
 
 blockquote {
   font-family: var(--ibp-heading-font-family);
@@ -245,6 +247,7 @@ ibp-header {
   font-weight: 700;
   padding: 5px 10px 5px 12px;
   border-radius: 500px;
+  transition: background-color .3s;
 
   i {
     margin-left: 8px;
@@ -405,14 +408,13 @@ ol {
   margin: 0;
   
   li {
-    padding-bottom: 15px;
     position: relative;
     padding-left: 30px;
+    counter-increment: ibp-ol;
 
     &:before {
       font-family: "DM Mono", sans-serif;
       content: counter(ibp-ol);
-      counter-increment: ibp-ol;
       background: var(--ibp-footer-bg-light);
       height: 20px;
       width: 20px;
@@ -423,7 +425,7 @@ ol {
       top: -2px;
       font-size: 12px;
       color: white;
-      position: absolute;      
+      // position: absolute;      
       top: 4px;
       line-height: 20px;
     }

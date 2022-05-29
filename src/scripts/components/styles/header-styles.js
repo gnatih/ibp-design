@@ -93,6 +93,17 @@ export const HeaderStyles = css`
     background: #f00;
   }
 
+  .page-descriptoin {
+  }
+
+  [slot="pre-nav"] a {
+    color: green !important;
+  }
+
+  [slot="nav-description"] a {
+    color: green !important;
+  }
+
   .secondary-nav ul {
     list-style: none;
     margin: 0;
