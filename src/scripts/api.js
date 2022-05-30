@@ -97,7 +97,7 @@ export function renderFullMenu(menu) {
   str += `<div>${createLinkList(menu_items[1])}</div>`;
   str += `<div>
             ${createLinkList(menu_items[2])}            
-            <span class="action-buttons d-md-none"><a href="https://internationalbudget.org/campaign-to-open-budgets/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Donate</a> </span>
+            <div class="action-buttons d-md-none"><a href="https://internationalbudget.org/campaign-to-open-budgets/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Donate</a></div>
             <social-links></social-links>
           </div>`;
 

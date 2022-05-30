@@ -93,21 +93,11 @@ export const HeaderStyles = css`
     background: #f00;
   }
 
-  .page-descriptoin {
-  }
-
-  [slot="pre-nav"] a {
-    color: green !important;
-  }
-
-  [slot="nav-description"] a {
-    color: green !important;
-  }
-
   .secondary-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    line-height: 18px;
   }
 
   .secondary-nav li {
@@ -124,10 +114,6 @@ export const HeaderStyles = css`
 
   .secondary-nav li:last-child {
     border: none;
-  }
-
-  ::slotted[name="infobox"] {
-    background: blue;
   }
 
   @media screen and (max-width: 576px) {

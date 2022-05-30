@@ -99,9 +99,6 @@ export class IbpHeader extends LitElement {
           <a class="logo" href="/"><ibp-logo></ibp-logo></a>
           <ul class="nav">
             ${renderPrimaryMenu(this.primary_menu)}
-            <li class="d-md-none">
-              <a href="#" class="search-btn"><i class="ibp-icons icon-globe"></i></a>
-            </li>
             <li>
               <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
             </li>

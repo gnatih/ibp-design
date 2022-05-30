@@ -122,6 +122,7 @@ export const MenuOverlayStyles = css`
   }
 
   .full-menu a {
+    display: inline-block;
     text-decoration: none;
     color: var(--ibp-body-text);
   }
@@ -216,7 +217,8 @@ export const MenuOverlayStyles = css`
     }
 
     .action-buttons {
-      margin-top: 24px;
+      margin-top: 18px;
+      margin-bottom: 24px;
       display: block;
     }
 

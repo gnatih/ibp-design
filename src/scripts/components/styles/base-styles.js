@@ -150,10 +150,11 @@ export const BaseStyles = css`
       gap: 0;
     }
 
-    .main-nav {
+    .main-nav.container {
+      padding: 0 15px;
+      padding-top: 5px;
       grid-template-columns: 1fr;
-      align-items: start;
-      padding-top: 14px;
+      align-items: center;
     }
 
     .main-nav .mobile-nav {
