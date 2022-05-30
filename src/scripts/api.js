@@ -36,7 +36,7 @@ export function createPrimaryMenu(menu, active_slug) {
           title: item_child.title,
           url: item_url,
           hero: item_child.hero,
-          active: href.indexOf(item_url) > -1,
+          active: item_url == href,
         };
 
         if (href.indexOf(item_child.url) > -1) {

@@ -69,13 +69,13 @@ export const menu = [
       {
         title: "Open Budget Survey",
         url: `${wp_url}/open-budget-survey`,
-        description: '<a href="#" class="btn btn-dark">Link to open budget survey</a>',
+        description: "",
       },
 
       {
         title: "Rankings",
         url: `${drupal_url}/rankings`,
-        description: "<p>The Open Budget Survey (OBS) 2021 results include country-specific findings and recommendations on budget transparency, public participation, and oversight.</p><p>Select a country on the drop down menu or via the map below to view its assessment. PDF versions of the country summaries and completed survey questionnaires can be downloaded from the country page.</p>",
+        description: "",
         children: [],
       },
 
