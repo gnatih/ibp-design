@@ -151,7 +151,7 @@ export const BaseStyles = css`
     }
 
     .main-nav.container {
-      padding: 0 15px;
+      // padding: 0 15px;
       padding-top: 5px;
       grid-template-columns: 1fr;
       align-items: center;

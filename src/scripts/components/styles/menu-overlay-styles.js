@@ -150,11 +150,9 @@ export const MenuOverlayStyles = css`
 
   @media screen and (max-width: 576px) {
     .main-nav-wrapper {
+      padding: 0;
+      padding-top: 5px;
       background: var(--ibp-ecru);
-    }
-
-    .main-nav-wrapper .container {
-      padding: 0 12px;
     }
 
     pre-nav {
@@ -187,7 +185,8 @@ export const MenuOverlayStyles = css`
 
     .btn-donate,
     .btn-action {
-      padding: 14px 14px 12px 14px;
+      // padding: 14px 14px 12px 14px;
+      padding: 8px 14px 6px 14px;
       font-size: 13px;
       text-transform: uppercase;
       font-weight: 800;

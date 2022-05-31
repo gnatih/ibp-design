@@ -132,10 +132,6 @@ export const HeaderStyles = css`
       grid-column: auto;
     }
 
-    .main-nav-wrapper {
-      padding: 0 12px;
-    }
-
     .page-title {
       font-size: 42px;
       line-height: 45px;
