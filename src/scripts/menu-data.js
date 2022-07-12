@@ -4,8 +4,8 @@ let wp_url = "https://internationalbudget.org";
 let drupal_url = "https://internationalbudget.org/open-budget-survey";
 let explorer_url = "https://survey.internationalbudget.org";
 
-if (href.match(/(ddev|localhost)/)) {
-  wp_url = "https://www2-ibp.wp.localhost";
+if (href.match(/(ddev|test)/)) {
+  wp_url = "https://www2-ibp.wp.test";
   drupal_url = "https://international-budget-partnership.ddev.site:4443/open-budget-survey";
   explorer_url = "http://localhost:3000";
 }

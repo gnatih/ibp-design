@@ -6,6 +6,7 @@ import { fetchData, createPrimaryMenu, renderPrimaryMenu, renderSecondaryMenu } 
 import "./partials/menu-overlay";
 import "./partials/pre-header";
 import "./partials/ibp-logo";
+import "./partials/ibp-logo-twentyfive";
 import { classMap } from "lit/directives/class-map.js";
 
 export class IbpHeader extends LitElement {
@@ -96,7 +97,7 @@ export class IbpHeader extends LitElement {
       <pre-header></pre-header>
       <div class="main-nav-wrapper">
         <div class="main-nav grid-12-col container">
-          <a class="logo" href="/"><ibp-logo></ibp-logo></a>
+          <a class="logo" href="/"><ibp-logo-twentyfive></ibp-logo-twentyfive></a>
           <ul class="nav">
             ${renderPrimaryMenu(this.primary_menu)}
             <li>
