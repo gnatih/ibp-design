@@ -12,6 +12,10 @@ mix.browserSync({
   files: ["dist/css/*", "dist/index.html", "dist/js/*"],
   open: false,
   cors: true,
+  https: {
+    cert: "/Users/gnat/Workspace/vhosts/.ssl/localhost+3.pem",
+    key: "/Users/gnat/Workspace/vhosts/.ssl/localhost+3-key.pem",
+  },
 });
 
 mix.options({

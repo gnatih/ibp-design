@@ -18,7 +18,6 @@ export class IbpFooter extends LitElement {
     return html` <footer>
       <div class="grid-12-col">
         <div class="left">
-          <hr />
           <h6>Quick Links</h6>
 
           <ul class="footer-nav">
@@ -36,13 +35,12 @@ export class IbpFooter extends LitElement {
           <social-links color="var(--ibp-accent-alt)"></social-links>
         </div>
         <div class="right">
-          <hr />
           <h6>&nbsp;</h6>
           <ul class="footer-nav">
             <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
             <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
             <li><a href="https://www.internationalbudget.org/library/copyright/">Copyright</a></li>
-            <li><a href="https://www.internationalbudget.org/library/publications/newsletter/sign-up-for-ibp-e-publications/">Newsletter</a></li>
+            <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
           </ul>
         </div>
       </div>

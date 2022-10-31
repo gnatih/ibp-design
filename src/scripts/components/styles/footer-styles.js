@@ -2,12 +2,12 @@ import { css } from "lit";
 
 export const FooterStyles = css`
   footer {
-    background-color: var(--ibp-footer-bg-light);
+    background-color: var(--ibp-teal-dark);
   }
 
   .grid-12-col {
     padding: 0 44px;
-    max-width: 1440px;
+    max-width: 1352px;
     margin: 0 auto;
   }
 
@@ -17,6 +17,7 @@ export const FooterStyles = css`
 
   .left,
   .right {
+    color: white;
     padding-top: 32px;
   }
 
@@ -30,7 +31,6 @@ export const FooterStyles = css`
 
   .main {
     grid-column: 4/10;
-    background: var(--ibp-footer-bg-dark);
     text-align: center;
     padding: 44px 0;
     color: white;
@@ -38,8 +38,7 @@ export const FooterStyles = css`
 
   .copyright {
     text-align: center;
-    color: rgba(255, 255, 255, 0.2);
-    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     padding: 18px;
   }
@@ -71,18 +70,13 @@ export const FooterStyles = css`
       grid-column: auto;
     }
 
-    .grid-12-col {
-      padding: 0;
-    }
-
-    footer {
+    .grid-12-col, footer {
       padding: 0;
     }
 
     .right {
       order: 3;
-      padding: 0 32px;
-      padding-bottom: 32px;
+      padding: 0 32px 32px 32px;
     }
 
     .left {

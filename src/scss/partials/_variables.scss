@@ -1,5 +1,8 @@
 :root {
-  --ibp-body-font-family: "Adelle Sans", sans-serif;
+  --ibp-font-family-serif: "DM Serif Display", serif;
+  --ibp-font-family-sans-serif: "Adelle Sans", sans-serif;
+  --ibp-font-family-monospaced: "DM Serif Mono", monospace;
+  --ibp-body-font-family: var(--ibp-font-family-sans-serif);
   --ibp-body-text: #222222;
   --ibp-body-text-dark-mode: #ffffff;
 
@@ -9,8 +12,8 @@
   --ibp-ecru: #eceae5;
   --ibp-footer-bg-light: #0f717e;
   --ibp-footer-bg-dark: #233238;
-  --ibp-accent: #ffa46b;
-  --ibp-accent-alt: #53C3C9;
+  --ibp-accent: #FF863A;
+  --ibp-accent-alt: var(--ibp-teal-light);
   --ibp-accent-alt-rgb: 83, 195, 201;
   --ibp-hr: #dad5ca;
   --ibp-field-focus-outline: #222222;
@@ -19,6 +22,9 @@
   --ibp-hr-height: 2px;
   --ibp-letter-spacing-sm: -0.03em;
   --ibp-letter-spacing: 0.12em;
+  --ibp-teal: #117A88;
+  --ibp-teal-dark: #063D4F;
+  --ibp-teal-light: #6FD3D9;
 
   --obs-rating-1: #3cbb88;
   --obs-rating-2: #8ce1bf;
@@ -32,7 +38,7 @@
   --obs-rating-worse: var(--obs-rating-5);
 
   /**headings**/
-  --ibp-heading-font-family: "DM Serif Display", serif;
+  --ibp-heading-font-family: var(--ibp-font-family-serif);
   --ibp-heading-1-font-size: 58px;
   --ibp-heading-2-font-size: 48px;
   --ibp-heading-3-font-size: 36px;

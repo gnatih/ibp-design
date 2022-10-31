@@ -17,9 +17,15 @@ export class SocialLinks extends LitElement {
         footer :host {
           background: green;
         }
-
-        footer .social-links {
-          outline: 1px solid red;
+        
+        a {
+          background: rgba(255, 255, 255, .2);
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          display: inline-block;
+          line-height: 38px;
+          color: white!important;
         }
 
         a:hover {
