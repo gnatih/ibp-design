@@ -85,6 +85,8 @@ export const BaseStyles = css`
     display: flex;
     list-style: none;
     align-items: center;
+    height: 78px;
+    align-self: end;
   }
 
   .nav li a {

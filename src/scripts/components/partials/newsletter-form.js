@@ -15,10 +15,16 @@ export class NewsletterForm extends LitElement {
 
   render() {
     return html`
-      <div class="signup-form">
-        ${this.show_heading ? html`<h6>Sign up for updates</h6>` : ``}
-        <form class="form">
-          <a class="newsletter-signup-button" href="http://eepurl.com/dNqbOs" target="_blank" rel="nofollow"><i class="icon-email"></i> <span>Sign up for our newsletters</span></a>
+      <div>
+        ${this.show_heading ? html`<p>Keep up to date by subscribing to our newsletter.</p>` : ``}
+        <form class="signup-form" action="https://internationalbudget.us12.list-manage.com/subscribe/post" method="POST">
+          <input type="hidden" name="u" value="de5755d359416097d437841c1" />
+          <input type="hidden" name="id" value="5799ba65dd" />
+          <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" value="" placeholder="Email address" />
+          <input type="hidden" name="ht" value="96c90fdc37737e65fac2ec4dfea45fd6b4126bf0:MTY3NDczOTA0Ni4wNzk5" />
+          <input type="hidden" name="mc_signupsource" value="hosted" />
+          <input type="submit" class="formEmailButton" name="submit" value="Signup" />
+          <i class="icon-email"></i>
         </form>
       </div>
     `;

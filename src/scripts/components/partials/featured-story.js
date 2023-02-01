@@ -7,12 +7,34 @@ export class FeaturedStory extends LitElement {
     return [BaseStyles, FeaturedStoryStyles];
   }
 
+  static properties = {
+    featured: { type: Object },
+  };
+
+  constructor() {
+    super();
+
+    this.featured = {
+      featured_image: "",
+      featured_link: "",
+      featured_type: "",
+      featured_title: "",
+      featured_button_text: "",
+    };
+
+    fetch("https://internationalbudget.org/wp-json/ibp/v1/featured")
+      .then((res) => res.json())
+      .then((data) => {
+        this.featured = data;
+      });
+  }
+
   render() {
-    return html`<div class="story-image" style="background: url(https://www2.internationalbudget.org/wp-content/uploads/2022/05/menu_obsimage.jpg) center/cover no-repeat"></div>
+    return html`<div class="story-image" style="background: url(${this.featured["featured_image"]}) center/cover no-repeat"></div>
       <div class="story-content">
-        <p class="featured-type">Report</p>
-        <h3>Paths to Progress in the Open Budget Survey 2021</h3>
-        <a href="https://internationalbudget.org/open-budget-survey/open-budget-survey-2021" class="read-more">Read more <i class="ibp-icons icon-caret-right-circle"></i></a>
+        <p class="featured-type">${this.featured["featured_type"]}</p>
+        <h3>${this.featured["featured_title"]}</h3>
+        <a href="${this.featured["featured_link"]}" class="read-more">${this.featured["featured_button_text"]} <i class="ibp-icons icon-caret-right-circle"></i></a>
       </div>`;
   }
 }

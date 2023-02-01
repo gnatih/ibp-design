@@ -4,7 +4,8 @@ export const FeaturedStoryStyles = css`
   :host {
     display: flex;
     flex-direction: column;
-    background: var(--ibp-text-highlight-light);
+    background: white;
+    color: var(--ibp-body-text);
   }
 
   .story-image {
@@ -21,7 +22,7 @@ export const FeaturedStoryStyles = css`
 
   .featured-type {
     font-size: 12px;
-    color: var(--ibp-text-highlight-dark);
+    color: var(--ibp-body-text);
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;

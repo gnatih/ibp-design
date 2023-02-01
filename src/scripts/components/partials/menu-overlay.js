@@ -8,6 +8,7 @@ import "./ibp-logo";
 import "./featured-story";
 import "./social-links";
 import "./newsletter-form";
+import "./search-box";
 
 export class MenuOverlay extends LitElement {
   static properties = {
@@ -38,6 +39,9 @@ export class MenuOverlay extends LitElement {
                 <div class="main-nav grid-12-col">
                   <a class="logo" href="/"><ibp-logo fill="#000"></ibp-logo></a>
                   <ul class="nav">
+                    <li class="search-box">
+                      <search-box></search-box>
+                    </li>
                     <li>
                       <a href="#" class="close-btn" @click=${this.hideMenuOverlay}><i class="ibp-icons icon-close"></i></a>
                     </li>
@@ -48,6 +52,7 @@ export class MenuOverlay extends LitElement {
             <div class="container nav-content-wrapper">
               <div class="nav-content grid-12-col">
                 <div class="full-menu">${renderFullMenu(this.menu)}</div>
+                <div class="search-box-mobile"><search-box></search-box></div>
                 <featured-story class="featured-story"></featured-story>
               </div>
             </div>

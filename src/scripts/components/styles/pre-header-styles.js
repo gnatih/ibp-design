@@ -6,6 +6,9 @@ export const PreHeaderStyles = css`
     justify-content: end;
     height: 35px;
     background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .overlay :host {
@@ -20,7 +23,7 @@ export const PreHeaderStyles = css`
     color: #151515;
     padding: 0 14px;
     text-transform: uppercase;
-    line-height: 35px;
+    line-height: 35px; 
     letter-spacing: 0.12em;
   }
 

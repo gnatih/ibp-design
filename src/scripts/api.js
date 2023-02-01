@@ -39,10 +39,10 @@ export function createPrimaryMenu(menu, active_slug) {
           active: item_url == href,
         };
 
-        if (href.indexOf(item_child.url) > -1) {
+        if (item_child.url.indexOf(href) > -1) {
           _parent = parent;
           _current = item_child;
-          parent.active = true;
+          if (href !== "https://internationalbudget.org") _parent.active = true;
         }
 
         if (!parent.children) parent.children = [];
@@ -91,12 +91,18 @@ export function renderSecondaryMenu(menu) {
 export function renderFullMenu(menu) {
   let str = "";
 
-  let menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 4), menu.slice(menu.length - 4, menu.length)];
+  // let menu_items = [menu.slice(0, 2), menu.slice(2, menu.length - 4), menu.slice(menu.length - 4, menu.length)]; //pre-launch
+  let menu_items = [menu.slice(0, 3), menu.slice(3, menu.length - 1), menu.slice(menu.length - 1)];
 
   str += `<div>${createLinkList(menu_items[0])}</div>`;
   str += `<div>${createLinkList(menu_items[1])}</div>`;
   str += `<div>
-            ${createLinkList(menu_items[2])}            
+            ${createLinkList(menu_items[2])}
+            <ul class="sub">
+              <li><a href="/press">Press</a></li>
+              <li><a href="/events">Events</a></li>
+              <li><a href="/insights">Insights</a></li>
+            </ul> 
             <div class="action-buttons d-md-none"><a href="https://internationalbudget.org/campaign-to-open-budgets/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Donate</a></div>
             <social-links></social-links>
           </div>`;

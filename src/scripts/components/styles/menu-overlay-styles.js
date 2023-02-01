@@ -29,40 +29,20 @@ export const MenuOverlayStyles = css`
     position: absolute;
     top: 0;
     left: 0;
-    background: purple;
   }
 
-  input[type="text"] {
-    padding: 0;
-    border: 1px solid var(--ibp-ecru);
-    font-size: 15px;
-    line-height: 26px;
-    padding: 4px 9px;
-    border-radius: 26px;
-    position: relative;
-    padding-left: 46px;
-  }
-
-  .search-box {
-    position: relative;
-  }
-
-  .search-box i {
-    position: absolute;
-    left: 0;
-    top: 0;
-    line-height: 36px;
-    border-radius: 50%;
-    width: 36px;
-    text-align: center;
-    background: var(--ibp-ecru);
+  .search-box-mobile {
+    grid-column: span 12;
+    margin-top: 20px;
+    display: none;
   }
 
   .nav-header {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background: var(--ibp-ecru);
+    background: var(--ibp-teal-dark);
+    color: white;
   }
 
   .nav-content {
@@ -70,7 +50,7 @@ export const MenuOverlayStyles = css`
   }
 
   .nav-footer-wrapper {
-    background: var(--ibp-footer-bg-light);
+    background: var(--ibp-teal-light);
   }
 
   .nav-content-wrapper {
@@ -83,7 +63,7 @@ export const MenuOverlayStyles = css`
   }
 
   .nav-footer .signup-note {
-    color: white;
+    color: var(--ibp-body-text);
     grid-column: span 5;
     line-height: 28px;
     padding: 44px 0;
@@ -101,6 +81,11 @@ export const MenuOverlayStyles = css`
 
   .full-menu div {
     width: 33.3333%;
+    margin-right: 20px;
+  }
+
+  .full-menu div:last-child {
+    margin-right: 0;
   }
 
   .full-menu ul {
@@ -111,6 +96,21 @@ export const MenuOverlayStyles = css`
 
   .full-menu li {
     line-height: 2;
+  }
+
+  .full-menu .sub {
+    margin-top: 44px;
+    line-height: 3;
+  }
+
+  .full-menu .sub a {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+  }
+
+  .full-menu li a {
+    line-height: 1.4;
   }
 
   .full-menu h6 {
@@ -124,7 +124,7 @@ export const MenuOverlayStyles = css`
   .full-menu a {
     display: inline-block;
     text-decoration: none;
-    color: var(--ibp-body-text);
+    color: white;
   }
 
   .featured-story {
@@ -152,7 +152,24 @@ export const MenuOverlayStyles = css`
     .main-nav-wrapper {
       padding: 0;
       padding-top: 5px;
-      background: var(--ibp-ecru);
+      // background: var(--ibp-teal-dark);
+      background: white;
+    }
+
+    .search-box-mobile {
+      display: block;
+    }
+
+    .nav-content {
+      margin-top: 20px;
+    }
+
+    .search-box {
+      display: none;
+    }
+
+    .logo {
+      max-width: 20px;
     }
 
     pre-nav {
@@ -165,14 +182,15 @@ export const MenuOverlayStyles = css`
 
     .full-menu div {
       width: auto;
+      margin: 0;
     }
 
     .full-menu h6 {
-      background: var(--ibp-ecru);
+      background: var(--ibp-teal-dark);
       margin: 0;
       padding-top: 14px;
       padding-bottom: 12px;
-      border-top: 1px solid var(--ibp-text-highlight-light);
+      border-top: 1px solid var(--ibp-teal-light);
     }
 
     .full-menu h6 i {

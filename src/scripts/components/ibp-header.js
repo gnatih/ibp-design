@@ -8,6 +8,7 @@ import "./partials/pre-header";
 import "./partials/ibp-logo";
 import "./partials/ibp-logo-twentyfive";
 import { classMap } from "lit/directives/class-map.js";
+import { menu } from "../menu-data";
 
 export class IbpHeader extends LitElement {
   static styles = [BaseStyles, HeaderStyles];
@@ -61,7 +62,7 @@ export class IbpHeader extends LitElement {
     this.current_menu = {};
     this.show_menu = false;
 
-    fetchData("wp-api-menus/v2/menu-locations/primary").then((res) => {
+    fetchData().then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res, this.active_slug);
 
       if (current.hero && typeof this.background !== "undefined") {

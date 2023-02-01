@@ -3,11 +3,15 @@ import { css } from "lit";
 export const NewsletterFormStyles = css`
   :host {
     display: block;
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .signup-form {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    position: relative;
   }
 
   .signup-form h6,
@@ -16,13 +20,13 @@ export const NewsletterFormStyles = css`
     grid-column: 2/6;
   }
 
-  .form {
-    display: flex;
-    margin-top: 8px;
-    position: relative;
-  }
+  // .form {
+  //   display: flex;
+  //   margin-top: 8px;
+  //   position: relative;
+  // }
 
-  input[type="text"] {
+  input[type="email"] {
     font-family: var(--ibp-body-font-family);
     width: 100%;
     border: none;
@@ -30,14 +34,25 @@ export const NewsletterFormStyles = css`
     letter-spacing: 1px;
     padding: 16px 0;
     padding-left: 42px;
+    grid-column: 1/6;
+  }
+
+  input[type="email"]::placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  input[type="email"]:focus {
+    outline: none;
   }
 
   .icon-email {
     margin-right: 8px;
-    //   position: absolute;
-    //   top: 12px;
-    //   left: 12px;
-    //   color: var(--ibp-ecru);
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    color: black;
+    font-size: 18px;
   }
 
   button {
@@ -45,19 +60,22 @@ export const NewsletterFormStyles = css`
     border: none;
   }
 
-  a.newsletter-signup-button {
-    background: var(--ibp-accent-alt);
+  .formEmailButton {
+    grid-column: 6/7;
+    background: var(--ibp-teal-dark);
     width: 100%;
-    color: var(--ibp-body-text);
+    color: white;
     text-transform: uppercase;
     text-align: center;
-    font-size: 16px;
+    font-size: 13px;
+    font-weight: 800;
     letter-spacing: 1px;
-    padding: 20px;
+    padding: 16px;
+    border: none;
   }
 
-  .newsletter-signup-button:hover {
-    background: white;
+  .formEmailButton:hover {
+    background: var(--ibp-accent);
     color: var(--ibp-body-text);
   }
 

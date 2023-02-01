@@ -13,39 +13,55 @@ export class IbpFooter extends LitElement {
   }
 
   render() {
-    const show_heading = true;
-
-    return html` <footer>
-      <div class="grid-12-col">
-        <div class="left">
-          <h6>Quick Links</h6>
-
-          <ul class="footer-nav">
-            <li><a href="https://internationalbudget.org/campaign-to-open-budgets/">Join Our Call To Action</a></li>
-            <li><a href="https://internationalbudget.org/our-work/">What We Do</a></li>
-            <li><a href="https://internationalbudget.org/library/publications/">Publications</a></li>
-            <li><a href="https://internationalbudget.org/about-us/">About</a></li>
-          </ul>
-        </div>
-        <div class="main">
-          <ibp-logo flat width="280"></ibp-logo>
-
-          <newsletter-form style="padding: 0 44px; margin: 44px 0;"></newsletter-form>
-
-          <social-links color="var(--ibp-accent-alt)"></social-links>
-        </div>
-        <div class="right">
-          <h6>&nbsp;</h6>
-          <ul class="footer-nav">
-            <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
-            <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
-            <li><a href="https://www.internationalbudget.org/library/copyright/">Copyright</a></li>
-            <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
-          </ul>
+    return html` <div class="footer-banner">
+        <div class="grid-12-col">
+          <div class="footer-slogan">We make <span>budgets</span><br />work for <span>people</span></div>
+          <div class="footer-newsletter"><newsletter-form show-heading="true" class="signup-form"></newsletter-form></div>
         </div>
       </div>
-      <div class="copyright">© 2022 International Budget Partnership. All rights reserved. • Made with Love by creatives with a conscience</div>
-    </footer>`;
+      <footer>
+        <div class="grid-12-col">
+          <div class="left">
+            <h6>Quick Links</h6>
+
+            <ul class="footer-nav">
+              <li><a href="https://internationalbudget.org/campaign-to-open-budgets/">Join Our Call To Action</a></li>
+              <li><a href="https://internationalbudget.org/our-work/">What We Do</a></li>
+              <li><a href="https://internationalbudget.org/library/publications/">Publications</a></li>
+              <li><a href="https://internationalbudget.org/about-us/">About</a></li>
+            </ul>
+          </div>
+          <div class="main">
+            <ibp-logo flat width="280"></ibp-logo>
+            <social-links color="var(--ibp-accent-alt)"></social-links>
+          </div>
+          <div class="right">
+            <h6>&nbsp;</h6>
+            <ul class="footer-nav">
+              <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
+              <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
+              <li><a href="https://www.internationalbudget.org/library/copyright/">Copyright</a></li>
+              <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">© ${new Date().getFullYear()} International Budget Partnership. All rights reserved. • Made with Love by creatives with a conscience</div>
+      </footer>`;
+  }
+
+  firstUpdated() {
+    let nb = this.shadowRoot.querySelector("footer");
+
+    let observer = new IntersectionObserver(
+      (entries) => {
+        this.shadowRoot.querySelector(".footer-banner").classList.toggle("active", entries[0].isIntersecting);
+      },
+      {
+        threshold: [0.4],
+      }
+    );
+
+    observer.observe(nb);
   }
 }
 
