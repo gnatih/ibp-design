@@ -2,6 +2,16 @@ import { LitElement, html, css } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 
 export class IbpLogo extends LitElement {
+  static get styles() {
+    return css`
+      @media screen and (max-width: 320px) {
+        svg {
+          width: 80%;
+        }
+      }
+    `;
+  }
+
   static properties = {
     flat: { type: Boolean },
     width: { type: String },

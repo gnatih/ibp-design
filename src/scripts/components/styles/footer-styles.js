@@ -93,7 +93,7 @@ export const FooterStyles = css`
   }
 
   .footer-banner.active:after {
-    clip-path: polygon(60% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(63% 0, 100% 0, 100% 100%, 53% 100%);
   }
 
   .footer-banner.active .grid-12-col {
@@ -120,14 +120,18 @@ export const FooterStyles = css`
   }
 
   @media screen and (max-width: 576px) {
-    :host {
-      outline: 1px solid purple;
-    }
-
     .main,
     .right,
     .left {
       grid-column: auto;
+    }
+
+    .left .footer-nav li:last-child {
+      border-bottom: 1px solid #3f8d98;
+    }
+
+    .right h6 {
+      display: none;
     }
 
     .grid-12-col,
@@ -165,8 +169,8 @@ export const FooterStyles = css`
     }
 
     .footer-banner .grid-12-col {
-      padding: 0 32px;
-      margin-top: 15px;
+      padding: 0 20px;
+      margin-top: 0 !important;
       opacity: 1;
     }
 
@@ -174,10 +178,18 @@ export const FooterStyles = css`
       font-size: 42px;
       line-height: 48px;
       grid-column: 1/13;
+      white-space: nowrap;
     }
 
     .footer-newsletter {
       padding-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .footer-slogan {
+      font-size: 32px;
+      line-height: 41px;
     }
   }
 `;

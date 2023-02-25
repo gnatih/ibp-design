@@ -91,9 +91,9 @@ h6 {
   }
 }
 
-[slot="pre-nav"] a {
-  text-decoration: underline;
-}
+// [slot="pre-nav"] a {
+//   text-decoration: underline;
+// }
 
 a {
   color: inherit;
@@ -201,7 +201,7 @@ p {
 
   a {
     color: white;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 }
 
@@ -422,7 +422,7 @@ ol {
   }
 }
 
-a:not([class*="btn"]):not([class*="story-teaser"]):not([class*="button"]):not([class*="elementor"]):not(:has([class*="wp-image"])):not([class*="sf_filter"]):not([class*="page-numbers"]):not(:has(img)):not([class*="leaflet-control"]) {
+a:not([class*="btn"]):not([class*="story-teaser"]):not([class*="button"]):not([class*="elementor"]):not(:has([class*="wp-image"])):not([class*="sf_filter"]):not([class*="page-numbers"]):not(:has(img)):not([class*="leaflet-control"]):not([class*="c-full-ranking__row"]) {
   border-bottom: 1px solid var(--ibp-accent);
   transition: all 0.2s ease-out;
 

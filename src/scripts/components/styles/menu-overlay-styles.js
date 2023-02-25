@@ -100,17 +100,7 @@ export const MenuOverlayStyles = css`
 
   .full-menu .sub {
     margin-top: 44px;
-    line-height: 3;
-  }
-
-  .full-menu .sub a {
-    font-size: 13px;
-    line-height: 15px;
-    font-weight: bold;
-  }
-
-  .full-menu li a {
-    line-height: 1.4;
+    margin-bottom: 44px;
   }
 
   .full-menu h6 {
@@ -180,6 +170,11 @@ export const MenuOverlayStyles = css`
       flex-direction: column;
     }
 
+    .full-menu .sub {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+
     .full-menu div {
       width: auto;
       margin: 0;
@@ -203,6 +198,7 @@ export const MenuOverlayStyles = css`
 
     .btn-donate,
     .btn-action {
+      color: var(--ibp-body-text) !important;
       // padding: 14px 14px 12px 14px;
       padding: 8px 14px 6px 14px;
       font-size: 13px;

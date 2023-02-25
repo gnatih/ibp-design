@@ -52,7 +52,7 @@ export const BaseStyles = css`
 
   .social-links a {
     color: inherit;
-    margin-right: 25px;
+    margin-right: 15px;
   }
 
   .main-nav-wrapper {

@@ -11,38 +11,45 @@ export async function fetchData(path) {
 }
 
 export function createPrimaryMenu(menu, active_slug) {
+  let href = window.location.href.replace(/\/$/, "");
   let _menu = [];
   let _current = {};
   let _parent = {};
+  let has_active = false;
 
   menu.forEach((item) => {
-    let href = window.location.href.replace(/\/$/, "");
-    let url = item.url.replace(/\/$/, "");
+    let item_url = item.url.replace(/\/$/, "");
     let parent = {
       title: item.title,
-      url: item.url,
       hero: item.hero,
+      url: item_url,
     };
 
-    if (url == href) {
-      _current = parent;
+    if (item_url == href && href !== "https://internationalbudget.org/events") {
       parent.active = true;
+      _parent = parent;
+      has_active = true;
     }
 
     if (item.children) {
       item.children.forEach((item_child) => {
-        let item_url = item_child.url.replace(/\/$/, "");
+        let child_url = item_child.url.replace(/\/$/, "");
+
         let child = {
           title: item_child.title,
-          url: item_url,
+          url: item_child.url,
           hero: item_child.hero,
-          active: item_url == href,
         };
 
-        if (item_child.url.indexOf(href) > -1) {
-          _parent = parent;
-          _current = item_child;
-          if (href !== "https://internationalbudget.org") _parent.active = true;
+        if (child_url === href && href !== "https://internationalbudget.org/events") {
+          if (!has_active) {
+            parent.active = true;
+            _parent = parent;
+            has_active = true;
+          }
+
+          child.active = true;
+          _current = child;
         }
 
         if (!parent.children) parent.children = [];
@@ -70,6 +77,7 @@ export function renderPrimaryMenu(menu) {
 }
 
 export function renderSecondaryMenu(menu) {
+  console.log(menu);
   if (menu.children && menu.children.length > 1) {
     let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
 
@@ -98,12 +106,12 @@ export function renderFullMenu(menu) {
   str += `<div>${createLinkList(menu_items[1])}</div>`;
   str += `<div>
             ${createLinkList(menu_items[2])}
-            <ul class="sub">
-              <li><a href="/press">Press</a></li>
-              <li><a href="/events">Events</a></li>
-              <li><a href="/insights">Insights</a></li>
-            </ul> 
-            <div class="action-buttons d-md-none"><a href="https://internationalbudget.org/campaign-to-open-budgets/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Donate</a></div>
+            <div class="sub"> 
+            <h6><a href="/press">Press</a></h6>
+            <h6><a href="/events">Events</a></h6>
+            <h6><a href="/insights">Insights</a></h6>
+            </div>
+            <div class="action-buttons d-md-none"><a href="https://internationalbudget.org/take-action/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Support Us</a></div>
             <social-links></social-links>
           </div>`;
 
