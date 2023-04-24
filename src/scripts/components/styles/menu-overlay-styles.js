@@ -10,6 +10,7 @@ export const MenuOverlayStyles = css`
     height: 0;
     transition: all 1s;
     pointer-events: none;
+    font-weight: 400;
   }
 
   .overlay.visible {
@@ -77,6 +78,7 @@ export const MenuOverlayStyles = css`
   .full-menu {
     grid-column: span 8;
     display: flex;
+    padding-bottom: 44px;
   }
 
   .full-menu div {
@@ -95,12 +97,14 @@ export const MenuOverlayStyles = css`
   }
 
   .full-menu li {
-    line-height: 2;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 22px;
   }
 
   .full-menu .sub {
     margin-top: 44px;
-    margin-bottom: 44px;
+    margin-bottom: 20px;
   }
 
   .full-menu h6 {

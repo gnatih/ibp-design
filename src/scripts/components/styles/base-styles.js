@@ -62,7 +62,7 @@ export const BaseStyles = css`
   .main-nav {
     min-height: var(--ibp-main-nav-height);
     align-items: center;
-    font-famiy: "Adelle Sans", sans-serif;
+    font-family: var(--ibp-body-font-family);
   }
 
   .main-nav .logo {
@@ -98,8 +98,8 @@ export const BaseStyles = css`
     line-height: 18px;
     letter-spacing: 0.12em;
     margin-right: 1em;
-    font-weight: 400;
-    font-family: "Adelle Sans", sans-serif;
+    font-family: var(--ibp-body-font-family);
+    font-weight: 600;
   }
 
   @media screen and (max-width: 1299px) {

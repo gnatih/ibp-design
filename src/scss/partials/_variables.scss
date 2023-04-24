@@ -1,13 +1,14 @@
 :root {
   --ibp-font-family-serif: "DM Serif Display", serif;
-  --ibp-font-family-sans-serif: "Adelle Sans", sans-serif;
-  --ibp-font-family-monospaced: "DM Serif Mono", monospace;
+  --ibp-font-family-sans-serif: "adelle-sans", "Adelle Sans", sans-serif;
+  --ibp-font-family-monospaced: "DM Mono", monospace;
   --ibp-body-font-family: var(--ibp-font-family-sans-serif);
   --ibp-body-text: #222222;
   --ibp-body-text-dark-mode: #ffffff;
 
   --ibp-text-highlight-light: #dad5ca;
   --ibp-text-highlight-dark: #6d6a5f;
+  --ibp-lines-on-cream: #acaaa2;
   --ibp-page-bg: #ffffff;
   --ibp-ecru: #eceae5;
   --ibp-footer-bg-light: #0f717e;

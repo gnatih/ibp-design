@@ -17,13 +17,13 @@ export const PreHeaderStyles = css`
 
   a {
     font-size: 13px;
-    font-family: "Adelle Sans", sans-serif;
+    font-family: var(--ibp-body-font-family);
     font-weight: 800;
     text-decoration: none;
     color: #151515;
     padding: 0 14px;
     text-transform: uppercase;
-    line-height: 35px; 
+    line-height: 35px;
     letter-spacing: 0.12em;
   }
 

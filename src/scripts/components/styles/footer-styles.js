@@ -1,6 +1,10 @@
 import { css } from "lit";
 
 export const FooterStyles = css`
+  :host {
+    font-weight: 400;
+  }
+
   footer {
     background-color: var(--ibp-teal-dark);
   }
@@ -68,6 +72,7 @@ export const FooterStyles = css`
     padding-bottom: 60px;
     position: relative;
     background: var(--ibp-teal-dark);
+    font-weight: 400;
   }
 
   .footer-banner .grid-12-col {
@@ -85,7 +90,6 @@ export const FooterStyles = css`
     top: 0;
     height: 100%;
     left: 0;
-    // background: linear-gradient(135deg, var(--ibp-teal-dark) 55%, var(--ibp-teal) 55%);
     background: var(--ibp-teal);
     clip-path: polygon(45% 0, 100% 0, 100% 100%, 35% 100%);
     z-index: 0;
