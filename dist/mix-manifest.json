@@ -1,4 +1,6 @@
 {
     "/js/ibp-components.js": "/js/ibp-components.js",
-    "/css/styles.css": "/css/styles.css"
+    "/js/manifest.js": "/js/manifest.js",
+    "/css/styles.css": "/css/styles.css",
+    "/js/vendor.js": "/js/vendor.js"
 }

@@ -5,6 +5,7 @@ mix.sass("src/scss/styles.scss", "css");
 // mix.sass("scss/partials/icons.scss", "css");
 
 mix.js(["src/scripts/components/ibp-header.js", "src/scripts/components/ibp-footer.js"], "js/ibp-components.js");
+mix.extract();
 
 mix.browserSync({
   server: "dist",
