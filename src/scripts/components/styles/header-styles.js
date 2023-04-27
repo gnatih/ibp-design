@@ -110,6 +110,7 @@ export const HeaderStyles = css`
     margin: 8px 0;
     display: block;
     font-size: 16px;
+    font-weight: normal;
   }
 
   .secondary-nav li:last-child {

@@ -4,7 +4,7 @@ module.exports = {
   outputDir: "dist/fonts",
   assetTypes: ["css"],
   fontTypes: ["eot", "woff", "woff2", "ttf"],
-  // fontsUrl: "https://gnatih.github.io/ibp-design/fonts",
+  fontsUrl: "https://gnatih.github.io/ibp-design/fonts",
   normalize: true,
   fontHeight: 300,
   tag: "",
