@@ -22,7 +22,7 @@ export function createPrimaryMenu(menu, active_slug) {
     let parent = {
       title: item.title,
       hero: item.hero,
-      url: item_url,
+      url: item.url,
     };
 
     if (item_url == href && href !== "https://internationalbudget.org/events") {

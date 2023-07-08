@@ -13,7 +13,9 @@ export const FeaturedStoryStyles = css`
   }
 
   .story-image img {
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .story-content {
