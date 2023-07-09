@@ -214,6 +214,7 @@ export const BaseStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   .icon-arrow-left:before {
     content: "\\f101";
   }
@@ -256,31 +257,34 @@ export const BaseStyles = css`
   .icon-globe:before {
     content: "\\f10e";
   }
-  .icon-linkedin:before {
+  .icon-instagram:before {
     content: "\\f10f";
   }
-  .icon-menu:before {
+  .icon-linkedin:before {
     content: "\\f110";
   }
-  .icon-participation:before {
+  .icon-menu:before {
     content: "\\f111";
   }
-  .icon-search:before {
+  .icon-participation:before {
     content: "\\f112";
   }
-  .icon-share:before {
+  .icon-search:before {
     content: "\\f113";
   }
-  .icon-transparency:before {
+  .icon-share:before {
     content: "\\f114";
   }
-  .icon-twitter:before {
+  .icon-transparency:before {
     content: "\\f115";
   }
-  .icon-youtube:before {
+  .icon-twitter:before {
     content: "\\f116";
   }
-  .icon-zoom:before {
+  .icon-youtube:before {
     content: "\\f117";
+  }
+  .icon-zoom:before {
+    content: "\\f118";
   }
 `;

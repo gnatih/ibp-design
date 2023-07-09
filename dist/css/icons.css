@@ -1,88 +1,89 @@
 @font-face {
-    font-family: "ibp-icons";
-    src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot?e30c0b5b14b8a1a96ab50253a6ec0d6e#iefix") format("embedded-opentype"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("woff"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("woff2"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("truetype");
+  font-family: "ibp-icons";
+  src: url("../fonts/ibp-icons.eot?906c88e2cf4cffb4174304e586b659a0#iefix") format("embedded-opentype"), url("../fonts/ibp-icons.woff?906c88e2cf4cffb4174304e586b659a0") format("woff"), url("../fonts/ibp-icons.woff2?906c88e2cf4cffb4174304e586b659a0") format("woff2"), url("../fonts/ibp-icons.ttf?906c88e2cf4cffb4174304e586b659a0") format("truetype");
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: ibp-icons !important;
-    font-style: normal;
-    font-weight: normal !important;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: ibp-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-arrow-left:before {
-    content: "\f101";
+  content: "\f101";
 }
 .icon-arrow-up:before {
-    content: "\f102";
+  content: "\f102";
 }
 .icon-budget:before {
-    content: "\f103";
+  content: "\f103";
 }
 .icon-caret-down:before {
-    content: "\f104";
+  content: "\f104";
 }
 .icon-caret-left:before {
-    content: "\f105";
+  content: "\f105";
 }
 .icon-caret-right-circle:before {
-    content: "\f106";
+  content: "\f106";
 }
 .icon-caret-right:before {
-    content: "\f107";
+  content: "\f107";
 }
 .icon-close:before {
-    content: "\f108";
+  content: "\f108";
 }
 .icon-download:before {
-    content: "\f109";
+  content: "\f109";
 }
 .icon-email-filled:before {
-    content: "\f10a";
+  content: "\f10a";
 }
 .icon-email:before {
-    content: "\f10b";
+  content: "\f10b";
 }
 .icon-facebook:before {
-    content: "\f10c";
+  content: "\f10c";
 }
 .icon-filter:before {
-    content: "\f10d";
+  content: "\f10d";
 }
 .icon-globe:before {
-    content: "\f10e";
+  content: "\f10e";
+}
+.icon-instagram:before {
+  content: "\f10f";
 }
 .icon-linkedin:before {
-    content: "\f10f";
+  content: "\f110";
 }
 .icon-menu:before {
-    content: "\f110";
+  content: "\f111";
 }
 .icon-participation:before {
-    content: "\f111";
+  content: "\f112";
 }
 .icon-search:before {
-    content: "\f112";
+  content: "\f113";
 }
 .icon-share:before {
-    content: "\f113";
+  content: "\f114";
 }
 .icon-transparency:before {
-    content: "\f114";
+  content: "\f115";
 }
 .icon-twitter:before {
-    content: "\f115";
+  content: "\f116";
 }
 .icon-youtube:before {
-    content: "\f116";
+  content: "\f117";
 }
 .icon-zoom:before {
-    content: "\f117";
+  content: "\f118";
 }

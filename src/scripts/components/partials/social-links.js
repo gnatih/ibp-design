@@ -43,7 +43,7 @@ export class SocialLinks extends LitElement {
       <a href="https://twitter.com/OpenBudgets" target="_blank"><i class="ibp-icons icon-twitter"></i></a>
       <a href="https://www.linkedin.com/company/international-budget-partnership" target="_blank"><i class="ibp-icons icon-linkedin"></i></a>
       <a href="https://www.youtube.com/user/IntBudgetPartnership/playlists" target="_blank"><i class="ibp-icons icon-youtube"></i></a>
-      <a href="https://www.instagram.com/openbudgets/" target="_blank"><i class="ibp-icons icon-youtube"></i></a>
+      <a href="https://www.instagram.com/openbudgets/" target="_blank"><i class="ibp-icons icon-instagram"></i></a>
     </div>`;
   }
 }
