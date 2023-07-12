@@ -1,9 +1,9 @@
 @font-face {
     font-family: "ibp-icons";
-    src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot?e30c0b5b14b8a1a96ab50253a6ec0d6e#iefix") format("embedded-opentype"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("woff"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("woff2"),
-url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?e30c0b5b14b8a1a96ab50253a6ec0d6e") format("truetype");
+    src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot?906c88e2cf4cffb4174304e586b659a0#iefix") format("embedded-opentype"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff?906c88e2cf4cffb4174304e586b659a0") format("woff"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2?906c88e2cf4cffb4174304e586b659a0") format("woff2"),
+url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?906c88e2cf4cffb4174304e586b659a0") format("truetype");
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -59,30 +59,33 @@ url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf?e30c0b5b14b8a1a96ab
 .icon-globe:before {
     content: "\f10e";
 }
-.icon-linkedin:before {
+.icon-instagram:before {
     content: "\f10f";
 }
-.icon-menu:before {
+.icon-linkedin:before {
     content: "\f110";
 }
-.icon-participation:before {
+.icon-menu:before {
     content: "\f111";
 }
-.icon-search:before {
+.icon-participation:before {
     content: "\f112";
 }
-.icon-share:before {
+.icon-search:before {
     content: "\f113";
 }
-.icon-transparency:before {
+.icon-share:before {
     content: "\f114";
 }
-.icon-twitter:before {
+.icon-transparency:before {
     content: "\f115";
 }
-.icon-youtube:before {
+.icon-twitter:before {
     content: "\f116";
 }
-.icon-zoom:before {
+.icon-youtube:before {
     content: "\f117";
+}
+.icon-zoom:before {
+    content: "\f118";
 }
