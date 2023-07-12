@@ -50,7 +50,7 @@ export class IbpFooter extends LitElement {
   }
 
   firstUpdated() {
-    let nb = this.shadowRoot.querySelector("footer");
+    let nb = this.shadowRoot.querySelector(".footer-banner");
 
     let observer = new IntersectionObserver(
       (entries) => {

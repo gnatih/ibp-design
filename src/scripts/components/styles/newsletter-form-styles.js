@@ -33,7 +33,7 @@ export const NewsletterFormStyles = css`
     font-size: 12px;
     letter-spacing: 1px;
     padding: 16px 0;
-    padding-left: 42px;
+    padding-left: 46px;
     grid-column: 1/6;
   }
 
@@ -49,9 +49,9 @@ export const NewsletterFormStyles = css`
   .icon-email {
     margin-right: 8px;
     position: absolute;
-    top: 13px;
-    left: 12px;
-    color: black;
+    top: 15px;
+    left: 16px;
+    color: var(--ibp-teal-light);
     font-size: 18px;
   }
 

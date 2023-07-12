@@ -16,7 +16,7 @@ export const FooterStyles = css`
   }
 
   hr {
-    border-color: var(--ibp-footer-bg-dark);
+    border-color: rgba(255, 255, 255, 0.2);
   }
 
   .left,
@@ -55,7 +55,7 @@ export const FooterStyles = css`
 
   .footer-nav li {
     padding: 8px 0;
-    border-bottom: 1px solid #3f8d98;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .footer-nav li:last-child {
@@ -131,7 +131,7 @@ export const FooterStyles = css`
     }
 
     .left .footer-nav li:last-child {
-      border-bottom: 1px solid #3f8d98;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .right h6 {

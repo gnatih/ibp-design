@@ -135,7 +135,7 @@ export const BaseStyles = css`
   }
 
   .btn-action {
-    background: var(--ibp-text-highlight-light);
+    background: var(--ibp-ecru);
   }
 
   .d-md-none {

@@ -189,11 +189,12 @@ export const MenuOverlayStyles = css`
       margin: 0;
       padding-top: 14px;
       padding-bottom: 12px;
-      border-top: 1px solid var(--ibp-teal-light);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .full-menu h6 i {
       display: block;
+      font-size: 10px;
     }
 
     .full-menu li a {
@@ -203,14 +204,18 @@ export const MenuOverlayStyles = css`
     .btn-donate,
     .btn-action {
       color: var(--ibp-body-text) !important;
-      // padding: 14px 14px 12px 14px;
       padding: 8px 14px 6px 14px;
       font-size: 13px;
       text-transform: uppercase;
       font-weight: 800;
-      border-radius: 500px;
       margin-right: 11px;
       letter-spacing: var(--ibp-letter-spacing);
+    }
+
+    .btn-donate:hover,
+    .btn-action:hover {
+      background: white;
+      border: 1px solid var(--ibp-accent);
     }
 
     .toggle:checked + h6 i {

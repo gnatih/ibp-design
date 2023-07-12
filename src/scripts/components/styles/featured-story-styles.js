@@ -10,16 +10,22 @@ export const FeaturedStoryStyles = css`
 
   .story-image {
     flex: 1;
+    position: relative;
   }
 
   .story-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: left top;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .story-content {
     padding: 38px;
+    padding-top: 28px;
   }
 
   .featured-type {
@@ -28,7 +34,7 @@ export const FeaturedStoryStyles = css`
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
   }
 
   h3 {
@@ -45,11 +51,21 @@ export const FeaturedStoryStyles = css`
     color: var(--ibp-body-text);
     text-decoration: none;
     font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px 4px 12px;
+    border-radius: 500px;
+    margin-left: -12px;
+  }
+
+  .read-more:hover {
+    outline: 1px solid var(--ibp-accent);
   }
 
   .read-more i {
     margin-left: 8px;
     font-size: 15px;
+    line-height: 0;
   }
 
   @media screen and (max-width: 576px) {

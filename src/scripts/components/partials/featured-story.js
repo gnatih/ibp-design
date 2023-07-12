@@ -30,11 +30,13 @@ export class FeaturedStory extends LitElement {
   }
 
   render() {
-    return html`<div class="story-image"><img src="${this.featured.featured_image}" /></div>
+    return html`<div class="story-image"><img src="${this.featured.featured_image}" style="" /></div>
       <div class="story-content">
         <p class="featured-type">${this.featured.featured_type}</p>
         <h3>${this.featured.featured_title}</h3>
-        <a href="${this.featured.featured_link}" class="read-more">${this.featured.featured_button_text} <i class="ibp-icons icon-caret-right-circle"></i></a>
+        <div>
+          <a href="${this.featured.featured_link}" class="read-more btn btn-clear">${this.featured.featured_button_text} <i class="ibp-icons icon-caret-right-circle"></i></a>
+        </div>
       </div>`;
   }
 }
