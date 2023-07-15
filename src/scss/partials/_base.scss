@@ -133,13 +133,17 @@ blockquote {
   font-weight: 800;
 
   &--large {
-    font-size: 24px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 110%;
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+    }
   }
 
   &--small {
     font-size: 13px;
-    line-height: 15px;
+    line-height: 120%;
     text-transform: uppercase;
   }
 }
