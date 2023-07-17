@@ -44,7 +44,7 @@ h2 {
 
 h3 {
   font-size: var(--ibp-heading-3-font-size);
-  line-height: 1;
+  line-height: 38px;
   letter-spacing: var(--ibp-letter-spacing-sm);
 
   @media screen and (max-width: 375px) {
@@ -56,12 +56,12 @@ h3 {
 h4 {
   font-family: var(--ibp-body-font-family);
   font-size: var(--ibp-heading-4-font-size);
-  line-height: 1;
+  line-height: 125% !important;
   font-weight: 700;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 767px) {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 130% !important;
   }
 }
 
@@ -129,7 +129,7 @@ blockquote {
 
 .section-title {
   text-transform: uppercase;
-  letter-spacing: var(--ibp-letter-spacing);
+  letter-spacing: 2.4px;
   font-weight: 800;
 
   &--large {
@@ -138,13 +138,14 @@ blockquote {
 
     @media screen and (max-width: 767px) {
       font-size: 18px;
+      letter-spacing: 2.16px;
     }
   }
 
   &--small {
     font-size: 13px;
     line-height: 120%;
-    text-transform: uppercase;
+    letter-spacing: 1.56px;
   }
 }
 
@@ -159,16 +160,17 @@ blockquote {
   }
 }
 
-.page-title {
+.page-title,
+.page-title h1 {
   font-family: var(--ibp-heading-font-family);
-  font-size: var(--ibp-page-title-font-size);
-  letter-spacing: var(--ibp-letter-spacing-sm);
-  line-height: 1;
+  font-size: 90px;
+  letter-spacing: -2.25px;
+  line-height: 94px;
   pointer-events: none;
 
   @media screen and (max-width: 576px) {
     font-size: 42px;
-    line-height: 45px;
+    line-height: 105%;
     margin-bottom: 15px;
   }
 
