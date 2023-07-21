@@ -132,6 +132,11 @@ blockquote {
   letter-spacing: 2.4px;
   font-weight: 800;
 
+  .elementor-heading-title {
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
   &--large {
     font-size: 20px;
     line-height: 110%;
