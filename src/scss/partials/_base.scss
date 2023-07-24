@@ -25,7 +25,7 @@ h1 {
   line-height: 1;
   letter-spacing: var(--ibp-letter-spacing-sm);
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 767px) {
     font-size: 32px;
     line-height: 32px;
   }
@@ -36,7 +36,7 @@ h2 {
   line-height: 1;
   letter-spacing: var(--ibp-letter-spacing-sm);
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 767px) {
     font-size: 24px;
     line-height: 24px;
   }
@@ -47,9 +47,17 @@ h3 {
   line-height: 38px;
   letter-spacing: var(--ibp-letter-spacing-sm);
 
-  @media screen and (max-width: 375px) {
+  &.elementor-heading-title {
+    line-height: 38px;
+  }
+
+  @media screen and (max-width: 767px) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 120%;
+
+    &.elementor-heading-title {
+      line-height: 120%;
+    }
   }
 }
 
@@ -71,7 +79,7 @@ h5 {
   font-family: var(--ibp-body-font-family);
   font-weight: 700;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 767px) {
     font-size: 14px;
     line-height: 14px;
   }
@@ -85,7 +93,7 @@ h6 {
   font-family: var(--ibp-body-font-family);
   font-weight: 800;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 767px) {
     font-size: 13px;
     line-height: 13px;
   }
