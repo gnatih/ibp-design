@@ -178,6 +178,7 @@ export const HeaderStyles = css`
       font-family: "ibp-icons";
       content: "\\f109";
       margin-bottom: 8px;
+      font-size: 15px;
     }
 
     .subnav-content {

@@ -30,7 +30,7 @@ export const menu = fetch("https://internationalbudget.org/wp-json/wp-api-menus/
             if (child.url.indexOf("survey.international") > -1) {
               //setup heroku staging to rewrite staging urls
             } else if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports"])) {
-              child.url = child.url.replace(/internationalbudget.org/g, "dev-international-budget-partership.pantheonsite.io");
+              child.url = child.url.replace(/internationalbudget.org/g, "dev-international-budget-partnership.pantheonsite.io");
             } else {
               child.url = child.url.replace(/internationalbudget.org/g, "staging2.internationalbudget.org");
             }
