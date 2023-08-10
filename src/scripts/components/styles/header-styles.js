@@ -3,7 +3,6 @@ import { css } from "lit";
 export const HeaderStyles = css`
   :host {
     display: block;
-    background: #eceae5;
     min-height: var(--ibp-header-height);
     overflow: visible;
   }
@@ -56,6 +55,24 @@ export const HeaderStyles = css`
     z-index: 0;
   }
 
+  :host {
+    color: var(--ibp-body-text);
+    background: #eceae5;
+  }
+
+  :host([dark]) {
+    color: white;
+    background-color: var(--ibp-teal-dark);
+  }
+
+  :host([dark]) ::slotted(.page-title) {
+    color: var(--ibp-teal-light);
+  }
+
+  :host([dark]) hr {
+    border: solid var(--ibp-hr-height) var(--ibp-field-outline);
+  }
+
   .nav-content--header {
     grid-column: span 6;
     padding-bottom: 44px;
@@ -65,6 +82,10 @@ export const HeaderStyles = css`
     grid-column: span 2;
   }
 
+  .secondary-nav h6 {
+    margin-top: 8px;
+  }
+
   .infobox {
     grid-column: 9/13;
     background: white;
@@ -72,6 +93,10 @@ export const HeaderStyles = css`
 
   .spacer {
     grid-column: span 1;
+  }
+
+  input#subnav-toggle {
+    display: none;
   }
 
   .secondary-nav li a.active:before {
@@ -104,8 +129,12 @@ export const HeaderStyles = css`
     border-bottom: 1px solid #acaaa2;
   }
 
+  :host([dark]) .secondary-nav li {
+    border-bottom: 1px solid var(--ibp-field-outline);
+  }
+
   .secondary-nav li a {
-    color: #222222;
+    color: inherit;
     text-decoration: none;
     margin: 8px 0;
     display: block;
@@ -136,6 +165,29 @@ export const HeaderStyles = css`
     .page-title {
       font-size: 42px;
       line-height: 45px;
+    }
+
+    label[for="subnav-toggle"] {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    label[for="subnav-toggle"]:after {
+      font-family: "ibp-icons";
+      content: "\\f109";
+      margin-bottom: 8px;
+    }
+
+    .subnav-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    input#subnav-toggle:checked ~ label:after {
+      content: "\\f108";
     }
   }
 `;

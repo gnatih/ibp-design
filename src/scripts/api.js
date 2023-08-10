@@ -77,9 +77,8 @@ export function renderPrimaryMenu(menu) {
 }
 
 export function renderSecondaryMenu(menu) {
-  console.log(menu);
   if (menu.children && menu.children.length > 1) {
-    let str = `<div class="secondary-nav"><hr><h6>${menu.title}</h6><ul>`;
+    let str = `<hr><input type="checkbox" id="subnav-toggle"><label for="subnav-toggle"><h6>${menu.title}</h6></label><div class="subnav-content"><ul>`;
 
     menu.children.forEach((item) => {
       let link_class = "";
@@ -90,7 +89,7 @@ export function renderSecondaryMenu(menu) {
       str += `<li><a href="${item.url}" class="${link_class}">${item.title}</a></li>`;
     });
 
-    str += `</ul></div><div class="spacer"></div>`;
+    str += `</div></ul><div class="spacer"></div>`;
 
     return unsafeHTML(str);
   }

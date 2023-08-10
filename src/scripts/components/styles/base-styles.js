@@ -20,6 +20,7 @@ export const BaseStyles = css`
 
   hr {
     border: solid var(--ibp-hr-height) #acaaa2;
+    margin: 0;
   }
 
   a {
@@ -55,8 +56,21 @@ export const BaseStyles = css`
     margin-right: 15px;
   }
 
-  .main-nav-wrapper {
+  .main-nav-header-wrapper {
     background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 0.5s ease-out;
+    z-index: 999;
+  }
+
+  .main-nav-header-wrapper.header-down {
+    top: 0;
+  }
+
+  .main-nav-header-wrapper.header-up {
+    top: -113px;
   }
 
   .main-nav {
@@ -194,6 +208,22 @@ export const BaseStyles = css`
     .social-links {
       margin-top: 0;
     }
+
+    .main-nav-header-wrapper.header-up {
+      top: -83px;
+    }
+
+    .main-nav-wrapper {
+      width: 100%;
+      position: fixed;
+      z-index: 9999;
+      opacity: 0.5;
+    }
+
+    .nav-content-wrapper {
+      padding-top: 30px;
+      z-index: 9999;
+    }
   }
 
   @media screen and (max-width: 1190px) {
@@ -236,55 +266,61 @@ export const BaseStyles = css`
   .icon-caret-right:before {
     content: "\\f107";
   }
-  .icon-close:before {
+  .icon-circle-minus:before {
     content: "\\f108";
   }
-  .icon-download:before {
+  .icon-circle-plus:before {
     content: "\\f109";
   }
-  .icon-email-filled:before {
+  .icon-close:before {
     content: "\\f10a";
   }
-  .icon-email:before {
+  .icon-download:before {
     content: "\\f10b";
   }
-  .icon-facebook:before {
+  .icon-email-filled:before {
     content: "\\f10c";
   }
-  .icon-filter:before {
+  .icon-email:before {
     content: "\\f10d";
   }
-  .icon-globe:before {
+  .icon-facebook:before {
     content: "\\f10e";
   }
-  .icon-instagram:before {
+  .icon-filter:before {
     content: "\\f10f";
   }
-  .icon-linkedin:before {
+  .icon-globe:before {
     content: "\\f110";
   }
-  .icon-menu:before {
+  .icon-instagram:before {
     content: "\\f111";
   }
-  .icon-participation:before {
+  .icon-linkedin:before {
     content: "\\f112";
   }
-  .icon-search:before {
+  .icon-menu:before {
     content: "\\f113";
   }
-  .icon-share:before {
+  .icon-participation:before {
     content: "\\f114";
   }
-  .icon-transparency:before {
+  .icon-search:before {
     content: "\\f115";
   }
-  .icon-twitter:before {
+  .icon-share:before {
     content: "\\f116";
   }
-  .icon-youtube:before {
+  .icon-transparency:before {
     content: "\\f117";
   }
-  .icon-zoom:before {
+  .icon-twitter:before {
     content: "\\f118";
+  }
+  .icon-youtube:before {
+    content: "\\f119";
+  }
+  .icon-zoom:before {
+    content: "\\f11a";
   }
 `;

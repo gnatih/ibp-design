@@ -52,18 +52,12 @@
   --ibp-main-nav-height: 113px;
 }
 
-@font-face {
-  font-family: "ibp-icons";
-  src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot");
-  src: url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.eot") format("embedded-opentype"), url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff2") format("woff2"), url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.woff") format("woff"), url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.ttf") format("truetype"), url("https://gnatih.github.io/ibp-design/fonts/ibp-icons.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   font-family: var(--ibp-body-font-family);
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 145%;
   font-weight: 300;
-  color: #222222;
+  color: var(--ibp-body-text);
   -webkit-font-smoothing: antialiased;
 }
 @media screen and (max-width: 375px) {
@@ -245,15 +239,8 @@ p.sm, p.text-sm {
   margin: 0;
 }
 
-.page-description {
-  font-size: 18px;
-  line-height: 29px;
-}
-.page-description p {
-  line-height: 1.5;
-}
 .page-description a {
-  color: white;
+  color: inherit;
 }
 
 hr {

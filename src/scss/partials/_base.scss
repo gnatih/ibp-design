@@ -1,8 +1,9 @@
 body {
   font-family: var(--ibp-body-font-family);
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 145%;
   font-weight: 300;
-  color: #222222;
+  color: var(--ibp-body-text);
   -webkit-font-smoothing: antialiased;
 
   @media screen and (max-width: 375px) {
@@ -207,16 +208,8 @@ p {
 }
 
 .page-description {
-  font-size: 18px;
-  line-height: 29px;
-
-  p {
-    line-height: 1.5;
-  }
-
   a {
-    color: white;
-    // text-decoration: underline;
+    color: inherit;
   }
 }
 
