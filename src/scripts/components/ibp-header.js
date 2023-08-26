@@ -19,7 +19,7 @@ export class IbpHeader extends LitElement {
     current_menu: { type: Object },
     show_menu: { type: Boolean, attribute: "visible" },
     dark: { type: Boolean, reflect: true },
-    background_image: { type: String, attribute: "background-image" },
+    background: { type: String, attribute: "background" },
     hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
     mini: { type: Boolean, attribute: "mini" },
     active_slug: { attribute: "active-slug" },
@@ -78,7 +78,6 @@ export class IbpHeader extends LitElement {
       }
 
       lastScrollTop = scrollTop;
-      console.log(scrollTop);
     };
   }
 
@@ -101,10 +100,20 @@ export class IbpHeader extends LitElement {
       this.parent_menu = parent;
 
       window.setTimeout(() => {
+        if (document.body.clientWidth < 767 && this.background) {
+          let secnav = this.renderRoot.querySelector(".secondary-nav");
+          secnav.remove();
+          this.shadowRoot.appendChild(secnav.cloneNode(true));
+        }
+
         let subnavToggle = this.shadowRoot.querySelector("label[for=subnav-toggle]");
+        if (document.body.clientWidth < 767) {
+          this.shadowRoot.querySelector("label[for=subnav-toggle] h6").innerHTML += " Menu";
+        }
 
         subnavToggle.onclick = function () {
           let subnavContent = this.nextElementSibling;
+
           if (subnavContent.style.maxHeight) {
             subnavContent.style.maxHeight = null;
           } else {
@@ -159,7 +168,7 @@ export class IbpHeader extends LitElement {
 
       ${!this.mini
         ? html`
-            <div class="${classMap({ banner: !this.mini, "has-image": this.background })}">
+            <div class="${classMap({ banner: !this.mini, "has-image": this.background })}" style="background-image: url(${this.background})">
               <div class="nav-content-wrapper">
                 <div class="container nav-content grid-12-col">
                   ${this._getSidebar()}

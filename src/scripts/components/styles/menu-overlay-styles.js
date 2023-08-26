@@ -32,6 +32,10 @@ export const MenuOverlayStyles = css`
     left: 0;
   }
 
+  .overlay .nav-content-wrapper {
+    margin-top: 63px;
+  }
+
   .search-box-mobile {
     grid-column: span 12;
     margin-top: 20px;

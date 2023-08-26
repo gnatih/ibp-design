@@ -83,10 +83,6 @@ export const BaseStyles = css`
     grid-column: 1/3;
   }
 
-  .nav-content-wrapper {
-    padding-top: 44px;
-  }
-
   .nav,
   .mobile-nav {
     justify-self: end;
@@ -216,13 +212,11 @@ export const BaseStyles = css`
     .main-nav-wrapper {
       width: 100%;
       position: fixed;
-      z-index: 9999;
-      opacity: 0.5;
+      z-index: 1000;
     }
 
     .nav-content-wrapper {
-      padding-top: 30px;
-      z-index: 9999;
+      z-index: 1;
     }
   }
 

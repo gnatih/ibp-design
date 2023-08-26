@@ -141,13 +141,15 @@ blockquote {
   letter-spacing: 2.4px;
   font-weight: 800;
 
-  .elementor-heading-title {
+  h6.elementor-heading-title {
     line-height: inherit;
     letter-spacing: inherit;
+    margin: 0;
+    font-size: inherit;
   }
 
   &--large {
-    font-size: 20px;
+    font-size: 20px !important;
     line-height: 110%;
 
     @media screen and (max-width: 767px) {

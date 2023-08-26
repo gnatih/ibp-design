@@ -3,7 +3,7 @@ import { css } from "lit";
 export const HeaderStyles = css`
   :host {
     display: block;
-    min-height: var(--ibp-header-height);
+    // min-height: var(--ibp-header-height);
     overflow: visible;
   }
 
@@ -12,9 +12,12 @@ export const HeaderStyles = css`
   }
 
   .banner {
-    min-height: var(--ibp-header-height);
+    // min-height: var(--ibp-header-height);
     width: 100%;
     z-index: 0;
+    background-color: var(--ibp-ecru);
+    padding-top: 90px;
+    padding-bottom: 80px;
   }
 
   .banner.has-image {
@@ -57,11 +60,13 @@ export const HeaderStyles = css`
 
   :host {
     color: var(--ibp-body-text);
-    background: #eceae5;
   }
 
   :host([dark]) {
     color: white;
+  }
+
+  :host([dark]) .banner {
     background-color: var(--ibp-teal-dark);
   }
 
@@ -76,6 +81,12 @@ export const HeaderStyles = css`
   .nav-content--header {
     grid-column: span 6;
     padding-bottom: 44px;
+  }
+
+  .nav-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .secondary-nav {
@@ -152,14 +163,29 @@ export const HeaderStyles = css`
       min-height: auto;
     }
 
+    .banner {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     .nav-content {
       gap: 12px;
       grid-template-columns: 1fr;
     }
 
+    .nav-content-wrapper {
+      height: auto;
+      padding-top: 44px;
+    }
+
     .secondary-nav,
     .nav-content--header {
       grid-column: auto;
+    }
+
+    :host > .secondary-nav {
+      margin-top: 27px;
+      padding: 0 20px;
     }
 
     .page-title {
