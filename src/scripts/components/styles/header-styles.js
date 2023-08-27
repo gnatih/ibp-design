@@ -80,7 +80,6 @@ export const HeaderStyles = css`
 
   .nav-content--header {
     grid-column: span 6;
-    padding-bottom: 44px;
   }
 
   .nav-content-wrapper {
@@ -154,7 +153,7 @@ export const HeaderStyles = css`
   }
 
   .secondary-nav li:last-child {
-    border: none;
+    border: none !important;
   }
 
   @media screen and (max-width: 576px) {
