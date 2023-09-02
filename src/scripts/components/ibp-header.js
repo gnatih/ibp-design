@@ -107,19 +107,22 @@ export class IbpHeader extends LitElement {
         }
 
         let subnavToggle = this.shadowRoot.querySelector("label[for=subnav-toggle]");
-        if (document.body.clientWidth < 767) {
-          this.shadowRoot.querySelector("label[for=subnav-toggle] h6").innerHTML += " Menu";
-        }
 
-        subnavToggle.onclick = function () {
-          let subnavContent = this.nextElementSibling;
-
-          if (subnavContent.style.maxHeight) {
-            subnavContent.style.maxHeight = null;
-          } else {
-            subnavContent.style.maxHeight = subnavContent.scrollHeight + "px";
+        if (subnavToggle) {
+          if (document.body.clientWidth < 767) {
+            this.shadowRoot.querySelector("label[for=subnav-toggle] h6").innerHTML += " Menu";
           }
-        };
+
+          subnavToggle.onclick = function () {
+            let subnavContent = this.nextElementSibling;
+
+            if (subnavContent.style.maxHeight) {
+              subnavContent.style.maxHeight = null;
+            } else {
+              subnavContent.style.maxHeight = subnavContent.scrollHeight + "px";
+            }
+          };
+        }
       });
     });
   }

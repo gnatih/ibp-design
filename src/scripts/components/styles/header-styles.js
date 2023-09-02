@@ -174,12 +174,16 @@ export const HeaderStyles = css`
 
     .nav-content-wrapper {
       height: auto;
-      padding-top: 44px;
     }
 
     .secondary-nav,
     .nav-content--header {
       grid-column: auto;
+    }
+
+    .nav-content--header {
+      margin-top: 44px;
+      margin-bottom: 44px;
     }
 
     :host > .secondary-nav {

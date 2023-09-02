@@ -21,9 +21,10 @@ export function createPrimaryMenu(menu, active_slug) {
     let item_url = item.url.replace(/\/$/, "");
     let parent = {
       title: item.title,
-      hero: item.hero,
       url: item.url,
     };
+
+    if (item.hero) parent.hero = item.hero;
 
     if (item_url == href && href !== "https://internationalbudget.org/events") {
       parent.active = true;
@@ -38,8 +39,10 @@ export function createPrimaryMenu(menu, active_slug) {
         let child = {
           title: item_child.title,
           url: item_child.url,
-          hero: item_child.hero,
         };
+
+        if (item_child.here) child.hero = item_child.hero;
+        if (item_child.classes) child.classes = item_child.classes;
 
         if (child_url === href && href !== "https://internationalbudget.org/events") {
           if (!has_active) {
@@ -86,7 +89,7 @@ export function renderSecondaryMenu(menu) {
       if (item.active) link_class += "active";
       if (item.url.match(/(#calculator|#download)/)) link_class += " hash-link";
 
-      str += `<li><a href="${item.url}" class="${link_class}">${item.title}</a></li>`;
+      str += `<li class="${item.classes}"><a href="${item.url}" class="${link_class}">${item.title}</a></li>`;
     });
 
     str += `</div></ul><div class="spacer"></div>`;
@@ -125,7 +128,7 @@ function createLinkList(items) {
       str += `<input class="toggle" type="checkbox" id="${item.title}" name="fn"><h6><label for="${item.title}">${item.title} <i class="ibp-icons icon-caret-down" style="float:right"></i></label></h6><ul>`;
 
       item.children.forEach((child) => {
-        str += `<li><a href="${child.url}">${child.title}</a></li>`;
+        str += `<li class="${child.classes}"><a href="${child.url}">${child.title}</a></li>`;
       });
 
       str += `</ul>`;
