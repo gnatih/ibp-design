@@ -172,6 +172,10 @@ export const HeaderStyles = css`
       grid-template-columns: 1fr;
     }
 
+    .nav-content > .secondary-nav {
+      margin-top: 44px;
+    }
+
     .nav-content-wrapper {
       height: auto;
     }
@@ -181,7 +185,7 @@ export const HeaderStyles = css`
       grid-column: auto;
     }
 
-    .nav-content--header {
+    .banner.has-image .nav-content--header {
       margin-top: 44px;
       margin-bottom: 44px;
     }

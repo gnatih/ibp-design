@@ -180,7 +180,7 @@ export const BaseStyles = css`
 
     .container {
       max-width: 100%;
-      padding: 0 32px;
+      padding: 0 30px;
       margin: 0 auto;
     }
 

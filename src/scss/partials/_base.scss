@@ -189,6 +189,10 @@ p {
   a {
     color: inherit;
   }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 44px;
+  }
 }
 
 hr {
@@ -319,7 +323,7 @@ ibp-header {
 
   @media screen and (max-width: 576px) {
     max-width: 100%;
-    padding: 0 12px;
+    padding: 0 20px;
     margin: 0 auto;
   }
 }
