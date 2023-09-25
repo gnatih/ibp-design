@@ -48,17 +48,9 @@ h3 {
   line-height: 38px;
   letter-spacing: var(--ibp-letter-spacing-sm);
 
-  &.elementor-heading-title {
-    line-height: 38px;
-  }
-
   @media screen and (max-width: 767px) {
     font-size: 20px;
     line-height: 120%;
-
-    &.elementor-heading-title {
-      line-height: 120%;
-    }
   }
 }
 
