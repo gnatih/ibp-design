@@ -50,6 +50,58 @@
           </ul>
         </div>
 
+        <div class="secondary-nav" slot="secondary-nav">
+          <style>
+            hr {
+              border: solid var(--ibp-hr-height) #acaaa2;
+              margin: 0px;
+            }
+            .secondary-nav ul {
+              list-style: none;
+              margin: 0px;
+              padding: 0px;
+              line-height: 18px;
+            }
+            .secondary-nav li {
+              border-bottom: 1px solid rgb(172, 170, 162);
+            }
+            .secondary-nav li a {
+              color: inherit;
+              text-decoration: none !important;
+              border: none;
+              background: none !important;
+              margin: 8px 0px;
+              display: block;
+              font-size: 16px;
+              font-weight: normal;
+            }
+            h6 {
+              font-family: var(--ibp-body-font-family);
+              text-transform: uppercase;
+              letter-spacing: var(--ibp-letter-spacing);
+              font-size: var(--ibp-heading-6-font-size);
+              margin: 0px 0px 1em;
+              font-weight: 800;
+              margin-top: 8px;
+              line-height: ;
+            }
+          </style>
+          <hr />
+          <label for="subnav-toggle"><h6>Open Budget Survey</h6></label>
+          <div class="subnav-content">
+            <ul>
+              <li><a href="#" class="active">Open Budget Survey</a></li>
+              <li><a href="#">Rankings</a></li>
+              <li><a href="#">Country Results</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Calculator</a></li>
+              <li><a href="#">Download Data</a></li>
+              <li><a href="#">Roadmap to 61</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+        </div>
+
         <!-- <div slot="secondary-nav">
         <hr />
         <h6>Secondary nav</h6>
