@@ -159,7 +159,7 @@ export class IbpHeader extends LitElement {
       <div class="main-nav-header-wrapper">
         <pre-header></pre-header>
         <div class="main-nav grid-12-col container">
-          <a class="logo" href="/"><ibp-logo-twentyfive></ibp-logo-twentyfive></a>
+          <a class="logo" href="/"><ibp-logo></ibp-logo-twentyfive></a>
           <ul class="nav">
             ${renderPrimaryMenu(this.primary_menu)}
             <li>
