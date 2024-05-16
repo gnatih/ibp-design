@@ -1,6 +1,6 @@
 const checkURL = (testString, testArray) => testArray.some((v) => testString.indexOf(v) > -1);
 
-export const menu = fetch("https://internationalbudget.org/wp-json/wp-api-menus/v2/menu-locations/primary")
+export const menu = fetch("https://ibp.wp.test/wp-json/wp-api-menus/v2/menu-locations/primary")
   .then((response) => response.json())
   .then((data) => {
     if (checkURL(location.host, ["ibp.wp.test", "ddev", "localhost"])) {
@@ -9,12 +9,10 @@ export const menu = fetch("https://internationalbudget.org/wp-json/wp-api-menus/
 
         if (item.children.length) {
           item.children.forEach((child) => {
-            if (child.url.indexOf("survey.international") > -1) {
-              child.url = child.url.replace(/survey.internationalbudget.org/g, "localhost:3000");
-            } else if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports"])) {
-              child.url = child.url.replace(/internationalbudget.org/g, "international-budget-partnership.ddev.site:4443");
-            } else {
-              child.url = child.url.replace(/internationalbudget.org/g, "ibp.wp.test");
+            child.url = child.url.replace(/internationalbudget.org/g, location.host);
+
+            if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports", "/open-budget-survey/calculator", "/open-budget-survey/download"])) {
+              child.url = child.url.replace(/ibp.wp.test/g, "international-budget-partnership.ddev.site:4443");
             }
           });
         }
@@ -27,9 +25,7 @@ export const menu = fetch("https://internationalbudget.org/wp-json/wp-api-menus/
 
         if (item.children.length) {
           item.children.forEach((child) => {
-            if (child.url.indexOf("survey.international") > -1) {
-              //TODO: setup heroku staging to rewrite staging urls
-            } else if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports"])) {
+            if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports", "/open-budget-survey/calculator", "/open-budget-survey/download"])) {
               child.url = child.url.replace(/internationalbudget.org/g, "dev-international-budget-partnership.pantheonsite.io");
             } else {
               child.url = child.url.replace(/internationalbudget.org/g, "staging2.internationalbudget.org");

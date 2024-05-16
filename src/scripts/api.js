@@ -1,12 +1,7 @@
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { menu } from "./menu-data";
 
-export async function fetchData(path) {
-  // let base_url = "https://ibp.wp.localhost";
-
-  // let data = await fetch(`${base_url}/wp-json/${path}`, {});
-
-  // return await data.json();
+export async function fetchData() {
   return menu;
 }
 
@@ -87,7 +82,6 @@ export function renderSecondaryMenu(menu) {
       let link_class = "";
 
       if (item.active) link_class += "active";
-      if (item.url.match(/(#calculator|#download)/)) link_class += " hash-link";
 
       str += `<li class="${item.classes}"><a href="${item.url}" class="${link_class}">${item.title}</a></li>`;
     });
