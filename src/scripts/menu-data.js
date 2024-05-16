@@ -1,6 +1,6 @@
 const checkURL = (testString, testArray) => testArray.some((v) => testString.indexOf(v) > -1);
 
-export const menu = fetch("https://ibp.wp.test/wp-json/wp-api-menus/v2/menu-locations/primary")
+export const menu = fetch("https://internationalbudget.org/wp-json/wp-api-menus/v2/menu-locations/primary")
   .then((response) => response.json())
   .then((data) => {
     if (checkURL(location.host, ["ibp.wp.test", "ddev", "localhost"])) {
