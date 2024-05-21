@@ -36,7 +36,7 @@ export function createPrimaryMenu(menu, active_slug) {
           url: item_child.url,
         };
 
-        if (item_child.here) child.hero = item_child.hero;
+        if (item_child.hero) child.hero = item_child.hero;
         if (item_child.classes) child.classes = item_child.classes;
 
         if (child_url === href && href !== "https://internationalbudget.org/events") {
@@ -48,6 +48,12 @@ export function createPrimaryMenu(menu, active_slug) {
 
           child.active = true;
           _current = child;
+        }
+
+        if (child_url.includes("/calculator") && href.includes(child_url)) {
+          parent.active = true;
+          child.active = true;
+          _parent = parent;
         }
 
         if (!parent.children) parent.children = [];
