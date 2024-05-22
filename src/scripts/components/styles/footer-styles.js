@@ -123,6 +123,15 @@ export const FooterStyles = css`
     align-self: center;
   }
 
+  .footer-logos {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logos img {
+    margin-right: 20px;
+  }
+
   @media screen and (max-width: 576px) {
     .main,
     .right,
