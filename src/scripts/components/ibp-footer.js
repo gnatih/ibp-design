@@ -41,8 +41,8 @@ export class IbpFooter extends LitElement {
               <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
             </ul>
             <div class="footer-logos">
-              <img src="https://internationalbudget.org/wp-content/uploads/2022/11/Charity_Navigator.png" width="100" />
-              <img src="https://internationalbudget.org/wp-content/uploads/candidlogo-in-150x150.png" width="80" />
+              <a href="https://www.charitynavigator.org/ein/463995547" target="_blank"><img src="https://internationalbudget.org/wp-content/uploads/2022/11/Charity_Navigator.png" width="100" /></a>
+              <a href="https://www.guidestar.org/profile/46-3995547" target="_blank"><img src="https://internationalbudget.org/wp-content/uploads/candidlogo-in-150x150.png" width="80" /></a>
             </div>
           </div>
         </div>

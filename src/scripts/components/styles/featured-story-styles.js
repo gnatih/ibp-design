@@ -2,14 +2,13 @@ import { css } from "lit";
 
 export const FeaturedStoryStyles = css`
   :host {
-    display: flex;
-    flex-direction: column;
-    background: white;
     color: var(--ibp-body-text);
+    margin-top: 44px;
   }
 
   .story-image {
     flex: 1;
+    aspect-ratio: 1;
     position: relative;
   }
 
@@ -26,6 +25,7 @@ export const FeaturedStoryStyles = css`
   .story-content {
     padding: 38px;
     padding-top: 28px;
+    background: white;
   }
 
   .featured-type {
@@ -74,10 +74,6 @@ export const FeaturedStoryStyles = css`
       margin-top: 15px;
     }
 
-    .story-image {
-      min-height: 100vw;
-    }
-
     .story-content {
       padding: 24px 15px;
     }
@@ -86,8 +82,8 @@ export const FeaturedStoryStyles = css`
       display: block;
       margin-left: 0;
       margin-right: 0 !important;
-      margin-bottom: 32px;
-      margin-top: 32px;
+      margin-top: 22px;
+      margin-bottom: 44px;
     }
 
     .read-more {

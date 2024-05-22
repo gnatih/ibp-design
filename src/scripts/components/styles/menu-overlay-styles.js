@@ -86,8 +86,12 @@ export const MenuOverlayStyles = css`
   }
 
   .full-menu div {
-    width: 33.3333%;
+    width: 45%;
     margin-right: 20px;
+  }
+
+  .full-menu div:nth-child(2n + 1) {
+    width: 35%;
   }
 
   .full-menu div:last-child {
@@ -183,8 +187,9 @@ export const MenuOverlayStyles = css`
       margin-bottom: 40px;
     }
 
-    .full-menu div {
-      width: auto;
+    .full-menu div,
+    .full-menu div:nth-child(2n + 1) {
+      width: 100%;
       margin: 0;
     }
 
