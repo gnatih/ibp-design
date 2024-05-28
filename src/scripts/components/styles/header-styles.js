@@ -22,11 +22,20 @@ export const HeaderStyles = css`
 
   .banner.has-image {
     background-size: cover;
-    background-position: center top;
     background-repeat: no-repeat;
     color: white;
     background-color: #979797;
     background-blend-mode: multiply;
+  }
+  @media screen and (max-width: 1280px) {
+    .banner.has-image {
+      background-position: center;
+    }
+  }
+  @media screen and (min-width: 1281px) {
+    .banner.has-image {
+      background-position: center -100px;
+    }
   }
 
   .has-image .infobox {
