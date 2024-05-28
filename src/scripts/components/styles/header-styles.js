@@ -27,14 +27,14 @@ export const HeaderStyles = css`
     background-color: #979797;
     background-blend-mode: multiply;
   }
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1560px) {
     .banner.has-image {
       background-position: center;
     }
   }
-  @media screen and (min-width: 1281px) {
+  @media screen and (min-width: 1561px) {
     .banner.has-image {
-      background-position: center -100px;
+      background-position: center -50px;
     }
   }
 
