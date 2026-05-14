@@ -37,8 +37,9 @@ export class IbpFooter extends LitElement {
           <div class="right">
             <ul class="footer-nav">
               <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
-              <li><a href="https://www.internationalbudget.org/library/copyright/">Copyright</a></li>
+              <li><a href="https://internationalbudget.org/copyright/">Copyright</a></li>
               <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
+              <li><a href="https://internationalbudget.org/privacy-policy/">Privacy Policy</a></li>
             </ul>
             <div class="footer-logos">
               <a href="https://www.charitynavigator.org/ein/463995547" target="_blank"><img src="https://internationalbudget.org/wp-content/uploads/2022/11/Charity_Navigator.png" width="100" /></a>
