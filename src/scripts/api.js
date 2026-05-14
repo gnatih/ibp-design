@@ -6,7 +6,7 @@ export async function fetchData() {
 }
 
 export function createPrimaryMenu(menu, active_slug) {
-  let href = window.location.href.replace(/\/$/, "");
+  let href = window.location.href.split("#")[0].replace(/\/$/, "");
   let _menu = [];
   let _current = {};
   let _parent = {};
