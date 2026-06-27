@@ -109,11 +109,10 @@ export function renderFullMenu(menu) {
   str += `<div>
             ${createLinkList(menu_items[2])}
             <div class="sub"> 
-            <h6><a href="/press">Press</a></h6>
-            <h6><a href="/events">Events</a></h6>
-            <h6><a href="/insights">Insights</a></h6>
+              <h6><a href="/press">Press</a></h6>
+              <h6><a href="/events">Events</a></h6>
             </div>
-            <div class="action-buttons d-md-none"><a href="https://internationalbudget.org/take-action/" class="btn-action">Take Action</a><a href="https://internationalbudget.org/support-us" class="btn-donate">Support Us</a></div>
+            <div class="action-buttons d-flex d-md-none"><a href="/support-us" class="btn-donate">Support Us</a></div>
             <social-links></social-links>
           </div>`;
 

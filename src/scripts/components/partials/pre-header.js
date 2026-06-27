@@ -9,7 +9,8 @@ export class PreHeader extends LitElement {
 
   render() {
     return html`
-      <a href="https://internationalbudget.org/take-action/" class="btn btn-action">Take Action</a>
+      <a href="https://internationalbudget.org/press/" class="btn btn-press">Press</a>
+      <a href="https://internationalbudget.org/events/" class="btn btn-events">Events</a>
       <a href="https://internationalbudget.org/support-us/" class="btn btn-donate">Support Us</a>
     `;
   }

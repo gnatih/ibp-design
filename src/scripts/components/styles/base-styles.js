@@ -140,11 +140,16 @@ export const BaseStyles = css`
   }
 
   .btn-donate:hover,
-  .btn-action:hover {
+  .btn-events:hover,
+  .btn-press:hover {
     background: var(--ibp-accent);
   }
 
-  .btn-action {
+  .btn-events {
+    background: #cdcdcd;
+  }
+
+  .btn-press {
     background: var(--ibp-ecru);
   }
 

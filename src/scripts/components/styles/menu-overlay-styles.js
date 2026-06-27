@@ -211,6 +211,7 @@ export const MenuOverlayStyles = css`
     }
 
     .btn-donate,
+    .btn-events,
     .btn-action {
       color: var(--ibp-body-text) !important;
       padding: 8px 14px 6px 14px;
@@ -222,6 +223,7 @@ export const MenuOverlayStyles = css`
     }
 
     .btn-donate:hover,
+    .btn-events:hover,
     .btn-action:hover {
       background: white;
       border: 1px solid var(--ibp-accent);
