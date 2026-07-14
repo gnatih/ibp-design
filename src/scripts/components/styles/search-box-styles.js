@@ -34,7 +34,7 @@ export const SearchBoxStyles = css`
   }
 
   input[type="search"]:focus {
-    outline: 1px solid var(--ibp-accent);
+    outline: 2px solid var(--ibp-teal-dark);
   }
 
   @media screen and (max-width: 567px) {

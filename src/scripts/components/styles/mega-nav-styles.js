@@ -57,7 +57,9 @@ export const MegaNavStyles = css`
   }
 
   .nav-item:focus-visible {
-    outline: 2px solid var(--ibp-accent);
+    /* Dark ring: the orange accent fails WCAG 1.4.11 non-text contrast on
+       white and on the teal wash (Vera gate, 14 Jul 2026). */
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: -2px;
   }
 
@@ -83,6 +85,13 @@ export const MegaNavStyles = css`
     opacity: 1;
     visibility: visible;
     transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .panel {
+      transition: none;
+      transform: none;
+    }
   }
 
   .panel-grid {
@@ -140,7 +149,7 @@ export const MegaNavStyles = css`
   }
 
   .opill:focus-visible {
-    outline: 2px solid var(--ibp-accent);
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: 2px;
   }
 

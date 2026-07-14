@@ -96,16 +96,19 @@ export const HeaderStyles = css`
     display: none;
     align-items: center;
     justify-content: center;
+    /* 44x44 touch target per the Part-2 spec (Vera gate, 14 Jul 2026). */
+    width: 44px;
+    height: 44px;
     background: none;
     border: none;
-    padding: 8px;
+    padding: 0;
     font-size: 20px;
     color: var(--ibp-body-text);
     cursor: pointer;
   }
 
   .menu-btn:focus-visible {
-    outline: 2px solid var(--ibp-accent);
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: -2px;
   }
 

@@ -180,6 +180,7 @@ export class MegaNav extends LitElement {
                   href="${item.url}"
                   aria-haspopup="true"
                   aria-expanded="${this.open_index === index}"
+                  aria-controls="mega-panel-${index}"
                   aria-current=${ifDefined(item.active ? "true" : undefined)}
                   @click=${(e) => this._onTopClick(e, index)}
                   @keydown=${(e) => this._onTopKeydown(e, index)}

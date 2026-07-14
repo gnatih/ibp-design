@@ -14,7 +14,7 @@ export class SearchBox extends LitElement {
 
   render() {
     return html`<form action="https://internationalbudget.org/" method="get" role="search" class="search-box">
-      <input type="search" class="search-field" placeholder="Enter Search" name="s" /><i class="ibp-icons icon-search"></i>
+      <input type="search" class="search-field" placeholder="Enter Search" name="s" aria-label="Search" /><i class="ibp-icons icon-search" aria-hidden="true"></i>
       <input type="submit" class="search-submit" value="Search" style="display: none" />
     </form>`;
   }

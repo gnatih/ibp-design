@@ -31,7 +31,7 @@ export const PreHeaderStyles = css`
 
   a:focus-visible,
   .search-toggle:focus-visible {
-    outline: 2px solid var(--ibp-accent);
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: -2px;
   }
 
@@ -39,8 +39,10 @@ export const PreHeaderStyles = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
+    /* 44x44 touch target per the Part-2 spec (Vera gate, 14 Jul 2026).
+       The 35px util bar stays; the extra hit area overflows transparently. */
+    width: 44px;
+    height: 44px;
     padding: 0;
     background: none;
     border: none;

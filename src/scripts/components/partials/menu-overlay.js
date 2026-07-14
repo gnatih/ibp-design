@@ -45,7 +45,39 @@ export class MenuOverlay extends LitElement {
   }
 
   _onKeydown(e) {
-    if (e.key === "Escape" && this.visible) this.hideMenuOverlay();
+    if (e.key === "Escape" && this.visible) {
+      this.hideMenuOverlay();
+      return;
+    }
+
+    // aria-modal contract: Tab / Shift+Tab wrap at the drawer edges instead
+    // of walking out into the hidden page behind (WCAG 2.4.11).
+    if (e.key !== "Tab" || !this.visible) return;
+
+    let focusables = this._focusables();
+    if (!focusables.length) return;
+
+    let first = focusables[0];
+    let last = focusables[focusables.length - 1];
+    // composedPath()[0] resolves the actually-focused node even inside
+    // nested shadow roots (the search-box input).
+    let active = e.composedPath()[0];
+
+    if (e.shiftKey && active === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && active === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  _focusables() {
+    // Tabbable elements in DOM order; search-box holds its input in its own
+    // shadow root. getClientRects filters anything inside [hidden] subs.
+    return Array.from(this.renderRoot.querySelectorAll("a[href], button, search-box"))
+      .map((node) => (node.localName === "search-box" ? node.renderRoot && node.renderRoot.querySelector("input[type=search]") : node))
+      .filter((node) => node && node.getClientRects().length > 0);
   }
 
   _toggleSection(index) {
@@ -87,8 +119,8 @@ export class MenuOverlay extends LitElement {
         <div class="scroll-container">
           <div class="drawer-bar">
             <div class="container drawer-bar-inner">
-              <a class="logo" href="/"><ibp-logo width="140"></ibp-logo></a>
-              <button class="close-btn" aria-label="Close menu" @click=${this.hideMenuOverlay}><i class="ibp-icons icon-close"></i></button>
+              <a class="logo" href="/" aria-label="International Budget Partnership — home"><ibp-logo width="140"></ibp-logo></a>
+              <button class="close-btn" aria-label="Close menu" @click=${this.hideMenuOverlay}><i class="ibp-icons icon-close" aria-hidden="true"></i></button>
             </div>
           </div>
 

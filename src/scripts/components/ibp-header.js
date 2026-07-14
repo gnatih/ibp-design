@@ -140,6 +140,13 @@ export class IbpHeader extends LitElement {
 
   _hideMenuOverlay() {
     this.show_menu = false;
+
+    // Return focus to the hamburger that opened the drawer (WCAG 2.4.11 /
+    // aria-modal contract): closing a dialog must not drop focus.
+    this.updateComplete.then(() => {
+      let btn = this.renderRoot.querySelector(".menu-btn");
+      if (btn) btn.focus();
+    });
   }
 
   _toggleSearch() {
@@ -184,11 +191,11 @@ export class IbpHeader extends LitElement {
       <div class="main-nav-header-wrapper" @keydown=${this._onHeaderKeydown}>
         <pre-header ?search-open="${this.show_search}" @toggleSearch=${this._toggleSearch}></pre-header>
         <div class="main-nav grid-12-col container">
-          <a class="logo" href="/"><ibp-logo></ibp-logo-twentyfive></a>
+          <a class="logo" href="/" aria-label="International Budget Partnership — home"><ibp-logo></ibp-logo></a>
           <div class="nav-area">
             <mega-nav .menu="${this.primary_menu}" assets-base="${ifDefined(this.assets_base)}"></mega-nav>
             <a class="btn-cta" href="https://internationalbudget.org/events/">Events</a>
-            <button class="menu-btn" aria-label="Open menu" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></button>
+            <button class="menu-btn" aria-label="Open menu" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu" aria-hidden="true"></i></button>
           </div>
         </div>
         <div class="${classMap({ "search-row": true, open: this.show_search })}">

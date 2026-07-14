@@ -34,9 +34,11 @@
   --ibp-menu-pill-ink: #0e5a63;
   --ibp-menu-cta-ink: #3a1c00;
   --ibp-menu-panel-height: 320px;
-  --ibp-drawer-sub-bg: #f7f5f0;
-  --ibp-drawer-sub-border: #efece5;
-  --ibp-drawer-sub-ink: #3f3f39;
+  /* Drawer sub-list: sanctioned tokens only (Vera/Iris round, 14 Jul 2026).
+     bg = page white, border = ecru (#efece5 was a typo of it), ink = body. */
+  --ibp-drawer-sub-bg: var(--ibp-page-bg);
+  --ibp-drawer-sub-border: var(--ibp-ecru);
+  --ibp-drawer-sub-ink: var(--ibp-body-text);
 
   --obs-rating-1: #3cbb88;
   --obs-rating-2: #8ce1bf;

@@ -2,9 +2,12 @@ import { css } from "lit";
 
 export const MenuOverlayStyles = css`
   :host {
-    --drawer-sub-bg: var(--ibp-drawer-sub-bg, #f7f5f0);
-    --drawer-sub-border: var(--ibp-drawer-sub-border, #efece5);
-    --drawer-sub-ink: var(--ibp-drawer-sub-ink, #3f3f39);
+    /* Drawer sub-list maps to sanctioned tokens only (GL-003 §8): white
+       page bg + ecru hairlines (the same treatment as the top-level rows)
+       and ink for the link text. Fallback literals mirror those tokens. */
+    --drawer-sub-bg: var(--ibp-drawer-sub-bg, #ffffff);
+    --drawer-sub-border: var(--ibp-drawer-sub-border, #eceae5);
+    --drawer-sub-ink: var(--ibp-drawer-sub-ink, #222222);
     --drawer-cta-ink: var(--ibp-menu-cta-ink, #3a1c00);
   }
 
@@ -68,10 +71,18 @@ export const MenuOverlayStyles = css`
   .close-btn:focus-visible,
   .drawer-row:focus-visible,
   .drawer-sub a:focus-visible,
-  .drawer-cta:focus-visible,
   .util-links a:focus-visible {
-    outline: 2px solid var(--ibp-accent);
+    /* Dark ring: the orange accent fails WCAG 1.4.11 non-text contrast on
+       white (Vera gate, 14 Jul 2026). */
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: -2px;
+  }
+
+  .drawer-cta:focus-visible {
+    /* Positive offset so the dark ring sits on the white around the orange
+       pill (a ring on the orange fill itself cannot reach 3:1). */
+    outline: 2px solid var(--ibp-teal-dark);
+    outline-offset: 2px;
   }
 
   .drawer {
@@ -112,7 +123,10 @@ export const MenuOverlayStyles = css`
 
   .drawer-row.open {
     background: var(--ibp-ecru);
-    color: var(--ibp-teal);
+    /* Deep teal, not brand teal: #117A88 on ecru is 4.20:1 and fails WCAG
+       1.4.3 at 16px/600 (Vera gate, 14 Jul 2026). The teal indicator glyph
+       stays (non-text, needs only 3:1). */
+    color: var(--ibp-teal-dark);
     padding-left: 12px;
     padding-right: 12px;
   }
@@ -146,7 +160,8 @@ export const MenuOverlayStyles = css`
     font-weight: 700;
     font-size: 14px;
     padding: 13px;
-    border-radius: 7px;
+    /* SHIP pills are fully round (999px), matching the desktop .btn-cta. */
+    border-radius: 999px;
     text-decoration: none;
   }
 
@@ -170,6 +185,12 @@ export const MenuOverlayStyles = css`
   @media screen and (min-width: 1024px) {
     .overlay {
       display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .overlay {
+      transition: none;
     }
   }
 `;
