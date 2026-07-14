@@ -133,7 +133,7 @@ export class MegaNav extends LitElement {
                     <li>
                       <a class="row ${child.classes || ""}" href="${child.url}">
                         <span class="t">${child.title}</span>
-                        <span class="arw" aria-hidden="true">›</span>
+                        <i class="arw ibp-icons icon-caret-right-circle" aria-hidden="true"></i>
                       </a>
                     </li>
                   `
@@ -186,9 +186,7 @@ export class MegaNav extends LitElement {
                   @keydown=${(e) => this._onTopKeydown(e, index)}
                 >
                   ${item.title}
-                  <span class="caret" aria-hidden="true">
-                    <svg width="9" height="9" viewBox="0 0 10 10" fill="currentColor"><path d="M1 3l4 4 4-4z" /></svg>
-                  </span>
+                  <span class="caret" aria-hidden="true"><i class="ibp-icons icon-caret-down"></i></span>
                 </a>
                 ${this._renderPanel(item, config, index)}
               </li>

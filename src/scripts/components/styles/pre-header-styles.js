@@ -15,13 +15,24 @@ export const PreHeaderStyles = css`
   }
 
   a {
+    /* Teal caps with hairline separators (Jayesh review round, 14 Jul 2026). */
     font-size: 13px;
     font-family: var(--ibp-body-font-family);
     font-weight: 600;
+    letter-spacing: var(--ibp-letter-spacing);
+    text-transform: uppercase;
     text-decoration: none;
     color: var(--ibp-teal);
     padding: 0 14px;
     line-height: 35px;
+  }
+
+  .sep {
+    /* Vertical cousin of the dropdown row hairlines. */
+    flex: none;
+    width: 1px;
+    height: 16px;
+    background: var(--ibp-teal-wash-border, #c7e3e5);
   }
 
   a:hover,

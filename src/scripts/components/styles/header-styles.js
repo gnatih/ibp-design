@@ -60,9 +60,16 @@ export const HeaderStyles = css`
     border-bottom: 1px solid var(--ibp-hr);
   }
 
+  /* Full-width bar (Jayesh review round, 14 Jul 2026): the nav row runs
+     edge to edge instead of the boxed 1352px container, and the menu items
+     spread across the space between the logo and the Events button. */
+  .main-nav.container {
+    max-width: none;
+  }
+
   .nav-area {
     grid-column: 3/13;
-    justify-self: end;
+    justify-self: stretch;
     align-self: end;
     display: flex;
     align-items: center;
@@ -70,20 +77,29 @@ export const HeaderStyles = css`
     height: 78px;
   }
 
+  .nav-area mega-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
   .btn-cta {
-    background: var(--ibp-accent);
-    color: var(--ibp-menu-cta-ink, #3a1c00);
+    /* House .btn-box: teal box button (Jayesh review round, 14 Jul 2026). */
+    background: var(--ibp-teal);
+    color: white;
     font-family: var(--ibp-body-font-family);
-    font-weight: 700;
-    font-size: 13.5px;
-    padding: 9px 22px;
-    border-radius: 999px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: var(--ibp-letter-spacing);
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 14px 16px;
+    border: none;
     text-decoration: none;
     white-space: nowrap;
   }
 
   .btn-cta:hover {
-    background: var(--ibp-teal);
+    background: var(--ibp-teal-dark);
     color: white;
   }
 

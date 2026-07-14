@@ -17,6 +17,8 @@ export const MegaNavStyles = css`
   .nav-list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     gap: 3px;
     margin: 0;
     padding: 0;
@@ -32,7 +34,9 @@ export const MegaNavStyles = css`
     color: var(--ibp-body-text);
     font-family: var(--ibp-body-font-family);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: var(--ibp-letter-spacing);
+    text-transform: uppercase;
     line-height: 1.2;
     text-decoration: none;
     white-space: nowrap;
@@ -114,30 +118,35 @@ export const MegaNavStyles = css`
   }
 
   .intro-title {
+    /* House h2 (Jayesh review round, 14 Jul 2026). */
     font-family: var(--ibp-heading-font-family);
     font-weight: 400;
-    font-size: 23px;
-    line-height: 1.1;
+    font-size: var(--ibp-heading-2-font-size);
+    line-height: var(--ibp-heading-2-line-height, 100%);
+    letter-spacing: var(--ibp-letter-spacing-sm);
     color: var(--ibp-teal-dark);
-    margin: 0 0 9px;
+    margin: 0 0 12px;
   }
 
   .intro-copy {
-    font-size: 13px;
-    line-height: 1.45;
+    /* House body copy: 20px. */
+    font-size: 20px;
+    line-height: 145%;
+    font-weight: 300;
     color: var(--menu-muted);
     margin: 0 0 16px;
   }
 
   .opill {
+    /* House pill metrics (.btn-pill): 500px radius, 14px caps. */
     align-self: flex-start;
     border: 1.5px solid var(--ibp-teal);
-    border-radius: 999px;
+    border-radius: 500px;
     padding: 9px 20px;
     color: var(--menu-pill-ink);
     font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.7px;
+    font-size: 14px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -181,30 +190,23 @@ export const MegaNavStyles = css`
   }
 
   .row .t {
+    /* House h4: Adelle Sans 700 at the h4 scale. */
     font-weight: 700;
-    font-size: 14.5px;
-    line-height: 1.15;
+    font-size: var(--ibp-heading-4-font-size);
+    line-height: var(--ibp-heading-4-line-height, 125%);
     color: var(--menu-ink);
   }
 
   .arw {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* House icon-font glyph (icon-caret-right-circle), recoloured teal. */
     flex: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--ibp-teal);
-    color: white;
-    font-weight: 700;
-    font-size: 13px;
+    font-size: 28px;
+    color: var(--ibp-teal);
   }
 
   .row:hover .arw,
   .row:focus-visible .arw {
-    background: var(--ibp-accent);
-    color: var(--menu-cta-ink);
+    color: var(--ibp-teal-dark);
   }
 
   .row:focus-visible {
@@ -235,7 +237,7 @@ export const MegaNavStyles = css`
   @media screen and (max-width: 1199px) {
     .nav-item {
       padding: 14px 10px;
-      font-size: 12.5px;
+      font-size: 13px;
     }
 
     .wedge {

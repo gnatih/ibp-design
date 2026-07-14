@@ -12,6 +12,17 @@
  * (Deliverables/2026-07-13-ibp-mega-menu-options, Parts 12/17/18).
  *
  * A WP per-item `hero` field, when present, overrides `heroImage`.
+ *
+ * ── HOW TO SWAP A MENU PHOTO ────────────────────────────────────────────
+ * Option A — WordPress (no code): set the `hero` field on the TOP-LEVEL
+ *   menu item (Appearance -> Menus; the field is exposed on the item by the
+ *   wp-api-menus REST plugin). Paste a full image URL. The component uses
+ *   it as-is, wedge-masked, and it wins over the shipped photo below.
+ * Option B — GitHub (one line): drop the new image into src/images/menu/,
+ *   change that section's `heroImage:` filename below, run
+ *   `npx mix --production`, commit. `heroPosition` nudges the crop
+ *   (CSS object-position: "x% y%") so the subject sits in the big wedge.
+ * ────────────────────────────────────────────────────────────────────────
  */
 
 // Where the wedge photos are served from. The component ships on both the

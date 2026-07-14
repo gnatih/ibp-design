@@ -14,12 +14,51 @@
     "type": "post_type",
     "type_label": "Page",
     "children": [
-      { "ID": 11, "order": 2, "parent": 1, "title": "Overview", "url": "https://internationalbudget.org/about-us/", "classes": "", "children": [] },
-      { "ID": 12, "order": 3, "parent": 1, "title": "People", "url": "https://internationalbudget.org/about-us/people/", "classes": "", "children": [] },
-      { "ID": 13, "order": 4, "parent": 1, "title": "Financials", "url": "https://internationalbudget.org/about-us/financials/", "classes": "", "children": [] },
-      { "ID": 14, "order": 5, "parent": 1, "title": "Careers", "url": "https://internationalbudget.org/about-us/careers/", "classes": "", "children": [] },
-      { "ID": 15, "order": 6, "parent": 1, "title": "Board & Advisory Groups", "url": "https://internationalbudget.org/about-us/board/", "classes": "", "children": [] },
-      { "ID": 16, "order": 7, "parent": 1, "title": "Network Directory", "url": "https://internationalbudget.org/network/network-directory/", "classes": "", "children": [] }
+      {
+        "ID": 12,
+        "order": 3,
+        "parent": 1,
+        "title": "People",
+        "url": "https://internationalbudget.org/about-us/people/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 13,
+        "order": 4,
+        "parent": 1,
+        "title": "Financials",
+        "url": "https://internationalbudget.org/about-us/financials/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 14,
+        "order": 5,
+        "parent": 1,
+        "title": "Careers",
+        "url": "https://internationalbudget.org/about-us/careers/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 15,
+        "order": 6,
+        "parent": 1,
+        "title": "Board & Advisory Groups",
+        "url": "https://internationalbudget.org/about-us/board/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 16,
+        "order": 7,
+        "parent": 1,
+        "title": "Network Directory",
+        "url": "https://internationalbudget.org/network/network-directory/",
+        "classes": "",
+        "children": []
+      }
     ]
   },
   {
@@ -37,12 +76,60 @@
     "type": "post_type",
     "type_label": "Page",
     "children": [
-      { "ID": 21, "order": 9, "parent": 2, "title": "OBS 2025 — Global", "url": "https://internationalbudget.org/open-budget-survey/", "classes": "", "children": [] },
-      { "ID": 22, "order": 10, "parent": 2, "title": "Sub-Saharan Africa", "url": "https://internationalbudget.org/open-budget-survey/sub-saharan-africa/", "classes": "", "children": [] },
-      { "ID": 23, "order": 11, "parent": 2, "title": "MENA", "url": "https://internationalbudget.org/open-budget-survey/mena/", "classes": "", "children": [] },
-      { "ID": 24, "order": 12, "parent": 2, "title": "Western Balkans & Türkiye", "url": "https://internationalbudget.org/open-budget-survey/western-balkans-turkiye/", "classes": "", "children": [] },
-      { "ID": 25, "order": 13, "parent": 2, "title": "Country Results", "url": "https://internationalbudget.org/open-budget-survey/country-results", "classes": "", "children": [] },
-      { "ID": 26, "order": 14, "parent": 2, "title": "Methodology", "url": "https://internationalbudget.org/open-budget-survey/methodology/", "classes": "", "children": [] }
+      {
+        "ID": 21,
+        "order": 9,
+        "parent": 2,
+        "title": "OBS 2025 — Global",
+        "url": "https://internationalbudget.org/open-budget-survey/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 22,
+        "order": 10,
+        "parent": 2,
+        "title": "Sub-Saharan Africa",
+        "url": "https://internationalbudget.org/open-budget-survey/sub-saharan-africa/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 23,
+        "order": 11,
+        "parent": 2,
+        "title": "MENA",
+        "url": "https://internationalbudget.org/open-budget-survey/mena/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 24,
+        "order": 12,
+        "parent": 2,
+        "title": "Western Balkans & Türkiye",
+        "url": "https://internationalbudget.org/open-budget-survey/western-balkans-turkiye/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 25,
+        "order": 13,
+        "parent": 2,
+        "title": "Country Results",
+        "url": "https://internationalbudget.org/open-budget-survey/country-results",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 26,
+        "order": 14,
+        "parent": 2,
+        "title": "Methodology",
+        "url": "https://internationalbudget.org/open-budget-survey/methodology/",
+        "classes": "",
+        "children": []
+      }
     ]
   },
   {
@@ -60,12 +147,60 @@
     "type": "post_type",
     "type_label": "Page",
     "children": [
-      { "ID": 31, "order": 16, "parent": 3, "title": "Indonesia", "url": "https://internationalbudget.org/countries/indonesia/", "classes": "", "children": [] },
-      { "ID": 32, "order": 17, "parent": 3, "title": "Nigeria", "url": "https://internationalbudget.org/countries/nigeria/", "classes": "", "children": [] },
-      { "ID": 33, "order": 18, "parent": 3, "title": "South Africa", "url": "https://internationalbudget.org/countries/south-africa/", "classes": "", "children": [] },
-      { "ID": 34, "order": 19, "parent": 3, "title": "Francophone Africa", "url": "https://internationalbudget.org/countries/francophone-africa/", "classes": "", "children": [] },
-      { "ID": 35, "order": 20, "parent": 3, "title": "MENA", "url": "https://internationalbudget.org/countries/mena/", "classes": "", "children": [] },
-      { "ID": 36, "order": 21, "parent": 3, "title": "All countries / map", "url": "https://internationalbudget.org/countries/", "classes": "", "children": [] }
+      {
+        "ID": 31,
+        "order": 16,
+        "parent": 3,
+        "title": "Indonesia",
+        "url": "https://internationalbudget.org/countries/indonesia/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 32,
+        "order": 17,
+        "parent": 3,
+        "title": "Nigeria",
+        "url": "https://internationalbudget.org/countries/nigeria/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 33,
+        "order": 18,
+        "parent": 3,
+        "title": "South Africa",
+        "url": "https://internationalbudget.org/countries/south-africa/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 34,
+        "order": 19,
+        "parent": 3,
+        "title": "Francophone Africa",
+        "url": "https://internationalbudget.org/countries/francophone-africa/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 35,
+        "order": 20,
+        "parent": 3,
+        "title": "MENA",
+        "url": "https://internationalbudget.org/countries/mena/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 36,
+        "order": 21,
+        "parent": 3,
+        "title": "All countries / map",
+        "url": "https://internationalbudget.org/countries/",
+        "classes": "",
+        "children": []
+      }
     ]
   },
   {
@@ -83,14 +218,78 @@
     "type": "post_type",
     "type_label": "Page",
     "children": [
-      { "ID": 41, "order": 23, "parent": 4, "title": "Debt Accountability", "url": "https://internationalbudget.org/initiative/debt-accountability/", "classes": "", "children": [] },
-      { "ID": 42, "order": 24, "parent": 4, "title": "Budget Credibility", "url": "https://internationalbudget.org/initiative/budget-credibility/", "classes": "", "children": [] },
-      { "ID": 43, "order": 25, "parent": 4, "title": "Strengthening Public Accountability", "url": "https://internationalbudget.org/initiative/strengthening-public-accountability/", "classes": "", "children": [] },
-      { "ID": 44, "order": 26, "parent": 4, "title": "Fiscal Transparency (GIFT)", "url": "https://fiscaltransparency.net/", "classes": "", "children": [] },
-      { "ID": 45, "order": 27, "parent": 4, "title": "Tax Equity", "url": "https://internationalbudget.org/initiative/tax-equity/", "classes": "", "children": [] },
-      { "ID": 46, "order": 28, "parent": 4, "title": "Audit Accountability", "url": "https://internationalbudget.org/initiative/audit-accountability/", "classes": "", "children": [] },
-      { "ID": 47, "order": 29, "parent": 4, "title": "Collaborating for Open Budgets", "url": "https://internationalbudget.org/initiative/collaborating-for-open-budgets/", "classes": "", "children": [] },
-      { "ID": 48, "order": 30, "parent": 4, "title": "Climate Finance", "url": "https://internationalbudget.org/initiative/climate-finance/", "classes": "", "children": [] }
+      {
+        "ID": 41,
+        "order": 23,
+        "parent": 4,
+        "title": "Debt Accountability",
+        "url": "https://internationalbudget.org/initiative/debt-accountability/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 42,
+        "order": 24,
+        "parent": 4,
+        "title": "Budget Credibility",
+        "url": "https://internationalbudget.org/initiative/budget-credibility/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 43,
+        "order": 25,
+        "parent": 4,
+        "title": "Strengthening Public Accountability",
+        "url": "https://internationalbudget.org/initiative/strengthening-public-accountability/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 44,
+        "order": 26,
+        "parent": 4,
+        "title": "Fiscal Transparency (GIFT)",
+        "url": "https://fiscaltransparency.net/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 45,
+        "order": 27,
+        "parent": 4,
+        "title": "Tax Equity",
+        "url": "https://internationalbudget.org/initiative/tax-equity/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 46,
+        "order": 28,
+        "parent": 4,
+        "title": "Audit Accountability",
+        "url": "https://internationalbudget.org/initiative/audit-accountability/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 47,
+        "order": 29,
+        "parent": 4,
+        "title": "Collaborating for Open Budgets",
+        "url": "https://internationalbudget.org/initiative/collaborating-for-open-budgets/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 48,
+        "order": 30,
+        "parent": 4,
+        "title": "Climate Finance",
+        "url": "https://internationalbudget.org/initiative/climate-finance/",
+        "classes": "",
+        "children": []
+      }
     ]
   },
   {
@@ -108,10 +307,42 @@
     "type": "post_type",
     "type_label": "Page",
     "children": [
-      { "ID": 51, "order": 32, "parent": 5, "title": "Annual Reports", "url": "https://internationalbudget.org/about-us/impacts/", "classes": "", "children": [] },
-      { "ID": 52, "order": 33, "parent": 5, "title": "Stories", "url": "https://internationalbudget.org/stories/", "classes": "", "children": [] },
-      { "ID": 53, "order": 34, "parent": 5, "title": "Insights & Blogs", "url": "https://internationalbudget.org/insights/", "classes": "", "children": [] },
-      { "ID": 54, "order": 35, "parent": 5, "title": "Resources", "url": "https://internationalbudget.org/resources/", "classes": "", "children": [] }
+      {
+        "ID": 51,
+        "order": 32,
+        "parent": 5,
+        "title": "Annual Reports",
+        "url": "https://internationalbudget.org/about-us/impacts/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 52,
+        "order": 33,
+        "parent": 5,
+        "title": "Stories",
+        "url": "https://internationalbudget.org/stories/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 53,
+        "order": 34,
+        "parent": 5,
+        "title": "Insights & Blogs",
+        "url": "https://internationalbudget.org/insights/",
+        "classes": "",
+        "children": []
+      },
+      {
+        "ID": 54,
+        "order": 35,
+        "parent": 5,
+        "title": "Resources",
+        "url": "https://internationalbudget.org/resources/",
+        "classes": "",
+        "children": []
+      }
     ]
   }
 ]
