@@ -7,6 +7,11 @@ export class SearchBox extends LitElement {
     return [BaseStyles, SearchBoxStyles];
   }
 
+  focusInput() {
+    let input = this.renderRoot.querySelector("input[type=search]");
+    if (input) input.focus();
+  }
+
   render() {
     return html`<form action="https://internationalbudget.org/" method="get" role="search" class="search-box">
       <input type="search" class="search-field" placeholder="Enter Search" name="s" /><i class="ibp-icons icon-search"></i>

@@ -54,6 +54,82 @@ export const HeaderStyles = css`
     background: #dad5ca;
   }
 
+  /* --- Main nav row: mega-nav + Events CTA (desktop), hamburger (tablet/mobile) --- */
+
+  .main-nav-header-wrapper {
+    border-bottom: 1px solid var(--ibp-hr);
+  }
+
+  .nav-area {
+    grid-column: 3/13;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 78px;
+  }
+
+  .btn-cta {
+    background: var(--ibp-accent);
+    color: var(--ibp-menu-cta-ink, #3a1c00);
+    font-family: var(--ibp-body-font-family);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 9px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-cta:hover {
+    background: var(--ibp-teal);
+    color: white;
+  }
+
+  .btn-cta:focus-visible {
+    outline: 2px solid var(--ibp-teal-dark);
+    outline-offset: 2px;
+  }
+
+  .menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    color: var(--ibp-body-text);
+    cursor: pointer;
+  }
+
+  .menu-btn:focus-visible {
+    outline: 2px solid var(--ibp-accent);
+    outline-offset: -2px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .menu-btn {
+      display: flex;
+    }
+
+    .btn-cta {
+      display: none;
+    }
+  }
+
+  .search-row {
+    display: none;
+    background: white;
+    border-top: 1px solid var(--ibp-hr);
+    padding: 12px 0;
+  }
+
+  .search-row.open {
+    display: block;
+  }
+
   .page-title {
     font-family: var(--ibp-heading-font-family);
     font-size: var(--ibp-page-title-font-size);
@@ -169,6 +245,12 @@ export const HeaderStyles = css`
     :host,
     .banner {
       min-height: auto;
+    }
+
+    .nav-area {
+      height: auto;
+      align-self: center;
+      gap: 8px;
     }
 
     .banner {

@@ -2,13 +2,16 @@ import { LitElement, html, css } from "lit";
 import { HeaderStyles } from "./styles/header-styles";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import { BaseStyles } from "./styles/base-styles";
-import { fetchData, createPrimaryMenu, renderPrimaryMenu, renderSecondaryMenu } from "../api";
+import { fetchData, createPrimaryMenu, renderSecondaryMenu } from "../api";
 import "./partials/menu-overlay";
 import "./partials/pre-header";
 import "./partials/ibp-logo";
 import "./partials/ibp-logo-twentyfive";
+import "./partials/mega-nav";
+import "./partials/search-box";
 import { classMap } from "lit/directives/class-map.js";
 import { styleMap } from "lit/directives/style-map.js";
+import { ifDefined } from "lit/directives/if-defined.js";
 
 export class IbpHeader extends LitElement {
   static styles = [BaseStyles, HeaderStyles];
@@ -18,11 +21,13 @@ export class IbpHeader extends LitElement {
     hero: { type: String },
     current_menu: { type: Object },
     show_menu: { type: Boolean, attribute: "visible" },
+    show_search: { type: Boolean },
     dark: { type: Boolean, reflect: true },
     background: { type: String, attribute: "background" },
     hide_sidebar: { type: Boolean, attribute: "hide-sidebar" },
     mini: { type: Boolean, attribute: "mini" },
     active_slug: { attribute: "active-slug" },
+    assets_base: { attribute: "assets-base" },
     subnavToggle: {},
   };
 
@@ -87,6 +92,7 @@ export class IbpHeader extends LitElement {
     this.parent_menu = {};
     this.current_menu = {};
     this.show_menu = false;
+    this.show_search = false;
 
     fetchData().then((res) => {
       let { primary, current, parent } = createPrimaryMenu(res, this.active_slug);
@@ -136,6 +142,25 @@ export class IbpHeader extends LitElement {
     this.show_menu = false;
   }
 
+  _toggleSearch() {
+    this.show_search = !this.show_search;
+
+    if (this.show_search) {
+      this.updateComplete.then(() => {
+        let box = this.renderRoot.querySelector(".search-row search-box");
+        if (box && box.focusInput) box.focusInput();
+      });
+    }
+  }
+
+  _onHeaderKeydown(e) {
+    if (e.key === "Escape" && this.show_search) {
+      this.show_search = false;
+      let toggle = this.renderRoot.querySelector("pre-header");
+      if (toggle) toggle.renderRoot.querySelector(".search-toggle").focus();
+    }
+  }
+
   _getSidebar() {
     if (!this.hide_sidebar) {
       return html`<div class="secondary-nav">
@@ -156,16 +181,18 @@ export class IbpHeader extends LitElement {
     }
 
     return html`
-      <div class="main-nav-header-wrapper">
-        <pre-header></pre-header>
+      <div class="main-nav-header-wrapper" @keydown=${this._onHeaderKeydown}>
+        <pre-header ?search-open="${this.show_search}" @toggleSearch=${this._toggleSearch}></pre-header>
         <div class="main-nav grid-12-col container">
           <a class="logo" href="/"><ibp-logo></ibp-logo-twentyfive></a>
-          <ul class="nav">
-            ${renderPrimaryMenu(this.primary_menu)}
-            <li>
-              <a href="#" class="search-btn" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></a>
-            </li>
-          </ul>
+          <div class="nav-area">
+            <mega-nav .menu="${this.primary_menu}" assets-base="${ifDefined(this.assets_base)}"></mega-nav>
+            <a class="btn-cta" href="https://internationalbudget.org/events/">Events</a>
+            <button class="menu-btn" aria-label="Open menu" @click=${this.showMenuOverlay}><i class="ibp-icons icon-menu"></i></button>
+          </div>
+        </div>
+        <div class="${classMap({ "search-row": true, open: this.show_search })}">
+          <div class="container"><search-box></search-box></div>
         </div>
       </div>
 
