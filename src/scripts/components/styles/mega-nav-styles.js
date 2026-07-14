@@ -96,6 +96,10 @@ export const MegaNavStyles = css`
       transition: none;
       transform: none;
     }
+
+    .nav-item .caret {
+      transition: none;
+    }
   }
 
   .panel-grid {
@@ -210,7 +214,7 @@ export const MegaNavStyles = css`
   }
 
   .row:focus-visible {
-    outline: 2px solid var(--ibp-teal);
+    outline: 2px solid var(--ibp-teal-dark);
     outline-offset: -2px;
   }
 
