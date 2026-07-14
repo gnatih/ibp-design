@@ -1,39 +1,21 @@
-const checkURL = (testString, testArray) => testArray.some((v) => testString.indexOf(v) > -1);
+import menuFixture from "./fixtures/menu-new-ia.json";
 
-export const menu = fetch(`https://${location.hostname}/wp-json/wp-api-menus/v2/menu-locations/primary`)
-  .then((response) => response.json())
-  .then((data) => {
-    // if (checkURL(location.host, ["ibp.wp.test", "ddev", "localhost"])) {
-    //   data.forEach((item) => {
-    //     item.url = item.url.replace(/internationalbudget.org/g, location.host);
+// The component renders whatever WordPress sends: labels, links and
+// hierarchy come from the primary menu location via REST. The fixture
+// (the new five-item IA) is used only in dev contexts: file:// previews,
+// localhost, or when `window.IBP_MENU_FIXTURE = true` is set before the
+// bundle loads (see preview.html). Production fetch failures fall back to
+// the fixture only in those dev contexts, never on the live domains.
 
-    //     // if (item.children.length) {
-    //     //   item.children.forEach((child) => {
-    //     //     child.url = child.url.replace(/internationalbudget.org/g, location.host);
+const isDevContext = () =>
+  window.IBP_MENU_FIXTURE === true ||
+  location.protocol === "file:" ||
+  ["localhost", "127.0.0.1", ""].includes(location.hostname);
 
-    //     //     if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports", "/open-budget-survey/calculator", "/open-budget-survey/download"])) {
-    //     //       child.url = child.url.replace(/ibp.wp.test/g, "obs.test");
-    //     //     }
-    //     //   });
-    //     // }
-    //   });
-    // }
-
-    // if (checkURL(location.host, ["staging2.internationalbudget.org", "obs.test"])) {
-    //   data.forEach((item) => {
-    //     item.url = item.url.replace(/internationalbudget.org/g, location.host);
-
-    //     if (item.children.length) {
-    //       item.children.forEach((child) => {
-    //         if (checkURL(child.url, ["/open-budget-survey/rankings", "/open-budget-survey/country-results", "/open-budget-survey/reports", "/open-budget-survey/calculator", "/open-budget-survey/download"])) {
-    //           child.url = child.url.replace(/internationalbudget.org/g, "rajanz2.sg-host.com");
-    //         } else {
-    //           // child.url = child.url.replace(/internationalbudget.org/g, "staging2.internationalbudget.org");
-    //         }
-    //       });
-    //     }
-    //   });
-    // }
-
-    return data;
-  });
+export const menu = (isDevContext()
+  ? Promise.resolve(menuFixture)
+  : fetch(`https://${location.hostname}/wp-json/wp-api-menus/v2/menu-locations/primary`).then((response) => response.json())
+).catch((err) => {
+  console.warn("[ibp-header] primary menu fetch failed", err);
+  return isDevContext() ? menuFixture : [];
+});

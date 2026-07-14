@@ -7,6 +7,9 @@ mix.sass("src/scss/styles.scss", "css");
 mix.js(["src/scripts/components/ibp-header.js", "src/scripts/components/ibp-footer.js"], "js/ibp-components.js");
 mix.extract();
 
+// Mega-menu wedge photos + mask, served from gh-pages /images/menu/
+mix.copy("src/images/menu", "dist/images/menu");
+
 mix.browserSync({
   server: "dist",
   index: "index.html",
