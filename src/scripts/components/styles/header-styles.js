@@ -134,7 +134,6 @@ export const HeaderStyles = css`
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f00;
   }
 
   .secondary-nav ul {
