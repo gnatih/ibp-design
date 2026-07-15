@@ -124,7 +124,10 @@ export const HeaderStyles = css`
     outline-offset: -2px;
   }
 
-  @media screen and (max-width: 1023px) {
+  /* Drawer cutover raised 1023 -> 1119 (Jayesh round 3, 15 Jul 2026): the
+     nav labels clipped under the Events button across 1024-~1063px, so the
+     whole cramped laptop band swaps to the hamburger. */
+  @media screen and (max-width: 1119px) {
     .menu-btn {
       display: flex;
     }

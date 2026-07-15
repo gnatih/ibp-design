@@ -181,8 +181,11 @@ export const MenuOverlayStyles = css`
     align-items: center;
   }
 
-  /* The drawer is the < 1024px pattern; on desktop the mega menu owns nav. */
-  @media screen and (min-width: 1024px) {
+  /* The drawer is the < 1120px pattern; on desktop the mega menu owns nav.
+     Cutover raised from 1024 to 1120 (Jayesh round 3, 15 Jul 2026): the six
+     nav labels plus the Events button only clear each other from ~1063px up,
+     so the whole cramped laptop band goes to the drawer instead. */
+  @media screen and (min-width: 1120px) {
     .overlay {
       display: none;
     }

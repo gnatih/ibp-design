@@ -247,7 +247,7 @@ export const MegaNavStyles = css`
     object-fit: cover;
   }
 
-  /* Laptop (1024-1199px): photo drops out first, everything tightens. */
+  /* Laptop (1120-1199px): photo drops out first, everything tightens. */
   @media screen and (max-width: 1199px) {
     .nav-item {
       padding: 14px 10px;
@@ -268,8 +268,9 @@ export const MegaNavStyles = css`
     }
   }
 
-  /* Tablet and below: the hamburger drawer (menu-overlay) takes over. */
-  @media screen and (max-width: 1023px) {
+  /* Laptop and below: the hamburger drawer (menu-overlay) takes over.
+     Raised 1023 -> 1119 (Jayesh round 3, 15 Jul 2026). */
+  @media screen and (max-width: 1119px) {
     :host {
       display: none;
     }
