@@ -143,7 +143,7 @@ export class MegaNav extends LitElement {
             ${hero
               ? html`
                   <div class="wedge" style=${styleMap(wedge_styles)}>
-                    <img src="${hero}" alt="" loading="lazy" style=${styleMap({ "object-position": (config && config.heroPosition) || "center" })} />
+                    <img src="${hero}" alt="" loading="lazy" style=${styleMap({ "object-position": (config && config.heroPosition) || "center", transform: config && config.heroZoom ? `scale(${config.heroZoom})` : null })} />
                   </div>
                 `
               : null}

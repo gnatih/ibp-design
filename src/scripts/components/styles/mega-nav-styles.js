@@ -45,6 +45,7 @@ export const MegaNavStyles = css`
 
   .nav-item .caret {
     display: flex;
+    font-size: 8px;
     opacity: 0.75;
     transition: transform 0.18s ease;
   }
@@ -78,8 +79,8 @@ export const MegaNavStyles = css`
        the same centred column as the nav bar - the house .container content
        column (100% minus the 2x44px gutters), capped at 1352px - instead of
        running edge to edge. */
-    width: calc(100% - 88px);
-    max-width: 1352px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto;
     z-index: 10;
     background: var(--menu-wash);
@@ -140,8 +141,8 @@ export const MegaNavStyles = css`
   }
 
   .intro-copy {
-    /* House body copy: 20px. */
-    font-size: 20px;
+    /* Menu intro runs smaller than house body copy (Raj, 15 Jul 2026). */
+    font-size: 16px;
     line-height: 145%;
     font-weight: 300;
     color: var(--menu-muted);
@@ -201,10 +202,10 @@ export const MegaNavStyles = css`
   }
 
   .row .t {
-    /* House h4: Adelle Sans 700 at the h4 scale. */
+    /* House h5: Adelle Sans 700 at the h5 scale. */
     font-weight: 700;
-    font-size: var(--ibp-heading-4-font-size);
-    line-height: var(--ibp-heading-4-line-height, 125%);
+    font-size: var(--ibp-heading-5-font-size);
+    line-height: var(--ibp-heading-5-line-height, 140%);
     color: var(--menu-ink);
   }
 
@@ -229,6 +230,14 @@ export const MegaNavStyles = css`
      gaps stay transparent so the panel wash shows through. */
   .wedge {
     overflow: hidden;
+    /* Mask lives on the wrapper, not the img, so a per-section heroZoom
+       transform on the img can't scale the wedge shapes with it. */
+    -webkit-mask-image: var(--wedge-mask);
+    mask-image: var(--wedge-mask);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
   }
 
   .wedge img {
@@ -236,12 +245,6 @@ export const MegaNavStyles = css`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-mask-image: var(--wedge-mask);
-    mask-image: var(--wedge-mask);
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
   }
 
   /* Laptop (1024-1199px): photo drops out first, everything tightens. */

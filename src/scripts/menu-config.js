@@ -38,7 +38,7 @@ const SECTION_CONFIG = [
     pillLabel: "About IBP",
     pillHref: null,
     heroImage: "about.jpg",
-    heroPosition: "center 55%",
+    heroPosition: "calc(50% + 66px) 55%",
   },
   {
     keys: ["open-budget-survey", "obs"],
@@ -46,7 +46,7 @@ const SECTION_CONFIG = [
     pillLabel: "Explore the data",
     pillHref: null,
     heroImage: "open-budget-survey.jpg",
-    heroPosition: "72% 44%",
+    heroPosition: "calc(72% + 41px) 44%",
   },
   {
     keys: ["where-we-work", "countries"],
@@ -54,7 +54,7 @@ const SECTION_CONFIG = [
     pillLabel: "All countries",
     pillHref: null,
     heroImage: "where-we-work.jpg",
-    heroPosition: "center 74%",
+    heroPosition: "calc(50% + 96px) 74%",
   },
   {
     keys: ["issues", "initiatives"],
@@ -62,7 +62,8 @@ const SECTION_CONFIG = [
     pillLabel: "All initiatives",
     pillHref: null,
     heroImage: "issues.jpg",
-    heroPosition: "center 56%",
+    heroPosition: "calc(50% + 41px) 56%",
+    heroZoom: 1.07,
   },
   {
     keys: ["stories-impact", "stories-and-impact", "stories", "impact", "stories-amp-impact"],
@@ -70,7 +71,7 @@ const SECTION_CONFIG = [
     pillLabel: "See our impact",
     pillHref: null,
     heroImage: "stories-impact.jpg",
-    heroPosition: "center 46%",
+    heroPosition: "calc(50% + 81px) 46%",
   },
 ];
 
