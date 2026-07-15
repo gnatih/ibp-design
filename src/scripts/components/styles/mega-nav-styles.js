@@ -74,6 +74,13 @@ export const MegaNavStyles = css`
     left: 0;
     right: 0;
     top: 100%;
+    /* Boxed dropdown (Jayesh review round 2, 15 Jul 2026): the panel spans
+       the same centred column as the nav bar - the house .container content
+       column (100% minus the 2x44px gutters), capped at 1352px - instead of
+       running edge to edge. */
+    width: calc(100% - 88px);
+    max-width: 1352px;
+    margin: 0 auto;
     z-index: 10;
     background: var(--menu-wash);
     color: var(--menu-ink);

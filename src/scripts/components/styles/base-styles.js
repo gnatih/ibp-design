@@ -70,7 +70,10 @@ export const BaseStyles = css`
   }
 
   .main-nav-header-wrapper.header-up {
-    top: -113px;
+    /* Hide by the wrapper's own height, not a pixel constant: the old
+       -113px offset stopped matching the real header height and left a
+       strip visible (Jayesh review round 2, 15 Jul 2026). */
+    transform: translateY(-100%);
   }
 
   .main-nav {
@@ -208,10 +211,6 @@ export const BaseStyles = css`
 
     .social-links {
       margin-top: 0;
-    }
-
-    .main-nav-header-wrapper.header-up {
-      top: -83px;
     }
 
     .main-nav-wrapper {

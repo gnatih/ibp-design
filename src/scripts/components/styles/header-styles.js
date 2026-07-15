@@ -60,13 +60,9 @@ export const HeaderStyles = css`
     border-bottom: 1px solid var(--ibp-hr);
   }
 
-  /* Full-width bar (Jayesh review round, 14 Jul 2026): the nav row runs
-     edge to edge instead of the boxed 1352px container, and the menu items
-     spread across the space between the logo and the Events button. */
-  .main-nav.container {
-    max-width: none;
-  }
-
+  /* Boxed bar (Jayesh review round 2, 15 Jul 2026): the nav row sits in the
+     house 1352px .container column again; the menu items keep spreading
+     across the space between the logo and the Events button. */
   .nav-area {
     grid-column: 3/13;
     justify-self: stretch;
