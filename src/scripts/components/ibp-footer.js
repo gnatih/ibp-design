@@ -23,11 +23,11 @@ export class IbpFooter extends LitElement {
         <div class="grid-12-col">
           <div class="left">
             <ul class="footer-nav">
-              <li><a href="https://internationalbudget.org/campaign-to-open-budgets/">Join Our Call To Action</a></li>
-              <li><a href="https://internationalbudget.org/our-work/">What We Do</a></li>
-              <li><a href="https://internationalbudget.org/library/publications/">Publications</a></li>
-              <li><a href="https://internationalbudget.org/about-us/">About</a></li>
               <li><a href="https://internationalbudget.org/contact-us/">Contact</a></li>
+              <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
+              <li><a href="https://internationalbudget.org/copyright/">Copyright</a></li>
+              <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
+              <li><a href="https://internationalbudget.org/privacy-policy/">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="main">
@@ -35,12 +35,6 @@ export class IbpFooter extends LitElement {
             <social-links color="var(--ibp-accent-alt)"></social-links>
           </div>
           <div class="right">
-            <ul class="footer-nav">
-              <li><a href="https://internationalbudget.org/ethical-violations/">Whistleblower Policy</a></li>
-              <li><a href="https://internationalbudget.org/copyright/">Copyright</a></li>
-              <li><a href="https://us12.campaign-archive.com/home/?u=de5755d359416097d437841c1&id=5799ba65dd">Newsletter</a></li>
-              <li><a href="https://internationalbudget.org/privacy-policy/">Privacy Policy</a></li>
-            </ul>
             <div class="footer-logos">
               <a href="https://www.charitynavigator.org/ein/463995547" target="_blank"><img src="https://internationalbudget.org/wp-content/uploads/2022/11/Charity_Navigator.png" width="100" /></a>
               <a href="https://www.guidestar.org/profile/46-3995547" target="_blank"><img src="https://internationalbudget.org/wp-content/uploads/candidlogo-in-150x150.png" width="80" /></a>

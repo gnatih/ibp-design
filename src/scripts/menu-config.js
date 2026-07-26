@@ -29,7 +29,7 @@
 // WordPress and Drupal sites, so the default is the gh-pages asset host
 // (same pattern as $images-path in src/scss/partials/_variables.scss).
 // Override for local preview: <ibp-header assets-base="./images/menu/">.
-export const DEFAULT_ASSETS_BASE = "https://gnatih.github.io/ibp-design/images/menu/";
+export const DEFAULT_ASSETS_BASE = "https://internationalbudget.org/wp-content/uploads/menu/";
 
 const SECTION_CONFIG = [
   {
@@ -58,7 +58,7 @@ const SECTION_CONFIG = [
   },
   {
     keys: ["issues", "initiatives"],
-    introCopy: "The initiatives through which we advance budget accountability worldwide.",
+    introCopy: "The issues and initiatives through which we advance budget accountability worldwide.",
     pillLabel: "All initiatives",
     pillHref: null,
     heroImage: "issues.jpg",
@@ -69,7 +69,7 @@ const SECTION_CONFIG = [
     keys: ["stories-impact", "stories-and-impact", "stories", "impact", "stories-amp-impact"],
     introCopy: "The proof of the work — reports, stories of change, analysis and the resource library.",
     pillLabel: "See our impact",
-    pillHref: null,
+    pillHref: "/about-us/impacts/",
     heroImage: "stories-impact.jpg",
     heroPosition: "calc(50% + 81px) 46%",
   },

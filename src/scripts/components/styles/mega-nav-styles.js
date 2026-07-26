@@ -90,7 +90,10 @@ export const MegaNavStyles = css`
     opacity: 0;
     visibility: hidden;
     transform: translateY(-6px);
-    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease,
+      visibility 0.18s;
   }
 
   .panel.open {

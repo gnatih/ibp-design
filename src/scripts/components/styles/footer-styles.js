@@ -31,6 +31,7 @@ export const FooterStyles = css`
 
   .right {
     grid-column: 10/13;
+    padding-top: 40px;
   }
 
   .main {

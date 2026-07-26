@@ -92,6 +92,7 @@ export const HeaderStyles = css`
     border: none;
     text-decoration: none;
     white-space: nowrap;
+    margin-left: 30px;
   }
 
   .btn-cta:hover {
